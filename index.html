@@ -19,15 +19,15 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: "#1d4ed8", // Corporate Blue
-                        "background-light": "#f8fafc",
-                        "background-dark": "#0f172a",
+                        primary: "#0f172a", // Slate 900 as primary for a very corporate look
+                        "background-light": "#ffffff",
+                        "background-dark": "#09090b", // Zinc 950
                     },
                     fontFamily: {
                         display: ["Inter", "sans-serif"],
                     },
                     borderRadius: {
-                        DEFAULT: "0.5rem",
+                        DEFAULT: "0.375rem", // md border radius by default
                     },
                 },
             },
@@ -36,7 +36,7 @@
     <style type="text/tailwindcss">
         body { font-family: 'Inter', sans-serif; }
         .journey-line {
-            background-image: linear-gradient(to right, #1d4ed8 50%, transparent 50%);
+            background-image: linear-gradient(to right, #64748b 50%, transparent 50%);
             background-size: 15px 1px;
             background-repeat: repeat-x;
         }
@@ -96,29 +96,26 @@
             <div class="lg:flex items-center gap-16">
                 <div class="lg:w-3/5 space-y-8">
                     <div
-                        class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-900/30 text-primary text-sm font-semibold">
-                        <span class="material-symbols-outlined text-sm">trending_up</span>
-                        Ideal para equipes em crescimento
+                        class="inline-flex items-center gap-2 px-3 py-1 rounded-md border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 text-slate-600 dark:text-slate-400 text-xs font-semibold uppercase tracking-widest">
+                        Plataforma CRM Integrada
                     </div>
-                    <h1 class="text-4xl lg:text-6xl font-extrabold leading-tight text-slate-900 dark:text-white"
+                    <h1 class="text-4xl lg:text-5xl font-bold leading-tight tracking-tight text-slate-900 dark:text-white"
                         data-aos="fade-up" data-aos-duration="1000">
-                        Tudo o que sua imobiliária precisa para vender mais, <span class="text-primary italic">em um
-                            único sistema</span>
+                        Gestão inteligente. <br /> Controle absoluto de ponta a ponta.
                     </h1>
-                    <p class="text-xl text-slate-600 dark:text-slate-400 max-w-2xl leading-relaxed" data-aos="fade-up"
+                    <p class="text-lg text-slate-500 dark:text-slate-400 max-w-2xl leading-relaxed" data-aos="fade-up"
                         data-aos-delay="100">
-                        Potencialize a colaboração do seu time e acelere seu crescimento. Unificamos todas as etapas da
-                        jornada de venda para que sua equipe foque no que realmente importa: fechar negócios.
+                        Uma plataforma completa desenvolvida para imobiliárias de alta performance. Centralize seus leads, imóveis e atendimento em um único ecossistema robusto e seguro.
                     </p>
                     <div class="flex flex-wrap gap-4 pt-4">
                         <button
-                            class="bg-primary text-white px-8 py-4 rounded text-lg font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-500/20 flex items-center gap-2">
-                            Começar agora
-                            <span class="material-symbols-outlined">rocket_launch</span>
+                            class="bg-slate-900 dark:bg-white text-white dark:text-slate-900 px-6 py-3.5 rounded-md text-sm font-semibold hover:bg-slate-800 dark:hover:bg-slate-100 transition-all shadow-sm flex items-center gap-2">
+                            Criar conta grátis
+                            <span class="material-symbols-outlined text-sm">arrow_forward</span>
                         </button>
                         <button
-                            class="border border-slate-300 dark:border-slate-700 px-8 py-4 rounded text-lg font-semibold hover:bg-slate-50 dark:hover:bg-slate-800 transition-all">
-                            Ver demonstração
+                            class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 px-6 py-3.5 rounded-md text-sm font-medium hover:bg-slate-50 dark:hover:bg-slate-800 transition-all shadow-sm">
+                            Falar com o comercial
                         </button>
                     </div>
                 </div>
@@ -155,61 +152,58 @@
                     <!-- Aba Dashboard -->
                     <button onclick="switchShowcaseTab('dashboard', 'public/dashboard.png', 'dashboard')" 
                         id="tab-dashboard"
-                        class="showcase-tab shrink-0 flex items-center gap-2.5 px-5 py-3 rounded-full border border-primary bg-primary text-white font-semibold transition-all whitespace-nowrap cursor-pointer shadow-lg shadow-blue-500/20">
-                        <span class="material-symbols-outlined text-xl">dashboard</span>
-                        <span>Dashboard</span>
+                        class="showcase-tab shrink-0 flex items-center gap-2 px-4 py-2.5 rounded-lg border border-slate-900 dark:border-white bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-semibold transition-all whitespace-nowrap cursor-pointer shadow-sm">
+                        <span class="material-symbols-outlined text-lg">dashboard</span>
+                        <span class="text-sm">Dashboard</span>
                     </button>
                     <!-- Aba Imóveis -->
                     <button onclick="switchShowcaseTab('imoveis', 'public/imoveis.png', 'imoveis')" 
                         id="tab-imoveis"
-                        class="showcase-tab shrink-0 flex items-center gap-2.5 px-5 py-3 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 font-medium hover:bg-slate-100 dark:hover:bg-slate-700/50 hover:text-primary transition-all whitespace-nowrap cursor-pointer">
-                        <span class="material-symbols-outlined text-xl">home_work</span>
-                        <span>Imóveis</span>
+                        class="showcase-tab shrink-0 flex items-center gap-2 px-4 py-2.5 rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-slate-600 dark:text-slate-400 font-medium hover:bg-slate-50 dark:hover:bg-slate-900 transition-all whitespace-nowrap cursor-pointer">
+                        <span class="material-symbols-outlined text-lg">home_work</span>
+                        <span class="text-sm">Imóveis</span>
                     </button>
                     <!-- Aba Clientes -->
                     <button onclick="switchShowcaseTab('clientes', 'public/clientes.png', 'clientes')" 
                         id="tab-clientes"
-                        class="showcase-tab shrink-0 flex items-center gap-2.5 px-5 py-3 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 font-medium hover:bg-slate-100 dark:hover:bg-slate-700/50 hover:text-primary transition-all whitespace-nowrap cursor-pointer">
-                        <span class="material-symbols-outlined text-xl">groups</span>
-                        <span>Clientes</span>
+                        class="showcase-tab shrink-0 flex items-center gap-2 px-4 py-2.5 rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-slate-600 dark:text-slate-400 font-medium hover:bg-slate-50 dark:hover:bg-slate-900 transition-all whitespace-nowrap cursor-pointer">
+                        <span class="material-symbols-outlined text-lg">groups</span>
+                        <span class="text-sm">Clientes</span>
                     </button>
                     <!-- Aba Chaves -->
                     <button onclick="switchShowcaseTab('chaves', 'public/chaves.png', 'chaves')" 
                         id="tab-chaves"
-                        class="showcase-tab shrink-0 flex items-center gap-2.5 px-5 py-3 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 font-medium hover:bg-slate-100 dark:hover:bg-slate-700/50 hover:text-primary transition-all whitespace-nowrap cursor-pointer">
-                        <span class="material-symbols-outlined text-xl">vpn_key</span>
-                        <span>Chaves</span>
+                        class="showcase-tab shrink-0 flex items-center gap-2 px-4 py-2.5 rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-slate-600 dark:text-slate-400 font-medium hover:bg-slate-50 dark:hover:bg-slate-900 transition-all whitespace-nowrap cursor-pointer">
+                        <span class="material-symbols-outlined text-lg">vpn_key</span>
+                        <span class="text-sm">Chaves</span>
                     </button>
                     <!-- Aba Negócio -->
                     <button onclick="switchShowcaseTab('negocios', 'public/negocios.png', 'negocios')" 
                         id="tab-negocios"
-                        class="showcase-tab shrink-0 flex items-center gap-2.5 px-5 py-3 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 font-medium hover:bg-slate-100 dark:hover:bg-slate-700/50 hover:text-primary transition-all whitespace-nowrap cursor-pointer">
-                        <span class="material-symbols-outlined text-xl">handshake</span>
-                        <span>Negócio</span>
+                        class="showcase-tab shrink-0 flex items-center gap-2 px-4 py-2.5 rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-slate-600 dark:text-slate-400 font-medium hover:bg-slate-50 dark:hover:bg-slate-900 transition-all whitespace-nowrap cursor-pointer">
+                        <span class="material-symbols-outlined text-lg">handshake</span>
+                        <span class="text-sm">Negócio</span>
                     </button>
                     <!-- Aba Empreendimentos -->
                     <button onclick="switchShowcaseTab('empreendimentos', 'public/empreendimentos.png', 'empreendimentos')" 
                         id="tab-empreendimentos"
-                        class="showcase-tab shrink-0 flex items-center gap-2.5 px-5 py-3 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 font-medium hover:bg-slate-100 dark:hover:bg-slate-700/50 hover:text-primary transition-all whitespace-nowrap cursor-pointer">
-                        <span class="material-symbols-outlined text-xl">domain</span>
-                        <span>Empreendimentos</span>
+                        class="showcase-tab shrink-0 flex items-center gap-2 px-4 py-2.5 rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-slate-600 dark:text-slate-400 font-medium hover:bg-slate-50 dark:hover:bg-slate-900 transition-all whitespace-nowrap cursor-pointer">
+                        <span class="material-symbols-outlined text-lg">domain</span>
+                        <span class="text-sm">Empreendimentos</span>
                     </button>
                     <!-- Aba Leads -->
                     <button onclick="switchShowcaseTab('leads', 'public/leads.png', 'leads')" 
                         id="tab-leads"
-                        class="showcase-tab shrink-0 flex items-center gap-2.5 px-5 py-3 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 font-medium hover:bg-slate-100 dark:hover:bg-slate-700/50 hover:text-primary transition-all whitespace-nowrap cursor-pointer">
-                        <span class="material-symbols-outlined text-xl">filter_alt</span>
-                        <span>Leads</span>
+                        class="showcase-tab shrink-0 flex items-center gap-2 px-4 py-2.5 rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-slate-600 dark:text-slate-400 font-medium hover:bg-slate-50 dark:hover:bg-slate-900 transition-all whitespace-nowrap cursor-pointer">
+                        <span class="material-symbols-outlined text-lg">filter_alt</span>
+                        <span class="text-sm">Leads</span>
                     </button>
                 </div>
             </div>
 
             <!-- Mockup do Navegador Web -->
             <div class="relative max-w-6xl mx-auto" data-aos="zoom-in" data-aos-delay="200">
-                <!-- Efeitos de luz no background (Glow) -->
-                <div class="absolute -inset-1 rounded-3xl bg-gradient-to-r from-blue-600 to-indigo-600 opacity-20 blur-xl group-hover:opacity-30 transition duration-1000 -z-10"></div>
-                
-                <div class="bg-white dark:bg-slate-950 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-2xl overflow-hidden flex flex-col">
+                <div class="bg-white dark:bg-slate-950 rounded-xl border border-slate-200 dark:border-slate-800 shadow-xl overflow-hidden flex flex-col">
                     
                     <!-- Área de Conteúdo do Navegador -->
                     <div class="relative bg-slate-100 dark:bg-slate-900 min-h-[400px] md:min-h-[550px] flex flex-col justify-center items-center overflow-hidden transition-all duration-300">
@@ -790,12 +784,12 @@
             // 1. Atualizar estilos das abas (Active / Inactive)
             const tabs = document.querySelectorAll('.showcase-tab');
             tabs.forEach(tab => {
-                tab.className = "showcase-tab shrink-0 flex items-center gap-2.5 px-5 py-3 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 font-medium hover:bg-slate-100 dark:hover:bg-slate-700/50 hover:text-primary transition-all whitespace-nowrap cursor-pointer";
+                tab.className = "showcase-tab shrink-0 flex items-center gap-2 px-4 py-2.5 rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-slate-600 dark:text-slate-400 font-medium hover:bg-slate-50 dark:hover:bg-slate-900 transition-all whitespace-nowrap cursor-pointer";
             });
 
             const activeTab = document.getElementById('tab-' + tabId);
             if (activeTab) {
-                activeTab.className = "showcase-tab shrink-0 flex items-center gap-2.5 px-5 py-3 rounded-full border border-primary bg-primary text-white font-semibold transition-all whitespace-nowrap cursor-pointer shadow-lg shadow-blue-500/20";
+                activeTab.className = "showcase-tab shrink-0 flex items-center gap-2 px-4 py-2.5 rounded-lg border border-slate-900 dark:border-white bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-semibold transition-all whitespace-nowrap cursor-pointer shadow-sm";
             }
 
             // 2. Atualizar Slug do Browser Simulador
@@ -1237,24 +1231,22 @@
             </div>
         </div>
     </section>
-    <section class="py-24 bg-primary overflow-hidden relative">
-        <div class="absolute inset-0 bg-blue-900/20 opacity-50"></div>
+    <section class="py-24 bg-primary overflow-hidden relative border-t border-slate-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-            <h2 class="text-3xl lg:text-5xl font-extrabold text-white mb-8">
-                Pronto para levar seu time ao próximo nível?
+            <h2 class="text-3xl lg:text-5xl font-bold tracking-tight text-white mb-6">
+                Pronto para transformar sua gestão?
             </h2>
-            <p class="text-blue-100 text-lg mb-12 max-w-2xl mx-auto">
-                Junte-se a mais de 2.000 imobiliárias que já escalaram seus negócios com a Chave Reserva. Teste grátis
-                por 7 dias e sinta a diferença da colaboração real.
+            <p class="text-slate-300 text-lg mb-12 max-w-2xl mx-auto leading-relaxed">
+                Junte-se a imobiliárias que já profissionalizaram suas operações com o Chave Reserva. Controle absoluto do seu negócio, de ponta a ponta.
             </p>
-            <div class="flex flex-wrap justify-center gap-6">
+            <div class="flex flex-wrap justify-center gap-4">
                 <button
-                    class="bg-white text-primary px-10 py-5 rounded-xl text-lg font-bold hover:shadow-2xl hover:scale-105 transition-all">
+                    class="bg-white text-slate-900 px-8 py-4 rounded-md text-base font-semibold hover:bg-slate-100 transition-all shadow-sm">
                     Começar Agora Grátis
                 </button>
                 <button
-                    class="border-2 border-white/30 text-white px-10 py-5 rounded-xl text-lg font-bold hover:bg-white/10 transition-all">
-                    Falar com Consultor
+                    class="border border-slate-600 text-white px-8 py-4 rounded-md text-base font-medium hover:bg-slate-800 hover:border-slate-500 transition-all">
+                    Falar com Comercial
                 </button>
             </div>
         </div>
