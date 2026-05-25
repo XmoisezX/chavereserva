@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo Palácio - Imóveis de Luxo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <!-- FontAwesome for Icons in Card -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#D4AF37', /* Gold */
+                        secondary: '#111827', /* Dark */
+                        accent: '#F3F4F6'
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Lato', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-white text-gray-800 font-sans">
+
+    <!-- Navbar -->
+    <nav class="bg-black/90 text-white fixed w-full z-10 backdrop-blur-md border-b border-white/10 transition-all">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-24">
+                <div class="flex items-center gap-2">
+                    <span class="material-icons-outlined text-primary text-3xl">castle</span>
+                    <span class="text-3xl font-serif tracking-widest text-primary">PALÁCIO</span>
+                </div>
+                <div class="hidden md:flex space-x-12 items-center">
+                    <a href="#"
+                        class="text-white hover:text-primary font-light tracking-wider uppercase text-sm">Coleção</a>
+                    <a href="#"
+                        class="text-white hover:text-primary font-light tracking-wider uppercase text-sm">Venda</a>
+                    <a href="#"
+                        class="text-white hover:text-primary font-light tracking-wider uppercase text-sm">Sobre</a>
+                    <a href="#"
+                        class="border border-primary text-primary px-8 py-3 hover:bg-primary hover:text-black transition-all uppercase text-xs tracking-widest font-bold">
+                        Private Broker
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="relative h-[80vh]">
+        <div class="absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+                alt="Mansão de Luxo" class="w-full h-full object-cover grayscale-[30%] contrast-125">
+            <div class="absolute inset-0 bg-black/50"></div>
+        </div>
+        <div
+            class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex flex-col justify-center items-center text-center">
+            <span class="text-primary tracking-[0.5em] uppercase mb-6 animate-pulse">Exclusividade e Requinte</span>
+            <h1 class="text-5xl md:text-7xl font-serif text-white mb-20 italic">Viver é uma arte.</h1>
+        </div>
+    </div>
+
+    <!-- Filter Section (Luxurious Style) -->
+    <div class="max-w-5xl mx-auto px-4 relative z-20 -mt-20 mb-24">
+        <div class="bg-secondary text-white rounded-none shadow-2xl p-8 border border-primary/30">
+            <div class="flex justify-center gap-12 mb-8 border-b border-white/10 pb-4">
+                <button
+                    class="text-primary font-bold border-b border-primary pb-1 uppercase tracking-widest text-xs">Comprar</button>
+                <button
+                    class="text-gray-400 font-bold hover:text-primary pb-1 uppercase tracking-widest text-xs transition-colors">Alugar</button>
+            </div>
+
+            <form class="grid grid-cols-1 md:grid-cols-4 gap-6 items-end">
+                <div class="md:col-span-1">
+                    <label class="block text-[10px] font-bold text-primary mb-2 uppercase tracking-widest">Tipo</label>
+                    <select
+                        class="w-full bg-black/50 border border-white/20 rounded-none px-4 py-3 text-white focus:outline-none focus:border-primary transition-all appearance-none cursor-pointer text-xs uppercase tracking-wide">
+                        <option>Todos</option>
+                        <option>Mansão</option>
+                        <option>Penthouse</option>
+                        <option>Fazenda</option>
+                    </select>
+                </div>
+
+                <div class="md:col-span-2">
+                    <label class="block text-[10px] font-bold text-primary mb-2 uppercase tracking-widest">Localização
+                        ou Código</label>
+                    <input type="text" placeholder="CIDADE, BAIRRO..."
+                        class="w-full px-4 py-3 bg-black/50 border border-white/20 rounded-none text-white focus:outline-none focus:border-primary transition-all text-xs uppercase tracking-wide placeholder-gray-600">
+                </div>
+
+                <div class="md:col-span-1">
+                    <button type="button"
+                        class="w-full bg-primary hover:bg-white hover:text-black text-black font-bold py-3 rounded-none shadow-lg transition-all uppercase text-xs tracking-widest flex items-center justify-center gap-2">
+                        Buscar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Featured Properties -->
+    <section class="py-12 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-serif text-secondary mb-4">Destaques da Coleção</h2>
+                <div class="w-24 h-0.5 bg-primary mx-auto"></div>
+                <p class="text-gray-500 font-light mt-4 italic">Selecione apenas o extraordinário.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+                <!-- STANDARDIZED CARD 1 - LUXURY VARIANT -->
+                <div
+                    class="bg-white shadow-xl flex flex-col group hover:shadow-2xl transition-all duration-500 border border-gray-100">
+                    <div class="relative h-72 overflow-hidden">
+                        <div class="absolute top-4 left-4 z-10 flex gap-2">
+                            <span
+                                class="bg-secondary text-white text-[10px] font-bold px-3 py-1 uppercase tracking-widest">Venda</span>
+                            <span
+                                class="bg-primary text-black text-[10px] font-bold px-3 py-1 uppercase tracking-widest">Exclusivo</span>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1542125387-c71274d94f0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="Imóvel"
+                            class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105 filter brightness-90 group-hover:brightness-100">
+                        <button
+                            class="absolute bottom-4 right-4 bg-black/50 backdrop-blur text-white p-2 rounded-none hover:bg-primary hover:text-black transition-all">
+                            <span class="material-icons-outlined block text-sm">favorite_border</span>
+                        </button>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow text-center">
+                        <div class="mb-6">
+                            <h3
+                                class="text-2xl font-serif text-secondary mb-2 group-hover:text-primary transition-colors">
+                                Mansão Lago Sul</h3>
+                            <p class="text-xs text-gray-400 uppercase tracking-widest font-bold">Brasília - DF</p>
+                        </div>
+
+                        <div class="flex justify-center gap-6 py-4 border-t border-b border-gray-100 my-2">
+                            <div class="text-center">
+                                <span class="block text-gray-300 text-xs mb-1"><i
+                                        class="fa-solid fa-ruler-combined"></i></span>
+                                <span class="block text-secondary font-serif text-lg">1200m²</span>
+                            </div>
+                            <div class="text-center">
+                                <span class="block text-gray-300 text-xs mb-1"><i class="fa-solid fa-bed"></i></span>
+                                <span class="block text-secondary font-serif text-lg">6</span>
+                            </div>
+                            <div class="text-center">
+                                <span class="block text-gray-300 text-xs mb-1"><i class="fa-solid fa-car"></i></span>
+                                <span class="block text-secondary font-serif text-lg">8</span>
+                            </div>
+                        </div>
+
+                        <div class="mt-auto pt-6">
+                            <span
+                                class="block text-[10px] text-gray-400 uppercase tracking-widest mb-1">Investimento</span>
+                            <span class="text-3xl font-serif text-secondary">R$ 18.500.000</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- STANDARDIZED CARD 2 - LUXURY VARIANT -->
+                <div
+                    class="bg-white shadow-xl flex flex-col group hover:shadow-2xl transition-all duration-500 border border-gray-100">
+                    <div class="relative h-72 overflow-hidden">
+                        <div class="absolute top-4 left-4 z-10 flex gap-2">
+                            <span
+                                class="bg-secondary text-white text-[10px] font-bold px-3 py-1 uppercase tracking-widest">Venda</span>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="Imóvel"
+                            class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105 filter brightness-90 group-hover:brightness-100">
+                        <button
+                            class="absolute bottom-4 right-4 bg-black/50 backdrop-blur text-white p-2 rounded-none hover:bg-primary hover:text-black transition-all">
+                            <span class="material-icons-outlined block text-sm">favorite_border</span>
+                        </button>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow text-center">
+                        <div class="mb-6">
+                            <h3
+                                class="text-2xl font-serif text-secondary mb-2 group-hover:text-primary transition-colors">
+                                Penthouse Jardins</h3>
+                            <p class="text-xs text-gray-400 uppercase tracking-widest font-bold">São Paulo - SP</p>
+                        </div>
+
+                        <div class="flex justify-center gap-6 py-4 border-t border-b border-gray-100 my-2">
+                            <div class="text-center">
+                                <span class="block text-gray-300 text-xs mb-1"><i
+                                        class="fa-solid fa-ruler-combined"></i></span>
+                                <span class="block text-secondary font-serif text-lg">450m²</span>
+                            </div>
+                            <div class="text-center">
+                                <span class="block text-gray-300 text-xs mb-1"><i class="fa-solid fa-bed"></i></span>
+                                <span class="block text-secondary font-serif text-lg">4</span>
+                            </div>
+                            <div class="text-center">
+                                <span class="block text-gray-300 text-xs mb-1"><i class="fa-solid fa-car"></i></span>
+                                <span class="block text-secondary font-serif text-lg">4</span>
+                            </div>
+                        </div>
+
+                        <div class="mt-auto pt-6">
+                            <span
+                                class="block text-[10px] text-gray-400 uppercase tracking-widest mb-1">Investimento</span>
+                            <span class="text-3xl font-serif text-secondary">R$ 12.800.000</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- STANDARDIZED CARD 3 - LUXURY VARIANT -->
+                <div
+                    class="bg-white shadow-xl flex flex-col group hover:shadow-2xl transition-all duration-500 border border-gray-100">
+                    <div class="relative h-72 overflow-hidden">
+                        <div class="absolute top-4 left-4 z-10 flex gap-2">
+                            <span
+                                class="bg-secondary text-white text-[10px] font-bold px-3 py-1 uppercase tracking-widest">Aluguel</span>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="Imóvel"
+                            class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105 filter brightness-90 group-hover:brightness-100">
+                        <button
+                            class="absolute bottom-4 right-4 bg-black/50 backdrop-blur text-white p-2 rounded-none hover:bg-primary hover:text-black transition-all">
+                            <span class="material-icons-outlined block text-sm">favorite_border</span>
+                        </button>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow text-center">
+                        <div class="mb-6">
+                            <h3
+                                class="text-2xl font-serif text-secondary mb-2 group-hover:text-primary transition-colors">
+                                Residência Pedra Branca</h3>
+                            <p class="text-xs text-gray-400 uppercase tracking-widest font-bold">Palhoça - SC</p>
+                        </div>
+
+                        <div class="flex justify-center gap-6 py-4 border-t border-b border-gray-100 my-2">
+                            <div class="text-center">
+                                <span class="block text-gray-300 text-xs mb-1"><i
+                                        class="fa-solid fa-ruler-combined"></i></span>
+                                <span class="block text-secondary font-serif text-lg">380m²</span>
+                            </div>
+                            <div class="text-center">
+                                <span class="block text-gray-300 text-xs mb-1"><i class="fa-solid fa-bed"></i></span>
+                                <span class="block text-secondary font-serif text-lg">3</span>
+                            </div>
+                            <div class="text-center">
+                                <span class="block text-gray-300 text-xs mb-1"><i class="fa-solid fa-car"></i></span>
+                                <span class="block text-secondary font-serif text-lg">2</span>
+                            </div>
+                        </div>
+
+                        <div class="mt-auto pt-6">
+                            <span class="block text-[10px] text-gray-400 uppercase tracking-widest mb-1">Mensal</span>
+                            <span class="text-3xl font-serif text-secondary">R$ 15.000</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="text-center mt-16">
+                <a href="#"
+                    class="border-b border-black pb-1 hover:text-primary hover:border-primary transition-colors uppercase tracking-widest text-xs font-bold">Ver
+                    todo o portfólio</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-20 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <span class="text-3xl font-serif text-primary mb-8 block">PALÁCIO</span>
+            <div class="flex justify-center gap-8 mb-12 uppercase text-xs tracking-widest text-gray-400">
+                <a href="#" class="hover:text-white">Imóveis</a>
+                <a href="#" class="hover:text-white">Serviços</a>
+                <a href="#" class="hover:text-white">Imprensa</a>
+                <a href="#" class="hover:text-white">Contato</a>
+            </div>
+            <p class="text-gray-600 text-xs tracking-widest">&copy; 2024 Palácio Real Estate. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Back to Layouts Button (Demo only) -->
+    <a href="layout-sites.html"
+        class="fixed bottom-6 right-6 bg-primary text-black px-6 py-3 rounded-none shadow-xl font-bold hover:bg-white transition-colors z-50 flex items-center gap-2 uppercase tracking-wide text-xs">
+        <span class="material-icons-outlined">grid_view</span> Voltar
+    </a>
+
+    <script src="js/chatbot.js"></script>
+</body>
+
+</html>

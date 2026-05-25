@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="pt-br">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Imobiliária Portal - Modelo | Chave Reserva</title>
+    <meta content="Modelo de site estilo portal imobiliário com busca avançada e design focado em conversão."
+        name="description" />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+        rel="stylesheet" />
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#0092FF", // Viva Blue
+                        secondary: "#6200EE", // Viva Purple
+                        "brand-dark": "#1A1A1A",
+                    },
+                    fontFamily: {
+                        sans: ["Poppins", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                        'lg': '1rem',
+                        'xl': '1.25rem',
+                        '2xl': '1.5rem',
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        .search-card-shadow {
+            box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.15);
+        }
+    </style>
+</head>
+
+<body class="bg-white text-brand-dark antialiased">
+
+    <!-- Header -->
+    <header class="bg-white border-b border-slate-100 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-8">
+                <a href="#" class="flex items-center gap-2">
+                    <div
+                        class="w-10 h-10 bg-gradient-to-tr from-secondary to-primary rounded-lg flex items-center justify-center text-white">
+                        <span class="material-symbols-outlined">home_work</span>
+                    </div>
+                    <span
+                        class="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-secondary to-primary">Portal
+                        Imóveis</span>
+                </a>
+
+                <nav class="hidden lg:flex items-center gap-6 text-sm font-medium text-slate-600">
+                    <a href="#" class="hover:text-primary transition-colors">Alugar</a>
+                    <a href="#" class="hover:text-primary transition-colors">Comprar</a>
+                    <div class="relative group">
+                        <button class="flex items-center gap-1 hover:text-primary transition-colors">
+                            Lançamentos <span class="material-symbols-outlined text-sm">expand_more</span>
+                        </button>
+                    </div>
+                    <div class="relative group">
+                        <button class="flex items-center gap-1 hover:text-primary transition-colors">
+                            Anunciar <span class="material-symbols-outlined text-sm">expand_more</span>
+                        </button>
+                    </div>
+                    <a href="#" class="hover:text-primary transition-colors">Ajuda</a>
+                </nav>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <a href="#"
+                    class="hidden sm:flex px-4 py-2 text-sm font-semibold text-primary bg-blue-50 hover:bg-blue-100 rounded-lg transition-colors">
+                    Criar conta
+                </a>
+                <a href="#"
+                    class="flex items-center gap-2 px-4 py-2 text-sm font-semibold text-slate-600 hover:text-primary transition-colors border border-slate-200 hover:border-primary rounded-lg">
+                    <span class="material-symbols-outlined text-lg">person</span>
+                    Entrar
+                </a>
+                <button class="lg:hidden p-2 text-slate-600">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <main>
+        <section
+            class="relative bg-gradient-to-b from-blue-50/50 to-white pt-12 pb-24 lg:pt-20 lg:pb-32 overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid lg:grid-cols-12 gap-12 sm:gap-16 items-center">
+
+                    <!-- Left: Search Card -->
+                    <div class="lg:col-span-5 order-2 lg:order-1">
+                        <div
+                            class="bg-white rounded-2xl p-6 sm:p-8 search-card-shadow transform transition-all hover:-translate-y-1">
+                            <h1 class="text-2xl sm:text-3xl font-bold text-slate-800 mb-6 leading-tight">
+                                A chance de encontrar o imóvel dos sonhos começa aqui!
+                            </h1>
+
+                            <!-- Tabs -->
+                            <div class="flex border-b border-slate-200 mb-6">
+                                <button
+                                    class="pb-3 px-4 text-primary font-bold border-b-2 border-primary transition-colors">
+                                    Comprar
+                                </button>
+                                <button
+                                    class="pb-3 px-4 text-slate-500 font-medium hover:text-slate-800 transition-colors">
+                                    Alugar
+                                </button>
+                                <button
+                                    class="pb-3 px-4 text-slate-500 font-medium hover:text-slate-800 transition-colors">
+                                    Lançamentos
+                                </button>
+                            </div>
+
+                            <!-- Search Form -->
+                            <form class="space-y-5">
+                                <div>
+                                    <label class="block text-sm text-slate-500 mb-1.5 font-medium">Onde deseja
+                                        morar?</label>
+                                    <div class="relative">
+                                        <span
+                                            class="absolute left-4 top-1/2 -translate-y-1/2 text-primary material-symbols-outlined">search</span>
+                                        <input type="text" placeholder="Busque rua, bairro ou cidade"
+                                            class="w-full pl-12 pr-4 py-3.5 rounded-xl border border-slate-300 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-shadow text-slate-700 placeholder-slate-400">
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <label class="block text-sm text-slate-500 mb-1.5 font-medium">Tipo de
+                                        imóvel</label>
+                                    <div class="relative">
+                                        <select
+                                            class="w-full pl-4 pr-10 py-3.5 rounded-xl border border-slate-300 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-shadow text-slate-700 appearance-none bg-white">
+                                            <option>Todos os imóveis</option>
+                                            <option>Apartamento</option>
+                                            <option>Casa</option>
+                                            <option>Terreno</option>
+                                        </select>
+                                        <span
+                                            class="absolute right-4 top-1/2 -translate-y-1/2 text-primary material-symbols-outlined pointer-events-none">expand_more</span>
+                                    </div>
+                                </div>
+
+                                <button type="button"
+                                    class="w-full bg-primary hover:bg-blue-600 text-white font-bold py-4 rounded-xl shadow-lg shadow-blue-500/30 transition-all active:scale-95 text-lg">
+                                    Buscar Imóveis
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Right: Visual -->
+                    <div class="lg:col-span-7 order-1 lg:order-2 flex justify-center lg:justify-end relative">
+                        <!-- Decorative Purple BG -->
+                        <div
+                            class="absolute top-10 right-4 sm:right-10 w-[80%] h-[90%] bg-secondary rounded-[3rem] rotate-3 opacity-90">
+                        </div>
+
+                        <!-- Image -->
+                        <div class="relative z-10 w-full max-w-lg">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1000&auto=format&fit=crop"
+                                alt="Mulher sorrindo segurando celular"
+                                class="relative w-full h-auto drop-shadow-2xl rounded-b-[3rem] object-cover mask-image-gradient">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Bottom Categories -->
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16 lg:mt-20">
+                <h3 class="text-center text-slate-500 font-medium mb-8 uppercase tracking-widest text-sm">Categorias
+                    Populares</h3>
+                <div class="flex flex-wrap justify-center gap-4 sm:gap-8">
+                    <a href="#" class="flex flex-col items-center gap-3 group">
+                        <div
+                            class="w-16 h-16 bg-white border border-slate-100 rounded-2xl flex items-center justify-center shadow-sm group-hover:shadow-md group-hover:border-primary transition-all text-slate-400 group-hover:text-primary">
+                            <span class="material-symbols-outlined text-3xl">apartment</span>
+                        </div>
+                        <span
+                            class="text-sm font-medium text-slate-600 group-hover:text-primary transition-colors">Apartamentos</span>
+                    </a>
+                    <a href="#" class="flex flex-col items-center gap-3 group">
+                        <div
+                            class="w-16 h-16 bg-white border border-slate-100 rounded-2xl flex items-center justify-center shadow-sm group-hover:shadow-md group-hover:border-primary transition-all text-slate-400 group-hover:text-primary">
+                            <span class="material-symbols-outlined text-3xl">home</span>
+                        </div>
+                        <span
+                            class="text-sm font-medium text-slate-600 group-hover:text-primary transition-colors">Casas</span>
+                    </a>
+                    <a href="#" class="flex flex-col items-center gap-3 group">
+                        <div
+                            class="w-16 h-16 bg-white border border-slate-100 rounded-2xl flex items-center justify-center shadow-sm group-hover:shadow-md group-hover:border-primary transition-all text-slate-400 group-hover:text-primary">
+                            <span class="material-symbols-outlined text-3xl">storefront</span>
+                        </div>
+                        <span
+                            class="text-sm font-medium text-slate-600 group-hover:text-primary transition-colors">Comercial</span>
+                    </a>
+                    <a href="#" class="flex flex-col items-center gap-3 group">
+                        <div
+                            class="w-16 h-16 bg-white border border-slate-100 rounded-2xl flex items-center justify-center shadow-sm group-hover:shadow-md group-hover:border-primary transition-all text-slate-400 group-hover:text-primary">
+                            <span class="material-symbols-outlined text-3xl">terrain</span>
+                        </div>
+                        <span
+                            class="text-sm font-medium text-slate-600 group-hover:text-primary transition-colors">Terrenos</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Listings Preview -->
+        <section class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-end mb-10">
+                    <div>
+                        <h2 class="text-3xl font-bold text-slate-800 mb-2">Imóveis em destaque</h2>
+                        <p class="text-slate-500">As melhores oportunidades selecionadas para você</p>
+                    </div>
+                    <a href="#"
+                        class="hidden sm:flex items-center gap-1 text-primary font-bold hover:gap-2 transition-all">
+                        Ver todos <span class="material-symbols-outlined">arrow_forward</span>
+                    </a>
+                </div>
+
+                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Card 1 -->
+                    <div class="group cursor-pointer">
+                        <div class="relative overflow-hidden rounded-xl bg-slate-100 aspect-[4/3] mb-4">
+                            <img src="https://images.unsplash.com/photo-1600596542815-e325098aff12?q=80&w=800&auto=format&fit=crop"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                alt="Imóvel">
+                            <div
+                                class="absolute top-3 left-3 bg-secondary text-white text-xs font-bold px-2 py-1 rounded">
+                                Destaque</div>
+                            <button
+                                class="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/80 hover:bg-white flex items-center justify-center transition-colors">
+                                <span class="material-symbols-outlined text-lg text-slate-600">favorite</span>
+                            </button>
+                        </div>
+                        <div>
+                            <span class="text-xs font-bold text-slate-400 uppercase tracking-wide">Apartamento</span>
+                            <h3
+                                class="font-bold text-lg text-slate-800 truncate group-hover:text-primary transition-colors">
+                                Residencial Vista Alegre</h3>
+                            <p class="text-slate-500 text-sm mb-2">Jardins, São Paulo</p>
+                            <div class="flex items-center gap-3 text-sm text-slate-600 mb-3">
+                                <span class="flex items-center gap-1"><span
+                                        class="material-symbols-outlined text-lg">crop_square</span> 85m²</span>
+                                <span class="flex items-center gap-1"><span
+                                        class="material-symbols-outlined text-lg">bed</span> 2</span>
+                                <span class="flex items-center gap-1"><span
+                                        class="material-symbols-outlined text-lg">directions_car</span> 1</span>
+                            </div>
+                            <div class="flex items-center gap-1">
+                                <span class="text-sm text-slate-500">Venda:</span>
+                                <span class="font-bold text-primary text-xl">R$ 540.000</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="group cursor-pointer">
+                        <div class="relative overflow-hidden rounded-xl bg-slate-100 aspect-[4/3] mb-4">
+                            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                alt="Imóvel">
+                            <div
+                                class="absolute top-3 left-3 bg-green-500 text-white text-xs font-bold px-2 py-1 rounded">
+                                Novo</div>
+                            <button
+                                class="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/80 hover:bg-white flex items-center justify-center transition-colors">
+                                <span class="material-symbols-outlined text-lg text-slate-600">favorite</span>
+                            </button>
+                        </div>
+                        <div>
+                            <span class="text-xs font-bold text-slate-400 uppercase tracking-wide">Casa</span>
+                            <h3
+                                class="font-bold text-lg text-slate-800 truncate group-hover:text-primary transition-colors">
+                                Casa Térrea Moderna</h3>
+                            <p class="text-slate-500 text-sm mb-2">Alphaville, Barueri</p>
+                            <div class="flex items-center gap-3 text-sm text-slate-600 mb-3">
+                                <span class="flex items-center gap-1"><span
+                                        class="material-symbols-outlined text-lg">crop_square</span> 210m²</span>
+                                <span class="flex items-center gap-1"><span
+                                        class="material-symbols-outlined text-lg">bed</span> 4</span>
+                                <span class="flex items-center gap-1"><span
+                                        class="material-symbols-outlined text-lg">directions_car</span> 3</span>
+                            </div>
+                            <div class="flex items-center gap-1">
+                                <span class="text-sm text-slate-500">Venda:</span>
+                                <span class="font-bold text-primary text-xl">R$ 1.250.000</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="group cursor-pointer">
+                        <div class="relative overflow-hidden rounded-xl bg-slate-100 aspect-[4/3] mb-4">
+                            <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=800&auto=format&fit=crop"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                alt="Imóvel">
+                            <button
+                                class="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/80 hover:bg-white flex items-center justify-center transition-colors">
+                                <span class="material-symbols-outlined text-lg text-slate-600">favorite</span>
+                            </button>
+                        </div>
+                        <div>
+                            <span class="text-xs font-bold text-slate-400 uppercase tracking-wide">Apartamento</span>
+                            <h3
+                                class="font-bold text-lg text-slate-800 truncate group-hover:text-primary transition-colors">
+                                Studio Centro</h3>
+                            <p class="text-slate-500 text-sm mb-2">Centro, Curitiba</p>
+                            <div class="flex items-center gap-3 text-sm text-slate-600 mb-3">
+                                <span class="flex items-center gap-1"><span
+                                        class="material-symbols-outlined text-lg">crop_square</span> 35m²</span>
+                                <span class="flex items-center gap-1"><span
+                                        class="material-symbols-outlined text-lg">bed</span> 1</span>
+                                <span class="flex items-center gap-1"><span
+                                        class="material-symbols-outlined text-lg">directions_car</span> 0</span>
+                            </div>
+                            <div class="flex items-center gap-1">
+                                <span class="text-sm text-slate-500">Aluguel:</span>
+                                <span class="font-bold text-primary text-xl">R$ 1.800</span><span
+                                    class="text-xs text-slate-400">/mês</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="group cursor-pointer">
+                        <div class="relative overflow-hidden rounded-xl bg-slate-100 aspect-[4/3] mb-4">
+                            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=800&auto=format&fit=crop"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                alt="Imóvel">
+                            <button
+                                class="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/80 hover:bg-white flex items-center justify-center transition-colors">
+                                <span class="material-symbols-outlined text-lg text-slate-600">favorite</span>
+                            </button>
+                        </div>
+                        <div>
+                            <span class="text-xs font-bold text-slate-400 uppercase tracking-wide">Casa</span>
+                            <h3
+                                class="font-bold text-lg text-slate-800 truncate group-hover:text-primary transition-colors">
+                                Sobrado Geminado</h3>
+                            <p class="text-slate-500 text-sm mb-2">Saguaçu, Joinville</p>
+                            <div class="flex items-center gap-3 text-sm text-slate-600 mb-3">
+                                <span class="flex items-center gap-1"><span
+                                        class="material-symbols-outlined text-lg">crop_square</span> 110m²</span>
+                                <span class="flex items-center gap-1"><span
+                                        class="material-symbols-outlined text-lg">bed</span> 3</span>
+                                <span class="flex items-center gap-1"><span
+                                        class="material-symbols-outlined text-lg">directions_car</span> 1</span>
+                            </div>
+                            <div class="flex items-center gap-1">
+                                <span class="text-sm text-slate-500">Venda:</span>
+                                <span class="font-bold text-primary text-xl">R$ 450.000</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8 text-center sm:hidden">
+                    <a href="#"
+                        class="inline-flex items-center gap-1 text-primary font-bold hover:gap-2 transition-all">
+                        Ver todos <span class="material-symbols-outlined">arrow_forward</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Simple Footer -->
+    <footer class="bg-slate-50 border-t border-slate-100 pt-12 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <a href="#" class="flex items-center gap-2 mb-4">
+                        <div
+                            class="w-8 h-8 bg-gradient-to-tr from-secondary to-primary rounded-lg flex items-center justify-center text-white">
+                            <span class="material-symbols-outlined text-sm">home_work</span>
+                        </div>
+                        <span class="text-lg font-bold text-slate-800">Portal Imóveis</span>
+                    </a>
+                    <p class="text-sm text-slate-500">Encontre o imóvel ideal com a facilidade e rapidez que você
+                        merece.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-slate-800 mb-4">Navegação</h4>
+                    <ul class="space-y-2 text-sm text-slate-500">
+                        <li><a href="#" class="hover:text-primary">Alugar</a></li>
+                        <li><a href="#" class="hover:text-primary">Comprar</a></li>
+                        <li><a href="#" class="hover:text-primary">Lançamentos</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-slate-800 mb-4">Institucional</h4>
+                    <ul class="space-y-2 text-sm text-slate-500">
+                        <li><a href="#" class="hover:text-primary">Sobre nós</a></li>
+                        <li><a href="#" class="hover:text-primary">Carreiras</a></li>
+                        <li><a href="#" class="hover:text-primary">Contato</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-slate-800 mb-4">Aplicativo</h4>
+                    <div class="flex gap-2">
+                        <div
+                            class="w-1/2 h-10 bg-slate-200 rounded-lg flex items-center justify-center text-xs text-slate-500">
+                            Google Play</div>
+                        <div
+                            class="w-1/2 h-10 bg-slate-200 rounded-lg flex items-center justify-center text-xs text-slate-500">
+                            App Store</div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center text-xs text-slate-400 border-t border-slate-200 pt-8">
+                &copy; 2024 Portal Imóveis Modelo. Criado por Chave Reserva.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Hub -->
+    <a href="layout-sites.html"
+        class="fixed bottom-6 right-6 z-50 bg-brand-dark/90 text-white px-4 py-3 rounded-full shadow-lg font-medium flex items-center gap-2 hover:bg-black transition-all">
+        <span class="material-symbols-outlined text-lg">arrow_back</span>
+        Voltar aos Modelos
+    </a>
+
+</body>
+
+</html>

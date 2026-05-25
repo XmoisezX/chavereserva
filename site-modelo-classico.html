@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo Tradição - Família e Conforto</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <!-- FontAwesome for Icons in Card -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e3a8a', /* Navy */
+                        secondary: '#d97706', /* Amber */
+                        beige: '#fcfbf9'
+                    },
+                    fontFamily: {
+                        serif: ['Merriweather', 'serif'],
+                        sans: ['Open Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-beige text-gray-800 font-sans">
+
+    <!-- Top Bar -->
+    <div class="bg-primary text-white py-2 text-sm">
+        <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
+            <div class="flex items-center gap-4">
+                <span class="flex items-center gap-1"><span class="material-icons-outlined text-xs">phone</span> (11)
+                    3344-5566</span>
+                <span class="flex items-center gap-1"><span class="material-icons-outlined text-xs">email</span>
+                    contato@tradicao.com.br</span>
+            </div>
+            <div class="flex gap-4">
+                <a href="#" class="hover:text-secondary">Área do Cliente</a>
+                <a href="#" class="hover:text-secondary">Corretores</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm py-6 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
+            <div class="text-3xl font-serif font-bold text-primary tracking-tight">Família.</div>
+            <nav class="hidden md:flex space-x-8 font-semibold text-gray-600">
+                <a href="#" class="text-primary hover:text-secondary">Início</a>
+                <a href="#" class="hover:text-secondary">Comprar</a>
+                <a href="#" class="hover:text-secondary">Alugar</a>
+                <a href="#" class="hover:text-secondary">Quem Somos</a>
+                <a href="#" class="hover:text-secondary">Fale Conosco</a>
+            </nav>
+            <a href="#"
+                class="bg-secondary text-white px-6 py-2 rounded shadow hover:bg-orange-700 transition-colors font-bold">
+                Agendar Visita
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <div class="relative h-[500px]">
+        <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+            alt="Casa Suburban" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-primary/40"></div>
+        <div class="absolute inset-0 flex items-center justify-center pt-10">
+            <div class="text-center text-white px-4">
+                <h1 class="text-4xl md:text-5xl font-serif font-bold mb-4 shadow-sm">Encontre o lar para sua família
+                    crescer.</h1>
+                <p class="text-lg md:text-xl font-light">Tradição e confiança há mais de 40 anos.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Filter Section (Traditional Style) -->
+    <div class="max-w-5xl mx-auto px-4 relative z-20 -mt-24 mb-16">
+        <div class="bg-white rounded-t-lg p-2 inline-flex gap-1 shadow-lg relative top-[1px] z-10">
+            <button class="bg-primary text-white px-6 py-2 rounded-t font-bold text-sm">Comprar</button>
+            <button
+                class="bg-gray-100 text-gray-600 hover:bg-gray-200 px-6 py-2 rounded-t font-bold text-sm transition-colors">Alugar</button>
+        </div>
+        <div class="bg-white rounded-b-lg rounded-tr-lg shadow-xl p-8 border-t-4 border-primary">
+            <form class="grid grid-cols-1 md:grid-cols-4 gap-6 items-end">
+                <div class="md:col-span-1">
+                    <label class="block text-sm font-bold text-gray-600 mb-2">Tipo de Imóvel</label>
+                    <select
+                        class="w-full bg-gray-50 border border-gray-300 rounded px-3 py-2 text-gray-700 focus:outline-none focus:border-primary">
+                        <option>Todos</option>
+                        <option>Casa</option>
+                        <option>Apartamento</option>
+                        <option>Terreno</option>
+                    </select>
+                </div>
+
+                <div class="md:col-span-2">
+                    <label class="block text-sm font-bold text-gray-600 mb-2">Onde você quer morar?</label>
+                    <div class="relative">
+                        <input type="text" placeholder="Digite cidade ou bairro"
+                            class="w-full px-4 py-2 bg-gray-50 border border-gray-300 rounded text-gray-700 focus:outline-none focus:border-primary pl-10">
+                        <span class="material-icons-outlined absolute left-2 top-2 text-gray-400">search</span>
+                    </div>
+                </div>
+
+                <div class="md:col-span-1">
+                    <button type="button"
+                        class="w-full bg-secondary hover:bg-orange-700 text-white font-bold py-2 rounded shadow transition-colors uppercase text-sm tracking-wide">
+                        Pesquisar
+                    </button>
+                </div>
+            </form>
+            <div class="mt-4 text-right">
+                <a href="#" class="text-sm text-primary font-bold hover:underline">+ Busca Avançada</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Features -->
+    <section class="py-12 bg-beige">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-serif font-bold text-gray-800 mb-4">Nossa Seleção Residencial</h2>
+                <div class="w-20 h-1 bg-secondary mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- STANDARDIZED CARD 1 - TRADITIONAL VARIANT -->
+                <div
+                    class="bg-white rounded shadow-md overflow-hidden flex flex-col group hover:shadow-xl transition-all duration-300 border border-gray-200">
+                    <div class="relative h-64 overflow-hidden">
+                        <div class="absolute top-4 left-4 z-10 flex gap-2">
+                            <span
+                                class="bg-secondary text-white text-xs font-bold px-3 py-1 rounded shadow-sm">Venda</span>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="Imóvel"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                        <button
+                            class="absolute bottom-4 right-4 bg-white text-gray-400 p-2 rounded-full shadow hover:text-red-500 transition-colors">
+                            <span class="material-icons-outlined block">favorite_border</span>
+                        </button>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="mb-4">
+                            <h3
+                                class="text-lg font-bold font-serif text-primary mb-1 group-hover:text-secondary transition-colors">
+                                <a href="imovel-detalhe-classico.html">Sobrado no Brooklin</a>
+                            </h3>
+                            <p class="text-sm text-gray-500 flex items-center gap-1"><span
+                                    class="material-icons-outlined text-sm">place</span> Brooklin, São Paulo</p>
+                        </div>
+
+                        <div
+                            class="grid grid-cols-3 gap-2 py-4 border-t border-gray-100 my-2 text-center text-sm text-gray-600">
+                            <span class="flex items-center justify-center gap-1"><i
+                                    class="fa-solid fa-bed text-gray-400"></i> 3 Quartos</span>
+                            <span class="flex items-center justify-center gap-1"><i
+                                    class="fa-solid fa-shower text-gray-400"></i> 2 Banho</span>
+                            <span class="flex items-center justify-center gap-1"><i
+                                    class="fa-solid fa-car text-gray-400"></i> 2 Vagas</span>
+                        </div>
+
+                        <div class="mt-auto pt-4 flex justify-between items-center border-t border-gray-100">
+                            <div>
+                                <span class="text-xl font-bold text-secondary">R$ 850.000</span>
+                            </div>
+                            <span class="text-xs text-white bg-primary px-2 py-1 rounded">Ref. 2304</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- STANDARDIZED CARD 2 - TRADITIONAL VARIANT -->
+                <div
+                    class="bg-white rounded shadow-md overflow-hidden flex flex-col group hover:shadow-xl transition-all duration-300 border border-gray-200">
+                    <div class="relative h-64 overflow-hidden">
+                        <div class="absolute top-4 left-4 z-10 flex gap-2">
+                            <span
+                                class="bg-secondary text-white text-xs font-bold px-3 py-1 rounded shadow-sm">Venda</span>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1576941089067-dbde68d01a10?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="Imóvel"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                        <button
+                            class="absolute bottom-4 right-4 bg-white text-gray-400 p-2 rounded-full shadow hover:text-red-500 transition-colors">
+                            <span class="material-icons-outlined block">favorite_border</span>
+                        </button>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="mb-4">
+                            <h3
+                                class="text-lg font-bold font-serif text-primary mb-1 group-hover:text-secondary transition-colors">
+                                <a href="imovel-detalhe-classico.html">Casa Térrea Morumbi</a>
+                            </h3>
+                            <p class="text-sm text-gray-500 flex items-center gap-1"><span
+                                    class="material-icons-outlined text-sm">place</span> Morumbi, São Paulo</p>
+                        </div>
+
+                        <div
+                            class="grid grid-cols-3 gap-2 py-4 border-t border-gray-100 my-2 text-center text-sm text-gray-600">
+                            <span class="flex items-center justify-center gap-1"><i
+                                    class="fa-solid fa-bed text-gray-400"></i> 4 Quartos</span>
+                            <span class="flex items-center justify-center gap-1"><i
+                                    class="fa-solid fa-shower text-gray-400"></i> 3 Banho</span>
+                            <span class="flex items-center justify-center gap-1"><i
+                                    class="fa-solid fa-car text-gray-400"></i> 3 Vagas</span>
+                        </div>
+
+                        <div class="mt-auto pt-4 flex justify-between items-center border-t border-gray-100">
+                            <div>
+                                <span class="text-xl font-bold text-secondary">R$ 920.000</span>
+                            </div>
+                            <span class="text-xs text-white bg-primary px-2 py-1 rounded">Ref. 5501</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- STANDARDIZED CARD 3 - TRADITIONAL VARIANT -->
+                <div
+                    class="bg-white rounded shadow-md overflow-hidden flex flex-col group hover:shadow-xl transition-all duration-300 border border-gray-200">
+                    <div class="relative h-64 overflow-hidden">
+                        <div class="absolute top-4 left-4 z-10 flex gap-2">
+                            <span
+                                class="bg-green-600 text-white text-xs font-bold px-3 py-1 rounded shadow-sm">Aluguel</span>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1523217582562-09d0def993a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="Imóvel"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                        <button
+                            class="absolute bottom-4 right-4 bg-white text-gray-400 p-2 rounded-full shadow hover:text-red-500 transition-colors">
+                            <span class="material-icons-outlined block">favorite_border</span>
+                        </button>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="mb-4">
+                            <h3
+                                class="text-lg font-bold font-serif text-primary mb-1 group-hover:text-secondary transition-colors">
+                                <a href="imovel-detalhe-classico.html">Apartamento Moema</a>
+                            </h3>
+                            <p class="text-sm text-gray-500 flex items-center gap-1"><span
+                                    class="material-icons-outlined text-sm">place</span> Moema, São Paulo</p>
+                        </div>
+
+                        <div
+                            class="grid grid-cols-3 gap-2 py-4 border-t border-gray-100 my-2 text-center text-sm text-gray-600">
+                            <span class="flex items-center justify-center gap-1"><i
+                                    class="fa-solid fa-bed text-gray-400"></i> 3 Quartos</span>
+                            <span class="flex items-center justify-center gap-1"><i
+                                    class="fa-solid fa-shower text-gray-400"></i> 2 Banho</span>
+                            <span class="flex items-center justify-center gap-1"><i
+                                    class="fa-solid fa-car text-gray-400"></i> 1 Vaga</span>
+                        </div>
+
+                        <div class="mt-auto pt-4 flex justify-between items-center border-t border-gray-100">
+                            <div>
+                                <span class="text-xl font-bold text-secondary">R$ 3.800 <small
+                                        class="text-gray-500 font-normal">/mês</small></span>
+                            </div>
+                            <span class="text-xs text-white bg-primary px-2 py-1 rounded">Ref. 1190</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-12 border-t-4 border-secondary">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+                <h4 class="text-xl font-serif font-bold mb-4">Família.</h4>
+                <p class="text-blue-200 text-sm">Desde 1980 realizando sonhos e construindo histórias felizes.</p>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4">Contato</h4>
+                <p class="text-blue-200 text-sm mb-2">Rua das Flores, 123</p>
+                <p class="text-blue-200 text-sm mb-2">(11) 3344-5566</p>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4">Links Úteis</h4>
+                <ul class="text-blue-200 text-sm space-y-2">
+                    <li><a href="#" class="hover:text-white">Financiamento</a></li>
+                    <li><a href="#" class="hover:text-white">Documentação</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4">Social</h4>
+                <div class="flex gap-4">
+                    <span
+                        class="w-8 h-8 bg-blue-800 rounded flex items-center justify-center cursor-pointer hover:bg-secondary transition-colors">F</span>
+                    <span
+                        class="w-8 h-8 bg-blue-800 rounded flex items-center justify-center cursor-pointer hover:bg-secondary transition-colors">I</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <a href="layout-sites.html"
+        class="fixed bottom-6 right-6 bg-secondary text-white px-6 py-3 rounded shadow hover:bg-orange-700 transition-colors z-50 font-bold flex items-center gap-2">
+        <span class="material-icons-outlined">grid_view</span> Voltar aos Modelos
+    </a>
+
+    <script src="js/chatbot.js"></script>
+</body>
+
+</html>

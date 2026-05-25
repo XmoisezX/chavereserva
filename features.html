@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="pt-BR">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Recursos - Chave Reserva | CRM Imobiliário</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#2563eb",
+            "background-light": "#f8fafc",
+            "background-dark": "#0f172a",
+          },
+          fontFamily: {
+            display: ["Inter", "sans-serif"],
+            sans: ["Inter", "sans-serif"],
+          },
+          borderRadius: {
+            DEFAULT: "0.75rem",
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+
+    .gradient-bg {
+      background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+    }
+
+    .feature-card:hover {
+      transform: translateY(-4px);
+      transition: all 0.3s ease;
+    }
+  </style>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body
+  class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-200 transition-colors duration-300">
+  <nav
+    class="sticky top-0 z-50 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <div class="flex items-center gap-2">
+          <a href="index.html" class="flex items-center gap-2">
+            <img alt="Chave Reserva Logo" class="h-10 w-auto" src="logo.png" />
+          </a>
+        </div>
+        <div class="hidden md:flex items-center space-x-8">
+          <a class="text-sm font-semibold hover:text-primary transition-colors" href="features.html">Recursos</a>
+          <a class="text-sm font-semibold hover:text-primary transition-colors" href="pricing.html">Planos</a>
+          <a class="text-sm font-semibold hover:text-primary transition-colors" href="portal.html">Portal</a>
+          <a class="text-sm font-semibold hover:text-primary transition-colors" href="blog.html">Blog</a>
+          <a class="text-sm font-semibold hover:text-primary transition-colors" href="layout-sites.html">Layout
+            Sites</a>
+          <a class="text-sm font-semibold hover:text-primary transition-colors" href="login.html">Login</a>
+          <a class="px-5 py-2.5 bg-primary text-white rounded-full font-bold text-sm hover:shadow-lg hover:shadow-primary/30 transition-all"
+            href="#">Começar Grátis</a>
+  </nav>
+  <div class="md:hidden flex items-center">
+    <button id="mobile-menu-btn" class="text-slate-500 hover:text-primary p-2">
+      <span class="material-symbols-outlined text-2xl">menu</span>
+    </button>
+  </div>
+  </div>
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden md:hidden pb-4 space-y-2">
+    <a class="block py-2 text-sm font-semibold hover:text-primary transition-colors hover:bg-slate-50 dark:hover:bg-slate-800 px-2 rounded"
+      href="features.html">Recursos</a>
+    <a class="block py-2 text-sm font-semibold hover:text-primary transition-colors hover:bg-slate-50 dark:hover:bg-slate-800 px-2 rounded"
+      href="pricing.html">Planos</a>
+    <a class="block py-2 text-sm font-semibold hover:text-primary transition-colors hover:bg-slate-50 dark:hover:bg-slate-800 px-2 rounded"
+      href="portal.html">Portal</a>
+    <a class="block py-2 text-sm font-semibold hover:text-primary transition-colors hover:bg-slate-50 dark:hover:bg-slate-800 px-2 rounded"
+      href="blog.html">Blog</a>
+    <a class="block py-2 text-sm font-semibold hover:text-primary transition-colors hover:bg-slate-50 dark:hover:bg-slate-800 px-2 rounded"
+      href="layout-sites.html">Layout Sites</a>
+    <a class="block py-2 mt-2 bg-primary text-white px-5 rounded-full font-bold text-sm text-center" href="#">Começar
+      Grátis</a>
+  </div>
+  </div>
+  </nav>
+  <section class="py-20 lg:py-28 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto">
+        <span class="inline-block py-1 px-3 rounded-full bg-primary/10 text-primary text-sm font-bold mb-4">RECURSOS
+          EXCLUSIVOS</span>
+        <h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 dark:text-white mb-6 leading-tight">
+          Tudo que você precisa para <span class="text-primary italic">escalar</span> sua imobiliária.
+        </h1>
+        <p class="text-lg text-slate-600 dark:text-slate-400 mb-10 leading-relaxed">
+          Do primeiro contato ao fechamento do contrato. Centralizamos sua operação em uma plataforma moderna, intuitiva
+          e focada em resultados.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <button
+            class="px-8 py-4 bg-primary text-white rounded-xl font-bold text-lg hover:bg-blue-700 transition-colors shadow-xl shadow-primary/20">Testar
+            todos os recursos</button>
+          <button
+            class="px-8 py-4 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl font-bold text-lg hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors">Falar
+            com especialista</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="pb-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-16 items-center mb-32">
+        <div class="order-2 lg:order-1">
+          <div
+            class="w-14 h-14 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-2xl flex items-center justify-center mb-6">
+            <span class="material-icons-round text-3xl">people_alt</span>
+          </div>
+          <h2 class="text-3xl font-bold mb-4">Gestão Inteligente de Leads (CRM)</h2>
+          <p class="text-slate-600 dark:text-slate-400 text-lg mb-6 leading-relaxed">
+            Nunca mais perca um lead por falta de acompanhamento. Nosso CRM centraliza todos os contatos vindos de
+            portais, site e redes sociais.
+          </p>
+          <ul class="space-y-4">
+            <li class="flex items-center gap-3">
+              <span class="material-icons-round text-emerald-500">check_circle</span>
+              <span>Distribuição automática de leads (Roleta)</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="material-icons-round text-emerald-500">check_circle</span>
+              <span>Histórico completo de interações</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="material-icons-round text-emerald-500">check_circle</span>
+              <span>Lembretes de follow-up automatizados</span>
+            </li>
+          </ul>
+        </div>
+        <div class="order-1 lg:order-2 bg-slate-200 dark:bg-slate-800 rounded-3xl p-4 shadow-2xl">
+          <img alt="CRM Dashboard Interface" class="rounded-2xl w-full h-auto"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqRjgA3ahtnI0CyLXJ_HeFL81LahlP8VfP5gXNEDqkN_g-WBq8Jj82Jmzf_Q26WezBRE0Uy4GLR9zEM87EEwB6q3OX0ej3T1moVXAknhefjgr_jcHIMHpG_rGXooTt7UUfU69g6oRKm8YpKD2fARj1-WCuz-bh7OZcMYva6BJqpbjQOhEVIG5KahzYyuaRvSqGR6Pg5NZcL_tewSwoFglWjIStwvpXZxsac1ug9WmGxDCFd-oYwZh9breh359Hf-2m9nO9wdzwRn5f" />
+        </div>
+      </div>
+      <div class="grid lg:grid-cols-2 gap-16 items-center mb-32">
+        <div class="bg-slate-200 dark:bg-slate-800 rounded-3xl p-4 shadow-2xl">
+          <img alt="Sales Funnel Visualization" class="rounded-2xl w-full h-auto"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAa0pmhMdg-f2MoC51WHsZWBu6-e7pJq84QhgZJK-NkGHATD97EPWxDi3GuOyxcywBUbALRaeE06QVfoKSwlv4MkK2m4edVBreTx4S5aCrzqC35PqYXl_EIsUkm3J-XsZu_J3EzzHUex4Nhfw9XJzUNs7pUa4_MpFv4n43G9-VNTiY5esxuXK-ftUVH-KRV8iQAAt0yyLrv-U-rvjd69JX0HTSzLjtUlAu9mRInkEpBDupgfH9lMNK5qppMV20RMddnUqML00jIu6pg" />
+        </div>
+        <div>
+          <div
+            class="w-14 h-14 bg-indigo-100 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 rounded-2xl flex items-center justify-center mb-6">
+            <span class="material-icons-round text-3xl">filter_list</span>
+          </div>
+          <h2 class="text-3xl font-bold mb-4">Funil de Vendas Visual</h2>
+          <p class="text-slate-600 dark:text-slate-400 text-lg mb-6 leading-relaxed">
+            Visualize o estágio de cada negociação em tempo real. Identifique gargalos e acelere o fechamento com o
+            Kanban intuitivo.
+          </p>
+          <ul class="space-y-4">
+            <li class="flex items-center gap-3">
+              <span class="material-icons-round text-emerald-500">check_circle</span>
+              <span>Múltiplos funis (Venda, Aluguel, Lançamentos)</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="material-icons-round text-emerald-500">check_circle</span>
+              <span>Gestão de tarefas e compromissos</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="material-icons-round text-emerald-500">check_circle</span>
+              <span>Previsibilidade de faturamento</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="grid lg:grid-cols-2 gap-16 items-center mb-32">
+        <div class="order-2 lg:order-1">
+          <div
+            class="w-14 h-14 bg-orange-100 dark:bg-orange-900/30 text-orange-600 dark:text-orange-400 rounded-2xl flex items-center justify-center mb-6">
+            <span class="material-icons-round text-3xl">hub</span>
+          </div>
+          <h2 class="text-3xl font-bold mb-4">Integração com Portais</h2>
+          <p class="text-slate-600 dark:text-slate-400 text-lg mb-6 leading-relaxed">
+            Publique seus imóveis nos maiores portais do Brasil com apenas um clique. Controle tudo de um único lugar.
+          </p>
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 mt-8 opacity-75">
+            <div
+              class="h-12 bg-white dark:bg-slate-800 rounded-lg flex items-center justify-center font-bold text-xs uppercase tracking-widest border border-slate-200 dark:border-slate-700">
+              ZAP</div>
+            <div
+              class="h-12 bg-white dark:bg-slate-800 rounded-lg flex items-center justify-center font-bold text-xs uppercase tracking-widest border border-slate-200 dark:border-slate-700">
+              VIVAREAL</div>
+            <div
+              class="h-12 bg-white dark:bg-slate-800 rounded-lg flex items-center justify-center font-bold text-xs uppercase tracking-widest border border-slate-200 dark:border-slate-700">
+              OLX</div>
+            <div
+              class="h-12 bg-white dark:bg-slate-800 rounded-lg flex items-center justify-center font-bold text-xs uppercase tracking-widest border border-slate-200 dark:border-slate-700">
+              IMÓVELWEB</div>
+            <div
+              class="h-12 bg-white dark:bg-slate-800 rounded-lg flex items-center justify-center font-bold text-xs uppercase tracking-widest border border-slate-200 dark:border-slate-700">
+              CHAVES NA MÃO</div>
+            <div
+              class="h-12 bg-white dark:bg-slate-800 rounded-lg flex items-center justify-center font-bold text-xs uppercase tracking-widest border border-slate-200 dark:border-slate-700">
+              +80 PORTAIS</div>
+          </div>
+        </div>
+        <div class="order-1 lg:order-2 bg-slate-200 dark:bg-slate-800 rounded-3xl p-4 shadow-2xl">
+          <img alt="Portal Integration Hub" class="rounded-2xl w-full h-auto"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHjAly7JY-htAp6dB36GTwOYRhzoysYTgnn0QZ_MhnMKYqsfzNh_ap1PmoO9Bw56TayTLTL6ZIhboIXRMzxsf4tlrCAlOzlG4GHgj6j3KEPZSPPHkbmiZOoThT1yhUdiAFZY8M9E_kH8cT8VIFmFQQJ2O4wn_1ev7hwYtuQtylVaZirghLJ-_VLLzcHqsGHMLaYESy2hiiqiOuUsynEhZkDgJmFUNpY3-hB-jV07uY75ubk-mLR7Ci23DZ296ca8w1jhBCRvVDiKEq" />
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="bg-slate-900 text-white py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-20 items-center">
+        <div class="relative">
+          <div class="absolute -top-10 -left-10 w-64 h-64 bg-primary/20 rounded-full blur-3xl"></div>
+          <img alt="Mobile App Interface" class="relative z-10 rounded-[3rem] shadow-2xl border-8 border-slate-800"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIcuKGafkE5_ZzXJHL7UI4VafVRQDLLu_UYHGF1jUkT9uuZj0d1NVDqoAC2UL84xdNp5nihyfY5kep8QZ0pmDNe6FwBtDBDsca5hfAKUGRa-9MsGfHcA86kyiE0LvX6Tef93y-2Q1TdPNdaqQSHKmQ3GRnAWnrH5GngdmeFXxZQKQOGuWTBskdh8ME4FlUCB2Gej9XbYfnezpcuzPj8-pWu9yPuPE9amI3V-s_tSkv63Sxq-ICCiPlCjSGP8p00NdY36IIpwJLuR3u" />
+        </div>
+        <div>
+          <h2 class="text-4xl font-extrabold mb-8 leading-tight">Sua imobiliária na palma da mão e na web.</h2>
+          <div class="space-y-8">
+            <div class="flex gap-6">
+              <div class="flex-shrink-0 w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center">
+                <span class="material-icons-round">smartphone</span>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold mb-2">Aplicativo para Corretor</h3>
+                <p class="text-slate-400">Acesse seus leads, agende visitas e cadastre imóveis diretamente do campo.
+                  Disponível para iOS e Android.</p>
+              </div>
+            </div>
+            <div class="flex gap-6">
+              <div class="flex-shrink-0 w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center">
+                <span class="material-icons-round">language</span>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold mb-2">Site Personalizado</h3>
+                <p class="text-slate-400">Sites otimizados para conversão (SEO), integrados ao seu CRM e totalmente
+                  adaptáveis a dispositivos móveis.</p>
+              </div>
+            </div>
+            <div class="flex gap-6">
+              <div class="flex-shrink-0 w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center">
+                <span class="material-icons-round">analytics</span>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold mb-2">Relatórios Gerenciais</h3>
+                <p class="text-slate-400">Acompanhe a performance do seu time com métricas precisas sobre conversão,
+                  vendas e produtividade.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="py-20 bg-white dark:bg-slate-950">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div>
+          <div class="text-4xl font-black text-primary mb-2">5k+</div>
+          <div class="text-sm font-medium text-slate-500 uppercase tracking-widest">Imobiliárias</div>
+        </div>
+        <div>
+          <div class="text-4xl font-black text-primary mb-2">25k+</div>
+          <div class="text-sm font-medium text-slate-500 uppercase tracking-widest">Corretores</div>
+        </div>
+        <div>
+          <div class="text-4xl font-black text-primary mb-2">1M+</div>
+          <div class="text-sm font-medium text-slate-500 uppercase tracking-widest">Leads/Mês</div>
+        </div>
+        <div>
+          <div class="text-4xl font-black text-primary mb-2">R$ 2B+</div>
+          <div class="text-sm font-medium text-slate-500 uppercase tracking-widest">Em Vendas</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="py-24 bg-slate-50 dark:bg-background-dark">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-extrabold text-center mb-12">Perguntas Frequentes</h2>
+      <div class="space-y-4">
+        <details
+          class="group bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-200 dark:border-slate-700 shadow-sm transition-all duration-300 open:shadow-md">
+          <summary class="flex justify-between items-center font-bold cursor-pointer list-none list-inside">
+            Posso migrar meus dados de outro sistema?
+            <span class="material-icons-round transition-transform group-open:rotate-180">expand_more</span>
+          </summary>
+          <p class="mt-4 text-slate-600 dark:text-slate-400 leading-relaxed">
+            Sim! Nossa equipe de especialistas cuida de toda a migração dos seus dados (imóveis, leads e clientes) para
+            garantir que você não perca nada na transição.
+          </p>
+        </details>
+        <details
+          class="group bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-200 dark:border-slate-700 shadow-sm transition-all duration-300 open:shadow-md">
+          <summary class="flex justify-between items-center font-bold cursor-pointer list-none">
+            O treinamento está incluso no plano?
+            <span class="material-icons-round transition-transform group-open:rotate-180">expand_more</span>
+          </summary>
+          <p class="mt-4 text-slate-600 dark:text-slate-400 leading-relaxed">
+            Com certeza. Oferecemos treinamentos ao vivo e uma base de conhecimento completa para que sua equipe domine
+            todas as ferramentas do Chave Reserva.
+          </p>
+        </details>
+        <details
+          class="group bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-200 dark:border-slate-700 shadow-sm transition-all duration-300 open:shadow-md">
+          <summary class="flex justify-between items-center font-bold cursor-pointer list-none">
+            O sistema funciona sem internet?
+            <span class="material-icons-round transition-transform group-open:rotate-180">expand_more</span>
+          </summary>
+          <p class="mt-4 text-slate-600 dark:text-slate-400 leading-relaxed">
+            O Chave Reserva é 100% em nuvem para garantir segurança e mobilidade. No entanto, nosso aplicativo mobile
+            permite algumas funções offline com sincronização posterior.
+          </p>
+        </details>
+      </div>
+    </div>
+  </section>
+  <section class="py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="gradient-bg rounded-[3rem] p-12 md:p-20 text-center text-white relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full -mr-48 -mt-48 blur-3xl"></div>
+        <div class="relative z-10 max-w-2xl mx-auto">
+          <h2 class="text-4xl md:text-5xl font-black mb-6">Pronto para transformar sua imobiliária?</h2>
+          <p class="text-white/80 text-lg mb-10">Junte-se a milhares de profissionais que já usam o Chave Reserva para
+            vender mais e gerir melhor.</p>
+          <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <button
+              class="px-10 py-5 bg-white text-primary rounded-2xl font-black text-lg hover:scale-105 transition-transform">COMEÇAR
+              TESTE GRÁTIS</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-12">
+        <div class="col-span-2 lg:col-span-2">
+          <div class="flex items-center gap-2 mb-6">
+            <div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center text-white">
+              <span class="material-icons-round text-sm">vpn_key</span>
+            </div>
+            <span class="text-xl font-extrabold text-slate-900 dark:text-white">Chave<span
+                class="text-primary">Reserva</span></span>
+          </div>
+          <p class="text-slate-500 dark:text-slate-400 max-w-xs mb-6">
+            A plataforma completa para gestão imobiliária focada em performance e tecnologia de ponta.
+          </p>
+          <div class="flex space-x-4">
+            <a class="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
+              href="#">
+              <i class="material-icons-round text-sm">facebook</i>
+            </a>
+            <a class="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
+              href="#">
+              <i class="material-icons-round text-sm">camera_alt</i>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-bold mb-6">Produto</h4>
+          <ul class="space-y-4 text-slate-500 dark:text-slate-400">
+            <li><a class="hover:text-primary" href="#">Recursos</a></li>
+            <li><a class="hover:text-primary" href="#">Planos</a></li>
+            <li><a class="hover:text-primary" href="#">Integrações</a></li>
+            <li><a class="hover:text-primary" href="#">Aplicativo</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold mb-6">Empresa</h4>
+          <ul class="space-y-4 text-slate-500 dark:text-slate-400">
+            <li><a class="hover:text-primary" href="#">Sobre Nós</a></li>
+            <li><a class="hover:text-primary" href="#">Blog</a></li>
+            <li><a class="hover:text-primary" href="#">Carreiras</a></li>
+            <li><a class="hover:text-primary" href="#">Contato</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold mb-6">Suporte</h4>
+          <ul class="space-y-4 text-slate-500 dark:text-slate-400">
+            <li><a class="hover:text-primary" href="#">Central de Ajuda</a></li>
+            <li><a class="hover:text-primary" href="#">Privacidade</a></li>
+            <li><a class="hover:text-primary" href="#">Termos de Uso</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-slate-100 dark:border-slate-800 mt-16 pt-8 text-center text-slate-400 text-sm">
+        © 2024 Chave Reserva Tecnologia Imobiliária Ltda. Todos os direitos reservados.
+      </div>
+    </div>
+  </footer>
+  <button
+    class="fixed bottom-6 right-6 w-12 h-12 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full shadow-lg flex items-center justify-center z-50"
+    onclick="document.documentElement.classList.toggle('dark')">
+    <span class="material-icons-round text-slate-600 dark:text-slate-300">dark_mode</span>
+  </button>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="js/scripts.js"></script>
+  <script src="js/chatbot.js"></script>
+</body>
+
+</html>

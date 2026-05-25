@@ -1,0 +1,1140 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="pt-br">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Planos - Chave Reserva | CRM Imobiliário</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#2563eb",
+                        "brand-blue": "#3b82f6",
+                        "brand-indigo": "#4f46e5",
+                        "brand-purple": "#8b5cf6",
+                        "brand-green": "#10b981",
+                        "background-light": "#f8fafc",
+                        "background-dark": "#0f172a",
+                    },
+                    fontFamily: {
+                        display: ["Inter", "sans-serif"],
+                        sans: ["Inter", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                        'xl': '1rem',
+                        '2xl': '1.5rem',
+                        '3xl': '2rem',
+                        '4xl': '3rem',
+                    },
+                },
+            },
+        };
+    </script>
+    <style type="text/tailwindcss">
+        .pricing-toggle-shadow {
+            box-shadow: 0 4px 20px 0 rgba(37, 99, 235, 0.15);
+        }
+        .card-hover:hover {
+            transform: translateY(-8px);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .pro-hero-gradient {
+            background: linear-gradient(145deg, #2563eb 0%, #7c3aed 50%, #10b981 100%);
+        }
+        .lite-subtle-gradient {
+            background: linear-gradient(135deg, #ffffff 0%, #eff6ff 100%);
+        }
+        .enterprise-subtle-gradient {
+            background: linear-gradient(135deg, #ffffff 0%, #f5f3ff 100%);
+        }
+        .blob-shape {
+            position: absolute;
+            z-index: -1;
+            filter: blur(80px);
+            opacity: 0.12;
+        }
+        .stagger-down {
+            transform: translateY(30px);
+        }
+        .pro-glow {
+            box-shadow: 0 25px 50px -12px rgba(37, 99, 235, 0.35);
+        }
+    </style>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-sans antialiased overflow-x-hidden">
+
+
+    <nav
+        class="sticky top-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center gap-2">
+                    <a href="index.html" class="flex items-center gap-2">
+                        <img alt="Chave Reserva Logo" class="h-10 w-auto" src="logo.png" />
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="portal.html">Portal</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors"
+                        href="features.html">Recursos</a>
+                    <a class="text-sm font-medium text-primary" href="pricing.html">Planos</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="blog.html">Blog</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="layout-sites.html">Layout
+                        Sites</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="login.html">Login</a>
+                    <button
+                        class="bg-primary hover:bg-brand-indigo text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-all shadow-lg shadow-blue-500/25">
+                        Teste Grátis
+                    </button>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-500 hover:text-primary p-2">
+                        <span class="material-symbols-outlined text-2xl">menu</span>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden pb-4 space-y-2">
+                <a class="block py-2 text-sm font-medium hover:text-primary transition-colors px-2 rounded hover:bg-slate-50 dark:hover:bg-slate-800"
+                    href="portal.html">Portal</a>
+                <a class="block py-2 text-sm font-medium hover:text-primary transition-colors px-2 rounded hover:bg-slate-50 dark:hover:bg-slate-800"
+                    href="features.html">Recursos</a>
+                <a class="block py-2 text-sm font-medium text-primary px-2 rounded hover:bg-slate-50 dark:hover:bg-slate-800"
+                    href="pricing.html">Planos</a>
+                <a class="block py-2 text-sm font-medium hover:text-primary transition-colors px-2 rounded hover:bg-slate-50 dark:hover:bg-slate-800"
+                    href="blog.html">Blog</a>
+                <a class="block py-2 text-sm font-medium hover:text-primary transition-colors px-2 rounded hover:bg-slate-50 dark:hover:bg-slate-800"
+                    href="layout-sites.html">Layout Sites</a>
+                <button
+                    class="w-full mt-2 bg-primary hover:bg-brand-indigo text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-all shadow-lg shadow-blue-500/25">
+                    Teste Grátis
+                </button>
+            </div>
+        </div>
+    </nav>
+    <header class="pt-24 pb-12 text-center px-4 relative overflow-hidden">
+        <div class="blob-shape bg-brand-blue w-[500px] h-[500px] -top-20 -left-20 rounded-full"></div>
+        <div class="blob-shape bg-brand-green w-[400px] h-[400px] bottom-0 -right-20 rounded-full"></div>
+        <div class="blob-shape bg-brand-purple w-[300px] h-[300px] top-1/2 left-1/2 -translate-x-1/2 rounded-full">
+        </div>
+        <h1
+            class="text-4xl md:text-6xl font-display font-extrabold mb-6 tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-blue-700 via-indigo-600 to-emerald-500">
+            Temos o melhor plano para você crescer
+        </h1>
+        <p class="text-slate-500 dark:text-slate-400 max-w-2xl mx-auto text-lg md:text-xl font-medium">
+            Organize sua imobiliária, ganhe tempo e venda mais com uma plataforma completa para corretores e
+            imobiliárias.
+        </p>
+        <div class="mt-12 flex flex-col items-center justify-center gap-16">
+            <!-- Plan Type Toggle -->
+            <div
+                class="inline-flex p-1.5 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full shadow-lg transform hover:scale-105 transition-transform duration-300">
+                <button id="btn-corretor" onclick="switchPlanType('corretor')"
+                    class="px-10 py-3.5 rounded-full text-base font-bold transition-all hover:text-primary text-slate-500">
+                    Para Corretores
+                </button>
+                <button id="btn-imobiliaria" onclick="switchPlanType('imobiliaria')"
+                    class="px-10 py-3.5 rounded-full text-base font-bold transition-all bg-white text-primary shadow-sm border border-slate-100">
+                    Para Imobiliárias
+                </button>
+            </div>
+
+            <!-- Billing Cycle Toggle -->
+            <div class="flex flex-col items-center gap-4">
+                <div
+                    class="inline-flex items-center p-1.5 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full pricing-toggle-shadow">
+                    <button id="btn-anual" onclick="switchBilling('anual')"
+                        class="px-10 py-3 text-sm font-bold rounded-full bg-primary text-white shadow-md transition-all">Anual</button>
+                    <button id="btn-mensal" onclick="switchBilling('mensal')"
+                        class="px-10 py-3 text-sm font-medium rounded-full text-slate-500 dark:text-slate-400 hover:text-primary transition-all">Mensal</button>
+                </div>
+
+                <div id="savings-badge"
+                    class="whitespace-nowrap bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-4 py-1.5 rounded-full text-xs font-bold shadow-lg shadow-blue-500/30 flex items-center gap-1 transition-opacity duration-300">
+                    <span class="material-symbols-outlined text-sm">auto_awesome</span>
+                    Economize até 20%
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="max-w-[1400px] mx-auto px-4 py-12 mb-20 min-h-[600px]" style="zoom: 0.75;">
+
+        <!-- PLANOS PARA CORRETORES (2 CARDS) -->
+        <div id="plans-corretor"
+            class="hidden opacity-0 transition-opacity duration-500 ease-in-out flex flex-col md:flex-row items-start justify-center gap-8">
+            <!-- Card 1: Free -->
+            <div class="w-full md:w-[48%] lg:w-[45%]">
+                <div
+                    class="card-hover bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-3xl p-6 flex flex-col shadow-lg h-full">
+                    <div class="flex items-center gap-2 mb-4">
+                        <span class="material-symbols-outlined text-slate-500 bg-slate-100 p-2 rounded-lg">person</span>
+                        <h3 class="text-xl font-bold text-slate-800 dark:text-white">Corretor Free</h3>
+                    </div>
+                    <p class="text-sm text-slate-500 dark:text-slate-400 mb-5 min-h-[48px]">Comece sua jornada digital
+                        sem custos.</p>
+                    <div class="mb-5">
+                        <div class="flex items-baseline gap-1">
+                            <span class="text-sm font-bold text-slate-600">R$</span>
+                            <span class="text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white">0</span>
+                            <span class="text-slate-500 font-medium">/mês</span>
+                        </div>
+                        <p class="text-xs text-slate-400 mt-1 font-medium">Para sempre gratuito</p>
+                    </div>
+                    <button
+                        class="w-full py-3.5 px-4 border-2 border-slate-300 text-slate-600 hover:bg-slate-100 font-bold rounded-xl transition-all mb-5 shadow-sm">
+                        Teste Grátis 15 Dias
+                    </button>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex items-center gap-3 font-bold text-slate-700 dark:text-slate-300">
+                            <span class="material-symbols-outlined text-brand-green text-lg">check_circle</span> 1
+                            usuário
+                        </div>
+                        <div class="flex items-center gap-3 font-bold text-slate-700 dark:text-slate-300">
+                            <span class="material-symbols-outlined text-brand-green text-lg">check_circle</span> Até 50
+                            imóveis
+                        </div>
+                        <div class="pt-6 border-t border-slate-100 dark:border-slate-700">
+                            <ul class="space-y-3 text-slate-600 dark:text-slate-400">
+                                <li class="flex items-center gap-2"><span
+                                        class="w-1.5 h-1.5 rounded-full bg-slate-400"></span> Até 100 leads</li>
+                                <li class="flex items-center gap-2"><span
+                                        class="w-1.5 h-1.5 rounded-full bg-slate-400"></span> Funil simples de vendas
+                                </li>
+                                <li class="flex items-center gap-2"><span
+                                        class="w-1.5 h-1.5 rounded-full bg-slate-400"></span> Agenda básica</li>
+                                <li class="flex items-center gap-2"><span
+                                        class="w-1.5 h-1.5 rounded-full bg-slate-400"></span> Registro manual
+                                    atendimentos</li>
+                                <li class="flex items-center gap-2"><span
+                                        class="w-1.5 h-1.5 rounded-full bg-slate-400"></span> Link público do imóvel
+                                </li>
+                                <li class="flex items-center gap-2"><span
+                                        class="w-1.5 h-1.5 rounded-full bg-slate-400"></span> Relatórios básicos</li>
+                                <li class="flex items-center gap-2"><span
+                                        class="w-1.5 h-1.5 rounded-full bg-slate-400"></span> Branding do CRM visível
+                                </li>
+                                <li class="flex items-center gap-2"><span
+                                        class="w-1.5 h-1.5 rounded-full bg-slate-400"></span> Treinamento em vídeos e
+                                    FAQ</li>
+                                <li class="flex items-center gap-2 text-slate-400"><span
+                                        class="material-symbols-outlined text-sm">cancel</span> Sem WhatsApp</li>
+                                <li class="flex items-center gap-2 text-slate-400"><span
+                                        class="material-symbols-outlined text-sm">cancel</span> Sem automações</li>
+                                <li class="flex items-center gap-2 text-slate-400"><span
+                                        class="material-symbols-outlined text-sm">cancel</span> Sem integrações</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2: Pro -->
+            <div class="w-full md:w-[48%] lg:w-[45%] relative">
+                <div
+                    class="absolute -top-4 left-1/2 -translate-x-1/2 bg-brand-blue text-white text-[10px] font-black px-4 py-1.5 rounded-full uppercase tracking-widest shadow-lg z-20">
+                    Recomendado
+                </div>
+                <div
+                    class="card-hover pro-hero-gradient text-white rounded-3xl p-6 flex flex-col pro-glow relative overflow-hidden h-full border border-blue-400/30">
+                    <div class="absolute top-0 right-0 p-8 opacity-10">
+                        <span class="material-symbols-outlined text-9xl">workspace_premium</span>
+                    </div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <span
+                            class="material-symbols-outlined text-white bg-white/20 p-2 rounded-lg">workspace_premium</span>
+                        <h3 class="text-xl font-bold">Corretor PRO</h3>
+                    </div>
+                    <p class="text-sm text-blue-50 mb-5 min-h-[48px]">Mais visibilidade e ferramentas profissionais.</p>
+                    <div class="mb-5">
+                        <div class="flex items-baseline gap-1">
+                            <span class="text-sm font-bold text-white/80">R$</span>
+                            <span class="text-4xl font-extrabold tracking-tight text-white price-value"
+                                data-base-price="100">100</span>
+                            <span class="text-white/80 font-medium">/mês</span>
+                        </div>
+                        <p class="text-xs text-white/70 mt-1 font-medium billing-text">Por mês, pago anualmente</p>
+                    </div>
+                    <button
+                        class="w-full py-3.5 px-4 bg-white text-brand-blue hover:bg-blue-50 font-bold rounded-xl transition-all mb-5 shadow-xl">
+                        Teste Grátis 15 Dias
+                    </button>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex items-center gap-3 font-bold text-white">
+                            <span class="material-symbols-outlined text-emerald-400 text-lg">check_circle</span> 1
+                            usuário
+                        </div>
+                        <div class="flex items-center gap-3 font-bold text-white">
+                            <span class="material-symbols-outlined text-emerald-400 text-lg">check_circle</span> 500
+                            imóveis
+                        </div>
+                        <div class="pt-6 border-t border-white/20">
+                            <p class="font-bold mb-4 text-white uppercase text-xs tracking-wider">Tudo do Free, mais:
+                            </p>
+                            <ul class="space-y-3 text-blue-50">
+                                <li class="flex items-center gap-2"><span
+                                        class="w-1.5 h-1.5 rounded-full bg-white"></span> Leads ilimitados</li>
+                                <li class="flex items-center gap-2"><span
+                                        class="w-1.5 h-1.5 rounded-full bg-white"></span> Funil personalizável</li>
+                                <li class="flex items-center gap-2"><span
+                                        class="w-1.5 h-1.5 rounded-full bg-white"></span> Integração WhatsApp
+                                    (semi-auto)</li>
+                                <li class="flex items-center gap-2"><span
+                                        class="w-1.5 h-1.5 rounded-full bg-white"></span> Modelos de mensagens</li>
+                                <li class="flex items-center gap-2"><span
+                                        class="w-1.5 h-1.5 rounded-full bg-white"></span> Automação básica follow-up
+                                </li>
+                                <li class="flex items-center gap-2"><span
+                                        class="w-1.5 h-1.5 rounded-full bg-white"></span> Controle de propostas</li>
+                                <li class="flex items-center gap-2"><span
+                                        class="w-1.5 h-1.5 rounded-full bg-white"></span> Relatórios de desempenho</li>
+                                <li class="flex items-center gap-2"><span
+                                        class="w-1.5 h-1.5 rounded-full bg-white"></span> Agenda com notificações</li>
+                                <li class="flex items-center gap-2"><span
+                                        class="w-1.5 h-1.5 rounded-full bg-white"></span> Exportação de dados</li>
+                                <li class="flex items-center gap-2"><span
+                                        class="w-1.5 h-1.5 rounded-full bg-white"></span> Suporte WhatsApp</li>
+                                <li class="flex items-center gap-2"><span
+                                        class="w-1.5 h-1.5 rounded-full bg-white"></span> Treinamento online</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PLANOS PARA IMOBILIÁRIAS (3 CARDS) -->
+        <div id="plans-imobiliaria"
+            class="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-4 relative transition-opacity duration-500 ease-in-out">
+            <!-- Card 1: Basic -->
+            <div class="w-full lg:w-[30%] lg:mt-16 z-10">
+                <div
+                    class="card-hover lite-subtle-gradient dark:bg-slate-800 border border-blue-100 dark:border-slate-700 rounded-3xl p-6 flex flex-col shadow-xl">
+                    <div class="flex items-center gap-2 mb-4">
+                        <span
+                            class="material-symbols-outlined text-brand-blue bg-blue-50 p-2 rounded-lg">business_center</span>
+                        <h3 class="text-xl font-bold text-slate-800 dark:text-white">Imobiliária Basic</h3>
+                    </div>
+                    <p class="text-sm text-slate-500 dark:text-slate-400 mb-5 min-h-[48px]">CRM essencial para pequenas
+                        imobiliárias.</p>
+                    <div class="mb-5">
+                        <div class="flex items-baseline gap-1">
+                            <span class="text-sm font-bold text-blue-600">R$</span>
+                            <span
+                                class="text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white price-value"
+                                data-base-price="149">149</span>
+                            <span class="text-slate-500 font-medium">/mês</span>
+                        </div>
+                        <p class="text-xs text-slate-400 mt-1 font-medium billing-text">Por mês, pago anualmente</p>
+                    </div>
+                    <button
+                        class="w-full py-3.5 px-4 border-2 border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white font-bold rounded-xl transition-all mb-5 shadow-sm">
+                        Teste Grátis 15 Dias
+                    </button>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex items-center gap-3 font-bold text-slate-700 dark:text-slate-300">
+                            <span class="material-symbols-outlined text-brand-green text-lg">check_circle</span> Até 5
+                            usuários
+                        </div>
+                        <div class="pt-6 border-t border-blue-100 dark:border-slate-700">
+                            <p class="font-bold mb-4 text-slate-800 dark:text-white uppercase text-xs tracking-wider">
+                                Recursos Inclusos</p>
+                            <ul class="space-y-3 text-slate-600 dark:text-slate-400">
+                                <li class="flex items-center gap-2"><span
+                                        class="w-1.5 h-1.5 rounded-full bg-blue-400"></span> Gestão de corretores</li>
+                                <li class="flex items-center gap-2"><span
+                                        class="w-1.5 h-1.5 rounded-full bg-blue-400"></span> Distribuição manual de
+                                    leads</li>
+                                <li class="flex items-center gap-2"><span
+                                        class="w-1.5 h-1.5 rounded-full bg-blue-400"></span> Cadastro centralizado
+                                    imóveis</li>
+                                <li class="flex items-center gap-2"><span
+                                        class="w-1.5 h-1.5 rounded-full bg-blue-400"></span> Relatórios por corretor
+                                </li>
+                                <li class="flex items-center gap-2"><span
+                                        class="w-1.5 h-1.5 rounded-full bg-blue-400"></span> Agenda compartilhada</li>
+                                <li class="flex items-center gap-2"><span
+                                        class="w-1.5 h-1.5 rounded-full bg-blue-400"></span> Dashboard da imobiliária
+                                </li>
+                                <li class="flex items-center gap-2"><span
+                                        class="w-1.5 h-1.5 rounded-full bg-blue-400"></span> White label parcial</li>
+                                <li class="flex items-center gap-2"><span
+                                        class="w-1.5 h-1.5 rounded-full bg-blue-400"></span> Suporte dedicado</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2: Pro -->
+            <div class="w-full lg:w-[38%] z-20">
+                <div
+                    class="card-hover pro-hero-gradient text-white rounded-4xl p-8 flex flex-col pro-glow relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-8 opacity-10">
+                        <span class="material-symbols-outlined text-9xl">rocket_launch</span>
+                    </div>
+                    <div
+                        class="absolute top-6 right-6 bg-white/20 backdrop-blur-md text-white text-[10px] font-black px-4 py-1.5 rounded-full uppercase tracking-widest flex items-center gap-1.5 border border-white/30">
+                        <span class="material-symbols-outlined text-xs">star</span> Mais Popular
+                    </div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="bg-white/20 p-3 rounded-2xl">
+                            <span class="material-symbols-outlined text-white text-3xl">rocket_launch</span>
+                        </div>
+                        <h3 class="text-3xl font-black uppercase tracking-tight">Imobiliária PRO</h3>
+                    </div>
+                    <p class="text-base text-blue-50 mb-6 min-h-[48px] leading-relaxed">Para gerenciar negócios e
+                        equipes de maneira profissional.</p>
+                    <div class="mb-6">
+                        <div class="flex items-baseline gap-1">
+                            <span class="text-lg font-bold text-white/80">R$</span>
+                            <span class="text-7xl font-black tracking-tighter price-value"
+                                data-base-price="349">349</span>
+                            <span class="text-white/80 font-medium">/mês</span>
+                        </div>
+                        <p class="text-xs text-white/70 mt-3 font-medium billing-text">Por mês, pago anualmente</p>
+                    </div>
+                    <button
+                        class="w-full py-5 px-6 bg-white text-blue-700 hover:bg-blue-50 font-black text-xl rounded-2xl transition-all mb-6 shadow-xl shadow-blue-900/30">
+                        Teste Grátis 15 Dias
+                    </button>
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-3 font-bold text-white">
+                            <span class="material-symbols-outlined text-emerald-400 text-lg">check_circle</span> Até 15
+                            usuários
+                        </div>
+                        <div class="pt-8 border-t border-white/20">
+                            <p class="font-black mb-5 text-white uppercase text-xs tracking-[0.2em]">Tudo do Basic,
+                                mais:</p>
+                            <ul class="grid grid-cols-1 gap-4 text-blue-50 font-medium">
+                                <li class="flex items-start gap-3">
+                                    <span class="material-symbols-outlined text-emerald-400 text-lg">bolt</span>
+                                    <span>Distribuição automática de leads</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="material-symbols-outlined text-emerald-400 text-lg">filter_list</span>
+                                    <span>Integração portais imobiliários</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="material-symbols-outlined text-emerald-400 text-lg">key</span>
+                                    <span>Integração WhatsApp Business</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="material-symbols-outlined text-emerald-400 text-lg">bolt</span>
+                                    <span>Automações avançadas</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="material-symbols-outlined text-emerald-400 text-lg">filter_list</span>
+                                    <span>Funis múltiplos</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="material-symbols-outlined text-emerald-400 text-lg">filter_list</span>
+                                    <span>Metas e ranking de corretores</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="material-symbols-outlined text-emerald-400 text-lg">filter_list</span>
+                                    <span>Relatórios avançados ROI</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="material-symbols-outlined text-emerald-400 text-lg">filter_list</span>
+                                    <span>API básica</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="material-symbols-outlined text-emerald-400 text-lg">group_add</span>
+                                    <span>Onboarding de equipe</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3: Master -->
+            <div class="w-full lg:w-[30%] lg:mt-16 z-10">
+                <div
+                    class="card-hover enterprise-subtle-gradient dark:bg-slate-800 border border-indigo-100 dark:border-slate-700 rounded-3xl p-6 flex flex-col shadow-xl">
+                    <div class="flex items-center gap-2 mb-4">
+                        <span
+                            class="material-symbols-outlined text-brand-purple bg-purple-50 p-2 rounded-lg">corporate_fare</span>
+                        <h3 class="text-xl font-bold text-slate-800 dark:text-white">Imobiliária MASTER</h3>
+                    </div>
+                    <p class="text-sm text-slate-500 dark:text-slate-400 mb-5 min-h-[48px]">Para grandes operações e
+                        franquias.</p>
+                    <div class="mb-5">
+                        <div class="flex items-baseline gap-1">
+                            <span class="text-sm font-bold text-indigo-600">R$</span>
+                            <span
+                                class="text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white price-value"
+                                data-base-price="449">449</span>
+                            <span class="text-slate-500 font-medium">/mês</span>
+                        </div>
+                        <p class="text-xs text-slate-400 mt-1 font-medium billing-text">Por mês, pago anualmente</p>
+                    </div>
+                    <button
+                        class="w-full py-3.5 px-4 border-2 border-brand-purple text-brand-purple hover:bg-brand-purple hover:text-white font-bold rounded-xl transition-all mb-5 shadow-sm">
+                        Teste Grátis 15 Dias
+                    </button>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex items-center gap-3 font-bold text-slate-700 dark:text-slate-300">
+                            <span class="material-symbols-outlined text-brand-green text-lg">check_circle</span> 25
+                            usuários
+                        </div>
+                        <div class="pt-6 border-t border-indigo-100 dark:border-slate-700">
+                            <p class="font-bold mb-4 text-slate-800 dark:text-white uppercase text-xs tracking-wider">
+                                Tudo do Pro, mais:</p>
+                            <ul class="space-y-3 text-slate-600 dark:text-slate-400">
+                                <li class="flex items-center gap-2"><span
+                                        class="w-1.5 h-1.5 rounded-full bg-purple-400"></span> WhatsApp Business API
+                                    oficial</li>
+                                <li class="flex items-center gap-2"><span
+                                        class="w-1.5 h-1.5 rounded-full bg-purple-400"></span> Automações 100%
+                                    personalizadas</li>
+                                <li class="flex items-center gap-2"><span
+                                        class="w-1.5 h-1.5 rounded-full bg-purple-400"></span> Gestão de contratos</li>
+                                <li class="flex items-center gap-2"><span
+                                        class="w-1.5 h-1.5 rounded-full bg-purple-400"></span> Assinatura digital
+                                    integrada</li>
+                                <li class="flex items-center gap-2"><span
+                                        class="w-1.5 h-1.5 rounded-full bg-purple-400"></span> Gestão avançada comissões
+                                </li>
+                                <li class="flex items-center gap-2"><span
+                                        class="w-1.5 h-1.5 rounded-full bg-purple-400"></span> Relatórios BI e previsões
+                                </li>
+                                <li class="flex items-center gap-2"><span
+                                        class="w-1.5 h-1.5 rounded-full bg-purple-400"></span> Multi-filiais</li>
+                                <li class="flex items-center gap-2"><span
+                                        class="w-1.5 h-1.5 rounded-full bg-purple-400"></span> White label completo</li>
+                                <li class="flex items-center gap-2"><span
+                                        class="w-1.5 h-1.5 rounded-full bg-purple-400"></span> API Completa</li>
+                                <li class="flex items-center gap-2"><span
+                                        class="w-1.5 h-1.5 rounded-full bg-purple-400"></span> Gerente de sucesso
+                                    dedicado</li>
+                                <li class="flex items-center gap-2"><span
+                                        class="w-1.5 h-1.5 rounded-full bg-purple-400"></span> SLA de suporte</li>
+                                <li class="flex items-center gap-2"><span
+                                        class="w-1.5 h-1.5 rounded-full bg-purple-400"></span> Treinamento de Equipe
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        let currentType = 'imobiliaria';
+        let currentBilling = 'anual';
+
+        function switchPlanType(type) {
+            currentType = type;
+            const containerCorretor = document.getElementById('plans-corretor');
+            const containerImobiliaria = document.getElementById('plans-imobiliaria');
+            const btnCorretor = document.getElementById('btn-corretor');
+            const btnImobiliaria = document.getElementById('btn-imobiliaria');
+
+            // Reset buttons
+            const activeClass = ['bg-white', 'text-primary', 'shadow-sm', 'border', 'border-slate-100'];
+            const inactiveClass = ['text-slate-500', 'hover:text-primary'];
+
+            if (type === 'corretor') {
+                btnCorretor.classList.add(...activeClass);
+                btnCorretor.classList.remove(...inactiveClass);
+                btnImobiliaria.classList.remove(...activeClass);
+                btnImobiliaria.classList.add(...inactiveClass);
+
+                containerImobiliaria.classList.add('hidden', 'opacity-0');
+                containerImobiliaria.classList.remove('flex');
+
+                // Tables
+                const tableCorretor = document.getElementById('table-corretor');
+                const tableImobiliaria = document.getElementById('table-imobiliaria');
+
+                if (tableImobiliaria) {
+                    tableImobiliaria.classList.add('hidden', 'opacity-0');
+                    tableImobiliaria.classList.remove('block'); // Assuming block for table container
+                }
+
+                setTimeout(() => {
+                    containerCorretor.classList.remove('hidden');
+
+                    if (tableCorretor) {
+                        tableCorretor.classList.remove('hidden');
+                        setTimeout(() => {
+                            tableCorretor.classList.remove('opacity-0');
+                            tableCorretor.classList.add('block');
+                        }, 50);
+                    }
+
+                    // Small delay to allow display flex to apply before opacity transition
+                    setTimeout(() => {
+                        containerCorretor.classList.remove('opacity-0');
+                        containerCorretor.classList.add('flex');
+                    }, 50);
+                }, 300);
+
+            } else {
+                btnImobiliaria.classList.add(...activeClass);
+                btnImobiliaria.classList.remove(...inactiveClass);
+                btnCorretor.classList.remove(...activeClass);
+                btnCorretor.classList.add(...inactiveClass);
+
+                containerCorretor.classList.add('hidden', 'opacity-0');
+                containerCorretor.classList.remove('flex');
+
+                // Tables
+                const tableCorretor = document.getElementById('table-corretor');
+                const tableImobiliaria = document.getElementById('table-imobiliaria');
+
+                if (tableCorretor) {
+                    tableCorretor.classList.add('hidden', 'opacity-0');
+                    tableCorretor.classList.remove('block');
+                }
+
+                setTimeout(() => {
+                    containerImobiliaria.classList.remove('hidden');
+
+                    if (tableImobiliaria) {
+                        tableImobiliaria.classList.remove('hidden');
+                        setTimeout(() => {
+                            tableImobiliaria.classList.remove('opacity-0');
+                            tableImobiliaria.classList.add('block');
+                        }, 50);
+                    }
+
+                    setTimeout(() => {
+                        containerImobiliaria.classList.remove('opacity-0');
+                        containerImobiliaria.classList.add('flex');
+                    }, 50);
+                }, 300);
+            }
+        }
+
+        // Initialize view on load
+        document.addEventListener('DOMContentLoaded', () => {
+            // Force initial render of the default type (imobiliaria)
+            switchPlanType(currentType);
+        });
+
+        function switchBilling(cycle) {
+            currentBilling = cycle;
+            const btnAnual = document.getElementById('btn-anual');
+            const btnMensal = document.getElementById('btn-mensal');
+            const savingsBadge = document.getElementById('savings-badge');
+
+            const activeClass = ['bg-primary', 'text-white', 'shadow-md'];
+            const inactiveClass = ['text-slate-500', 'dark:text-slate-400', 'hover:text-primary'];
+
+            if (cycle === 'anual') {
+                btnAnual.classList.add(...activeClass);
+                btnAnual.classList.remove('text-slate-500', 'hover:text-primary'); // removing subset of inactive
+
+                btnMensal.classList.remove(...activeClass);
+                btnMensal.classList.add(...inactiveClass);
+
+                savingsBadge.style.opacity = '1';
+                updatePrices(1); // multiplier 1
+            } else {
+                btnMensal.classList.add(...activeClass);
+                btnMensal.classList.remove('text-slate-500', 'dark:text-slate-400', 'hover:text-primary');
+
+                btnAnual.classList.remove(...activeClass);
+                btnAnual.classList.add(...inactiveClass); // Simplified logic here, might need tuning
+
+                savingsBadge.style.opacity = '0';
+                updatePrices(1.2); // multiplier 1.2 (+20%)
+            }
+        }
+
+        function updatePrices(multiplier) {
+            const priceElements = document.querySelectorAll('.price-value');
+            const billingTexts = document.querySelectorAll('.billing-text');
+
+            priceElements.forEach(el => {
+                const basePrice = parseFloat(el.getAttribute('data-base-price'));
+                if (basePrice === 0) return; // Free plan stays 0
+
+                const finalPrice = basePrice * multiplier;
+
+                let formatted;
+                if (multiplier > 1.05) { // Logic to detect if it's not base price (allow some float margin, 1.2 is > 1.05)
+                    formatted = Math.round(finalPrice).toString();
+                } else {
+                    if (Number.isInteger(finalPrice)) {
+                        formatted = finalPrice.toString();
+                    } else {
+                        formatted = finalPrice.toFixed(2).replace('.', ',');
+                        if (formatted.endsWith(',00')) formatted = formatted.split(',')[0];
+                    }
+                }
+
+                // Add animation effect
+                el.style.opacity = '0';
+                setTimeout(() => {
+                    el.textContent = formatted;
+                    el.style.opacity = '1';
+                }, 200);
+            });
+
+            billingTexts.forEach(el => {
+                el.style.opacity = '0';
+                setTimeout(() => {
+                    el.textContent = currentBilling === 'anual' ? 'Por mês, pago anualmente' : 'Cobrado mensalmente';
+                    el.style.opacity = '1';
+                }, 200);
+            });
+        }
+
+        function toggleFAQ(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('.material-symbols-outlined');
+
+            // Toggle visibility
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                icon.style.transform = 'rotate(180deg)';
+                button.classList.add('text-primary');
+            } else {
+                content.classList.add('hidden');
+                icon.style.transform = 'rotate(0deg)';
+                button.classList.remove('text-primary');
+            }
+        }
+    </script>
+
+    <div class="max-w-7xl mx-auto px-4 mb-32">
+        <div
+            class="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-slate-800/50 dark:to-slate-900/50 border border-blue-100/50 dark:border-slate-700 p-10 rounded-4xl text-sm text-slate-600 dark:text-slate-400 shadow-sm">
+            <p class="font-black text-blue-800 dark:text-blue-400 mb-8 flex items-center gap-2 text-lg">
+                <span class="material-symbols-outlined text-blue-600">info</span> Observações adicionais:
+            </p>
+            <div class="grid md:grid-cols-3 gap-10 leading-relaxed">
+                <div class="flex gap-3">
+                    <span class="text-blue-400 font-bold">•</span>
+                    <p>O uso de recursos adicionais (móveis ativos, contratos de aluguel, intermediadores, assinaturas
+                        eletrônicas, etc.) são calculados e cobrados mensalmente.</p>
+                </div>
+                <div class="flex gap-3">
+                    <span class="text-blue-400 font-bold">•</span>
+                    <p>Usuário adicional ao plano por <span class="font-bold text-slate-800 dark:text-slate-200">R$
+                            29,90 / mês</span></p>
+                </div>
+                <div class="flex gap-3">
+                    <span class="text-blue-400 font-bold">•</span>
+                    <p>Ao exceder o limite de imóveis ativos do plano, um novo pacote com 100 imóveis é contratado
+                        automaticamente por <span class="font-bold text-slate-800 dark:text-slate-200">R$ 9,90 /
+                            mês</span>.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-800 py-20 relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+            <svg class="h-full w-full" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="400" cy="300" fill="white" fill-opacity="0.1" r="400"></circle>
+                <circle cx="0" cy="0" fill="white" fill-opacity="0.1" r="200"></circle>
+            </svg>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 relative z-10">
+            <h2 class="text-white text-3xl md:text-4xl font-display font-black mb-12 text-center tracking-tight">
+                Comparativo de Planos</h2>
+
+            <!-- Table for Corretores -->
+            <div id="table-corretor" class="hidden opacity-0 transition-opacity duration-500 ease-in-out">
+                <div class="bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl overflow-hidden shadow-2xl">
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left border-collapse">
+                            <thead>
+                                <tr class="bg-white/10 border-b border-white/10 text-white">
+                                    <th class="p-6 font-bold text-lg w-1/3">Recursos</th>
+                                    <th class="p-6 font-bold text-lg text-center w-1/3">Corretor Free</th>
+                                    <th class="p-6 font-bold text-lg text-center w-1/3 text-emerald-300">Corretor PRO
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-blue-50 text-sm">
+                                <tr class="border-b border-white/5 hover:bg-white/5 transition-colors">
+                                    <td class="p-4 px-6 font-medium">Imóveis Ativos</td>
+                                    <td class="p-4 px-6 text-center">Até 50</td>
+                                    <td class="p-4 px-6 text-center font-bold text-white">Até 500</td>
+                                </tr>
+                                <tr class="border-b border-white/5 hover:bg-white/5 transition-colors">
+                                    <td class="p-4 px-6 font-medium">Leads</td>
+                                    <td class="p-4 px-6 text-center">Até 100</td>
+                                    <td class="p-4 px-6 text-center font-bold text-white">Ilimitados</td>
+                                </tr>
+                                <tr class="border-b border-white/5 hover:bg-white/5 transition-colors">
+                                    <td class="p-4 px-6 font-medium">Usuários</td>
+                                    <td class="p-4 px-6 text-center">1 Usuário</td>
+                                    <td class="p-4 px-6 text-center font-bold text-white">1 Usuário</td>
+                                </tr>
+                                <tr class="border-b border-white/5 hover:bg-white/5 transition-colors">
+                                    <td class="p-4 px-6 font-medium">Site Pessoal</td>
+                                    <td class="p-4 px-6 text-center text-slate-300">Básico (Branding CRM)</td>
+                                    <td class="p-4 px-6 text-center font-bold text-white">Premium e Personalizável</td>
+                                </tr>
+                                <tr class="border-b border-white/5 hover:bg-white/5 transition-colors">
+                                    <td class="p-4 px-6 font-medium">Integração WhatsApp</td>
+                                    <td class="p-4 px-6 text-center text-slate-400">—</td>
+                                    <td class="p-4 px-6 text-center text-emerald-300"><span
+                                            class="material-symbols-outlined align-middle">check</span> Semi-automático
+                                    </td>
+                                </tr>
+                                <tr class="border-b border-white/5 hover:bg-white/5 transition-colors">
+                                    <td class="p-4 px-6 font-medium">Funil de Vendas</td>
+                                    <td class="p-4 px-6 text-center">Simples</td>
+                                    <td class="p-4 px-6 text-center font-bold text-white">Personalizável</td>
+                                </tr>
+                                <tr class="hover:bg-white/5 transition-colors">
+                                    <td class="p-4 px-6 font-medium">Suporte</td>
+                                    <td class="p-4 px-6 text-center">E-mail</td>
+                                    <td class="p-4 px-6 text-center font-bold text-white">WhatsApp Prioritário</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Table for Imobiliárias -->
+            <div id="table-imobiliaria" class="hidden opacity-0 transition-opacity duration-500 ease-in-out">
+                <div class="bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl overflow-hidden shadow-2xl">
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left border-collapse">
+                            <thead>
+                                <tr class="bg-white/10 border-b border-white/10 text-white">
+                                    <th class="p-6 font-bold text-lg w-1/4">Recursos</th>
+                                    <th class="p-6 font-bold text-lg text-center w-1/4">Basic</th>
+                                    <th class="p-6 font-bold text-lg text-center w-1/4 text-emerald-300">PRO</th>
+                                    <th class="p-6 font-bold text-lg text-center w-1/4 text-purple-300">MASTER</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-blue-50 text-sm">
+                                <tr class="border-b border-white/5 hover:bg-white/5 transition-colors">
+                                    <td class="p-4 px-6 font-medium">Usuários Inclusos</td>
+                                    <td class="p-4 px-6 text-center">Até 5</td>
+                                    <td class="p-4 px-6 text-center font-bold text-white">Até 15</td>
+                                    <td class="p-4 px-6 text-center font-bold text-purple-200">25 (Expansível)</td>
+                                </tr>
+                                <tr class="border-b border-white/5 hover:bg-white/5 transition-colors">
+                                    <td class="p-4 px-6 font-medium">Imóveis Ativos</td>
+                                    <td class="p-4 px-6 text-center">300</td>
+                                    <td class="p-4 px-6 text-center font-bold text-white">1.000</td>
+                                    <td class="p-4 px-6 text-center font-bold text-purple-200">5.000</td>
+                                </tr>
+                                <tr class="border-b border-white/5 hover:bg-white/5 transition-colors">
+                                    <td class="p-4 px-6 font-medium">Distribuição de Leads</td>
+                                    <td class="p-4 px-6 text-center text-slate-300">Manual</td>
+                                    <td class="p-4 px-6 text-center font-bold text-white">Automática (Roleta)</td>
+                                    <td class="p-4 px-6 text-center font-bold text-white">Automática</td>
+                                </tr>
+                                <tr class="border-b border-white/5 hover:bg-white/5 transition-colors">
+                                    <td class="p-4 px-6 font-medium">Integração Portais</td>
+                                    <td class="p-4 px-6 text-center text-slate-400">—</td>
+                                    <td class="p-4 px-6 text-center text-emerald-300"><span
+                                            class="material-symbols-outlined align-middle">check</span> Sim</td>
+                                    <td class="p-4 px-6 text-center text-emerald-300"><span
+                                            class="material-symbols-outlined align-middle">check</span> Sim</td>
+                                </tr>
+                                <tr class="border-b border-white/5 hover:bg-white/5 transition-colors">
+                                    <td class="p-4 px-6 font-medium">WhatsApp Business</td>
+                                    <td class="p-4 px-6 text-center text-slate-400">—</td>
+                                    <td class="p-4 px-6 text-center">Integração Básica</td>
+                                    <td class="p-4 px-6 text-center font-bold text-purple-200">API Oficial</td>
+                                </tr>
+                                <tr class="border-b border-white/5 hover:bg-white/5 transition-colors">
+                                    <td class="p-4 px-6 font-medium">Automações</td>
+                                    <td class="p-4 px-6 text-center text-slate-400">—</td>
+                                    <td class="p-4 px-6 text-center text-white">Avançadas</td>
+                                    <td class="p-4 px-6 text-center font-bold text-purple-200">100% Personalizadas</td>
+                                </tr>
+                                <tr class="border-b border-white/5 hover:bg-white/5 transition-colors">
+                                    <td class="p-4 px-6 font-medium">Assinatura Digital</td>
+                                    <td class="p-4 px-6 text-center text-slate-400">—</td>
+                                    <td class="p-4 px-6 text-center text-slate-400">—</td>
+                                    <td class="p-4 px-6 text-center text-emerald-300"><span
+                                            class="material-symbols-outlined align-middle">check</span> Integrada</td>
+                                </tr>
+                                <tr class="border-b border-white/5 hover:bg-white/5 transition-colors">
+                                    <td class="p-4 px-6 font-medium">White Label</td>
+                                    <td class="p-4 px-6 text-center">Parcial</td>
+                                    <td class="p-4 px-6 text-center">Parcial</td>
+                                    <td class="p-4 px-6 text-center font-bold text-purple-200">Completo (Domínio/Logo)
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-white/5 transition-colors">
+                                    <td class="p-4 px-6 font-medium">Suporte</td>
+                                    <td class="p-4 px-6 text-center">Dedicado</td>
+                                    <td class="p-4 px-6 text-center">Dedicado + Onboarding</td>
+                                    <td class="p-4 px-6 text-center font-bold text-purple-200">Gerente Sucesso + SLA
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOCK: GARANTIA / SEGURANÇA -->
+    <!-- BLOCK: GARANTIA / SEGURANÇA -->
+    <div class="bg-indigo-50 dark:bg-slate-900 border-y border-indigo-100 dark:border-slate-800 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 py-10">
+            <div
+                class="flex flex-wrap justify-center items-center gap-4 text-sm font-bold text-slate-600 dark:text-slate-400 uppercase tracking-wide">
+
+                <!-- Item 1 -->
+                <div class="group flex items-center gap-3 bg-white/50 dark:bg-slate-800/50 hover:bg-white dark:hover:bg-slate-800 px-5 py-3 rounded-full border border-transparent hover:border-green-200 dark:hover:border-green-900 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 cursor-default"
+                    data-aos="fade-up" data-aos-delay="0">
+                    <div
+                        class="p-1.5 bg-green-100 dark:bg-green-900/30 rounded-full group-hover:scale-110 transition-transform duration-300">
+                        <span
+                            class="material-symbols-outlined text-green-600 dark:text-green-400 text-lg">verified_user</span>
+                    </div>
+                    <span class="group-hover:text-green-700 dark:group-hover:text-green-300 transition-colors">Teste
+                        grátis de 15 dias</span>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="group flex items-center gap-3 bg-white/50 dark:bg-slate-800/50 hover:bg-white dark:hover:bg-slate-800 px-5 py-3 rounded-full border border-transparent hover:border-slate-200 dark:hover:border-slate-700 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 cursor-default"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <div
+                        class="p-1.5 bg-slate-200 dark:bg-slate-700 rounded-full group-hover:scale-110 transition-transform duration-300">
+                        <span
+                            class="material-symbols-outlined text-slate-600 dark:text-slate-300 text-lg">credit_card_off</span>
+                    </div>
+                    <span class="group-hover:text-slate-800 dark:group-hover:text-white transition-colors">Sem cartão de
+                        crédito</span>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="group flex items-center gap-3 bg-white/50 dark:bg-slate-800/50 hover:bg-white dark:hover:bg-slate-800 px-5 py-3 rounded-full border border-transparent hover:border-purple-200 dark:hover:border-purple-900 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 cursor-default"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <div
+                        class="p-1.5 bg-purple-100 dark:bg-purple-900/30 rounded-full group-hover:scale-110 transition-transform duration-300">
+                        <span class="material-symbols-outlined text-purple-600 dark:text-purple-400 text-lg">lock</span>
+                    </div>
+                    <span class="group-hover:text-purple-700 dark:group-hover:text-purple-300 transition-colors">Sem
+                        fidelidade</span>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="group flex items-center gap-3 bg-white/50 dark:bg-slate-800/50 hover:bg-white dark:hover:bg-slate-800 px-5 py-3 rounded-full border border-transparent hover:border-blue-200 dark:hover:border-blue-900 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 cursor-default"
+                    data-aos="fade-up" data-aos-delay="300">
+                    <div
+                        class="p-1.5 bg-blue-100 dark:bg-blue-900/30 rounded-full group-hover:scale-110 transition-transform duration-300">
+                        <span class="material-symbols-outlined text-blue-600 dark:text-blue-400 text-lg">shield</span>
+                    </div>
+                    <span class="group-hover:text-blue-700 dark:group-hover:text-blue-300 transition-colors">LGPD e
+                        dados
+                        protegidos</span>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="group flex items-center gap-3 bg-white/50 dark:bg-slate-800/50 hover:bg-white dark:hover:bg-slate-800 px-5 py-3 rounded-full border border-transparent hover:border-green-200 dark:hover:border-green-900 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 cursor-default"
+                    data-aos="fade-up" data-aos-delay="400">
+                    <div
+                        class="p-1.5 bg-green-100 dark:bg-green-900/30 rounded-full group-hover:scale-110 transition-transform duration-300">
+                        <span
+                            class="material-symbols-outlined text-green-600 dark:text-green-400 text-lg">check_circle</span>
+                    </div>
+                    <span class="group-hover:text-green-700 dark:group-hover:text-green-300 transition-colors">WhatsApp
+                        API
+                        Oficial</span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <section class="max-w-4xl mx-auto px-4 py-32">
+        <h2 class="text-4xl font-display font-black text-center mb-16 text-slate-800 dark:text-white">Perguntas
+            frequentes</h2>
+        <div class="space-y-4">
+            <!-- FAQ Item 1 -->
+            <div
+                class="bg-white dark:bg-slate-800/50 border border-slate-100 dark:border-slate-800 rounded-2xl overflow-hidden shadow-sm hover:border-blue-200 dark:hover:border-blue-900 transition-colors">
+                <button class="w-full flex justify-between items-center p-6 text-left group" onclick="toggleFAQ(this)">
+                    <span
+                        class="font-bold group-hover:text-primary transition-colors text-lg text-slate-800 dark:text-white">Posso
+                        trocar de plano depois?</span>
+                    <span
+                        class="material-symbols-outlined text-slate-400 transform transition-transform duration-300 group-hover:text-primary">expand_more</span>
+                </button>
+                <div
+                    class="hidden px-6 pb-6 text-slate-600 dark:text-slate-400 leading-relaxed border-t border-slate-50 dark:border-slate-800/50 pt-4">
+                    Sim! Você pode fazer upgrade ou downgrade do seu plano a qualquer momento direto pelo painel. A
+                    mudança é aplicada imediatamente e o valor é ajustado proporcionalmente.
+                </div>
+            </div>
+
+            <!-- FAQ Item 2 -->
+            <div
+                class="bg-white dark:bg-slate-800/50 border border-slate-100 dark:border-slate-800 rounded-2xl overflow-hidden shadow-sm hover:border-blue-200 dark:hover:border-blue-900 transition-colors">
+                <button class="w-full flex justify-between items-center p-6 text-left group" onclick="toggleFAQ(this)">
+                    <span
+                        class="font-bold group-hover:text-primary transition-colors text-lg text-slate-800 dark:text-white">Tem
+                        fidelidade?</span>
+                    <span
+                        class="material-symbols-outlined text-slate-400 transform transition-transform duration-300 group-hover:text-primary">expand_more</span>
+                </button>
+                <div
+                    class="hidden px-6 pb-6 text-slate-600 dark:text-slate-400 leading-relaxed border-t border-slate-50 dark:border-slate-800/50 pt-4">
+                    Não. O Chave Reserva não exige contrato de fidelidade. Você fica porque faz sentido para o seu
+                    negócio — não por obrigação.
+                </div>
+            </div>
+
+            <!-- FAQ Item 3 -->
+            <div
+                class="bg-white dark:bg-slate-800/50 border border-slate-100 dark:border-slate-800 rounded-2xl overflow-hidden shadow-sm hover:border-blue-200 dark:hover:border-blue-900 transition-colors">
+                <button class="w-full flex justify-between items-center p-6 text-left group" onclick="toggleFAQ(this)">
+                    <span
+                        class="font-bold group-hover:text-primary transition-colors text-lg text-slate-800 dark:text-white">Posso
+                        cancelar quando quiser?</span>
+                    <span
+                        class="material-symbols-outlined text-slate-400 transform transition-transform duration-300 group-hover:text-primary">expand_more</span>
+                </button>
+                <div
+                    class="hidden px-6 pb-6 text-slate-600 dark:text-slate-400 leading-relaxed border-t border-slate-50 dark:border-slate-800/50 pt-4">
+                    Pode sim. O cancelamento é simples, direto pelo sistema, sem burocracia. Seus dados continuam
+                    disponíveis para exportação.
+                </div>
+            </div>
+
+            <!-- FAQ Item 4 -->
+            <div
+                class="bg-white dark:bg-slate-800/50 border border-slate-100 dark:border-slate-800 rounded-2xl overflow-hidden shadow-sm hover:border-blue-200 dark:hover:border-blue-900 transition-colors">
+                <button class="w-full flex justify-between items-center p-6 text-left group" onclick="toggleFAQ(this)">
+                    <span
+                        class="font-bold group-hover:text-primary transition-colors text-lg text-slate-800 dark:text-white">O
+                        WhatsApp é oficial?</span>
+                    <span
+                        class="material-symbols-outlined text-slate-400 transform transition-transform duration-300 group-hover:text-primary">expand_more</span>
+                </button>
+                <div
+                    class="hidden px-6 pb-6 text-slate-600 dark:text-slate-400 leading-relaxed border-t border-slate-50 dark:border-slate-800/50 pt-4">
+                    Sim. Nos planos que incluem WhatsApp, utilizamos a API Oficial do WhatsApp Business, garantindo
+                    estabilidade, segurança e conformidade com as regras da Meta.
+                </div>
+            </div>
+
+            <!-- FAQ Item 5 -->
+            <div
+                class="bg-white dark:bg-slate-800/50 border border-slate-100 dark:border-slate-800 rounded-2xl overflow-hidden shadow-sm hover:border-blue-200 dark:hover:border-blue-900 transition-colors">
+                <button class="w-full flex justify-between items-center p-6 text-left group" onclick="toggleFAQ(this)">
+                    <span
+                        class="font-bold group-hover:text-primary transition-colors text-lg text-slate-800 dark:text-white">Vocês
+                        ajudam na implantação?</span>
+                    <span
+                        class="material-symbols-outlined text-slate-400 transform transition-transform duration-300 group-hover:text-primary">expand_more</span>
+                </button>
+                <div
+                    class="hidden px-6 pb-6 text-slate-600 dark:text-slate-400 leading-relaxed border-t border-slate-50 dark:border-slate-800/50 pt-4">
+                    Ajudamos, sim! Oferecemos onboarding, treinamento e suporte para você e sua equipe começarem a usar
+                    o sistema com máxima eficiência desde o primeiro dia.
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-slate-50 dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 pt-20 pb-10">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-12 mb-20">
+                <div class="col-span-2">
+                    <div class="flex items-center gap-2 mb-8">
+                        <img alt="Chave Reserva Logo" class="h-10 invert dark:invert-0" src="logo.png" />
+                        <span class="font-display font-black text-2xl tracking-tight text-primary">CHAVE RESERVA</span>
+                    </div>
+                    <p class="text-base text-slate-500 dark:text-slate-400 mb-8 max-w-xs leading-relaxed">
+                        A solução completa para gestão imobiliária, do lead ao contrato. Simplifique sua rotina hoje.
+                    </p>
+                    <div class="flex gap-4">
+                        <a class="h-10 w-10 rounded-full bg-white dark:bg-slate-800 flex items-center justify-center border border-slate-200 dark:border-slate-700 hover:bg-primary hover:text-white transition-all shadow-sm"
+                            href="#">
+                            <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                                <path
+                                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z">
+                                </path>
+                            </svg>
+                        </a>
+                        <a class="h-10 w-10 rounded-full bg-white dark:bg-slate-800 flex items-center justify-center border border-slate-200 dark:border-slate-700 hover:bg-primary hover:text-white transition-all shadow-sm"
+                            href="#">
+                            <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h5 class="font-black mb-6 text-sm uppercase tracking-widest text-slate-800 dark:text-white">Produto
+                    </h5>
+                    <ul class="space-y-4 text-sm text-slate-500 dark:text-slate-400">
+                        <li><a class="hover:text-primary transition-colors font-medium" href="#">Planos</a></li>
+                        <li><a class="hover:text-primary transition-colors font-medium" href="#">Funcionalidades</a>
+                        </li>
+                        <li><a class="hover:text-primary transition-colors font-medium" href="#">Integrações</a></li>
+                        <li><a class="hover:text-primary transition-colors font-medium" href="#">API</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-black mb-6 text-sm uppercase tracking-widest text-slate-800 dark:text-white">Suporte
+                    </h5>
+                    <ul class="space-y-4 text-sm text-slate-500 dark:text-slate-400">
+                        <li><a class="hover:text-primary transition-colors font-medium" href="#">Central de Ajuda</a>
+                        </li>
+                        <li><a class="hover:text-primary transition-colors font-medium" href="#">Base de
+                                Conhecimento</a></li>
+                        <li><a class="hover:text-primary transition-colors font-medium" href="#">Contato</a></li>
+                        <li><a class="hover:text-primary transition-colors font-medium" href="#">Status</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-black mb-6 text-sm uppercase tracking-widest text-slate-800 dark:text-white">
+                        Parceiros</h5>
+                    <ul class="space-y-4 text-sm text-slate-500 dark:text-slate-400">
+                        <li><a class="hover:text-primary transition-colors font-medium" href="#">Encontre um
+                                parceiro</a></li>
+                        <li><a class="hover:text-primary transition-colors font-medium" href="#">Torne-se um
+                                parceiro</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                class="border-t border-slate-200 dark:border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-6 text-sm text-slate-400 font-medium">
+                <p>© 2024 Chave Reserva. Todos os direitos reservados.</p>
+                <div class="flex gap-8">
+                    <a class="hover:text-primary transition-colors" href="#">Política de Privacidade</a>
+                    <a class="hover:text-primary transition-colors" href="#">Termos de Uso</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="fixed bottom-8 right-8 z-[60]">
+        <button
+            class="h-16 w-16 rounded-full bg-primary text-white shadow-2xl flex items-center justify-center hover:scale-110 hover:rotate-12 active:scale-95 transition-all">
+            <span class="material-symbols-outlined text-4xl">chat</span>
+        </button>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/chatbot.js"></script>
+</body>
+
+</html>

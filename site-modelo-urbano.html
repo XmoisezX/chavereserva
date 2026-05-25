@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo Urbano - Loft & Industrial</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Roboto+Condensed:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- FontAwesome for Icons in Card -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#FF4500', /* Orange Red */
+                        dark: '#121212',
+                        concrete: '#262626',
+                        light: '#E5E5E5'
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                        condensed: ['Roboto Condensed', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-dark text-light font-sans">
+
+    <!-- Navbar -->
+    <nav class="border-b border-concrete py-6">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <div class="font-black text-2xl tracking-tighter uppercase italic text-white">
+                URBANO<span class="text-primary">.</span>
+            </div>
+            <div class="hidden md:flex gap-8 font-condensed font-bold uppercase tracking-wide text-sm">
+                <a href="#" class="hover:text-primary transition-colors">Vendas</a>
+                <a href="#" class="hover:text-primary transition-colors">Aluguel</a>
+                <a href="#" class="hover:text-primary transition-colors">Studios</a>
+                <a href="#" class="hover:text-primary transition-colors">Sobre</a>
+            </div>
+            <button
+                class="bg-primary text-black font-black uppercase px-6 py-2 hover:bg-white transition-colors text-sm">
+                Login
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <div class="relative h-[80vh] flex items-center">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+                alt="Loft Industrial" class="w-full h-full object-cover opacity-40 grayscale">
+            <div class="absolute inset-0 bg-gradient-to-t from-dark via-transparent to-transparent"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10 w-full">
+            <h1 class="text-6xl md:text-9xl font-black uppercase leading-none mb-6">
+                Live <span
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-600">Bold</span>.
+            </h1>
+            <p class="text-xl md:text-2xl font-condensed text-gray-400 max-w-lg mb-10 border-l-4 border-primary pl-6">
+                Imóveis com personalidade para quem vive o ritmo da cidade. Lofts, studios e coberturas.
+            </p>
+            <div class="flex flex-col md:flex-row gap-4">
+                <a href="#search"
+                    class="bg-white text-black font-black uppercase px-8 py-4 hover:bg-primary transition-colors inline-block text-center">
+                    Ver Imóveis
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Filter Section (Urban/Industrial Style) -->
+    <div id="search"
+        class="bg-primary p-1 -mt-10 relative z-20 mx-4 md:mx-auto max-w-6xl shadow-[10px_10px_0px_0px_rgba(255,255,255,0.1)]">
+        <div class="bg-black p-6">
+            <div class="flex gap-6 mb-4 border-b border-concrete pb-2">
+                <button
+                    class="text-primary font-black uppercase text-sm border-b-2 border-primary pb-1">Comprar</button>
+                <button
+                    class="text-gray-500 font-black uppercase text-sm hover:text-white pb-1 transition-colors">Alugar</button>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                <div class="relative">
+                    <label class="block text-xs font-bold text-gray-500 mb-1 uppercase">Onde?</label>
+                    <input type="text" placeholder="BAIRRO / CIDADE"
+                        class="w-full bg-concrete border-none text-white p-3 font-bold placeholder-gray-600 focus:ring-2 focus:ring-white uppercase">
+                </div>
+                <div class="relative">
+                    <label class="block text-xs font-bold text-gray-500 mb-1 uppercase">Quanto?</label>
+                    <select
+                        class="w-full bg-concrete border-none text-white p-3 font-bold focus:ring-2 focus:ring-white uppercase h-[48px]">
+                        <option>Qualquer Preço</option>
+                        <option>Até 500k</option>
+                        <option>500k - 1M</option>
+                    </select>
+                </div>
+                <div class="relative">
+                    <label class="block text-xs font-bold text-gray-500 mb-1 uppercase">Tamanho?</label>
+                    <select
+                        class="w-full bg-concrete border-none text-white p-3 font-bold focus:ring-2 focus:ring-white uppercase h-[48px]">
+                        <option>Dormitórios</option>
+                        <option>Studio (0)</option>
+                        <option>1 Dorm</option>
+                        <option>2 Dorms</option>
+                    </select>
+                </div>
+                <div class="relative flex items-end">
+                    <button
+                        class="w-full bg-white text-black font-black uppercase hover:bg-primary hover:text-black transition-colors py-3 h-[48px] flex items-center justify-center gap-2">
+                        <i class="fa fa-search"></i> Procurar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Listings -->
+    <section class="py-24 max-w-7xl mx-auto px-6">
+        <div class="flex justify-between items-end mb-16 border-b border-concrete pb-6">
+            <h2 class="text-4xl md:text-6xl font-black uppercase">Novidades</h2>
+            <a href="#"
+                class="hidden md:block font-bold text-primary hover:text-white uppercase tracking-wider text-sm">Ver
+                tudo -></a>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <!-- STANDARDIZED CARD 1 - URBAN VARIANT -->
+            <div
+                class="group relative bg-concrete cursor-pointer overflow-hidden border border-concrete hover:border-primary transition-all duration-300">
+                <div class="aspect-square grayscale group-hover:grayscale-0 transition-all duration-500 relative">
+                    <div class="absolute top-4 left-4 z-10 flex gap-2">
+                        <span
+                            class="bg-primary text-black font-black text-xs px-2 py-1 uppercase transform -rotate-2 group-hover:rotate-0 transition-transform">Venda</span>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1556912173-3db996e7c31c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="Loft" class="w-full h-full object-cover">
+                    <!-- Fav button -->
+                    <button
+                        class="absolute top-4 right-4 bg-black text-white w-8 h-8 flex items-center justify-center hover:text-primary transition-colors">
+                        <i class="far fa-heart"></i>
+                    </button>
+                </div>
+
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <span class="text-xs text-primary font-bold uppercase tracking-wider">Studio</span>
+                            <h3 class="text-2xl font-black uppercase text-white leading-none">Centro Histórico</h3>
+                        </div>
+                        <span class="font-mono text-gray-500 text-xs">#COD123</span>
+                    </div>
+
+                    <div class="grid grid-cols-3 gap-2 border-t border-gray-800 pt-4 mb-4 text-center">
+                        <div>
+                            <span class="block text-xs text-gray-500 font-bold uppercase">Área</span>
+                            <span class="block text-white font-bold">48m²</span>
+                        </div>
+                        <div>
+                            <span class="block text-xs text-gray-500 font-bold uppercase">Dorms</span>
+                            <span class="block text-white font-bold">0</span>
+                        </div>
+                        <div>
+                            <span class="block text-xs text-gray-500 font-bold uppercase">Vagas</span>
+                            <span class="block text-white font-bold">0</span>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-between items-end">
+                        <div>
+                            <span class="text-xs text-gray-500 font-bold uppercase block">Valor</span>
+                            <span class="text-2xl font-black text-primary">R$ 480.000</span>
+                        </div>
+                        <button class="text-white hover:text-primary transition-colors">
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- STANDARDIZED CARD 2 - URBAN VARIANT -->
+            <div
+                class="group relative bg-concrete cursor-pointer overflow-hidden border border-concrete hover:border-primary transition-all duration-300">
+                <div class="aspect-square grayscale group-hover:grayscale-0 transition-all duration-500 relative">
+                    <div class="absolute top-4 left-4 z-10 flex gap-2">
+                        <span
+                            class="bg-primary text-black font-black text-xs px-2 py-1 uppercase transform -rotate-2 group-hover:rotate-0 transition-transform">Venda</span>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1502005229762-cf1e2a862d43?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="Loft" class="w-full h-full object-cover">
+                    <button
+                        class="absolute top-4 right-4 bg-black text-white w-8 h-8 flex items-center justify-center hover:text-primary transition-colors">
+                        <i class="far fa-heart"></i>
+                    </button>
+                </div>
+
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <span class="text-xs text-primary font-bold uppercase tracking-wider">Apartamento</span>
+                            <h3 class="text-2xl font-black uppercase text-white leading-none">Vila Madalena</h3>
+                        </div>
+                        <span class="font-mono text-gray-500 text-xs">#COD552</span>
+                    </div>
+
+                    <div class="grid grid-cols-3 gap-2 border-t border-gray-800 pt-4 mb-4 text-center">
+                        <div>
+                            <span class="block text-xs text-gray-500 font-bold uppercase">Área</span>
+                            <span class="block text-white font-bold">72m²</span>
+                        </div>
+                        <div>
+                            <span class="block text-xs text-gray-500 font-bold uppercase">Dorms</span>
+                            <span class="block text-white font-bold">1</span>
+                        </div>
+                        <div>
+                            <span class="block text-xs text-gray-500 font-bold uppercase">Vagas</span>
+                            <span class="block text-white font-bold">1</span>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-between items-end">
+                        <div>
+                            <span class="text-xs text-gray-500 font-bold uppercase block">Valor</span>
+                            <span class="text-2xl font-black text-primary">R$ 890.000</span>
+                        </div>
+                        <button class="text-white hover:text-primary transition-colors">
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- STANDARDIZED CARD 3 - URBAN VARIANT -->
+            <div
+                class="group relative bg-concrete cursor-pointer overflow-hidden border border-concrete hover:border-primary transition-all duration-300">
+                <div class="aspect-square grayscale group-hover:grayscale-0 transition-all duration-500 relative">
+                    <div class="absolute top-4 left-4 z-10 flex gap-2">
+                        <span
+                            class="bg-white text-black font-black text-xs px-2 py-1 uppercase transform -rotate-2 group-hover:rotate-0 transition-transform">Aluguel</span>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="Loft" class="w-full h-full object-cover">
+                    <button
+                        class="absolute top-4 right-4 bg-black text-white w-8 h-8 flex items-center justify-center hover:text-primary transition-colors">
+                        <i class="far fa-heart"></i>
+                    </button>
+                </div>
+
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <span class="text-xs text-primary font-bold uppercase tracking-wider">Duplex</span>
+                            <h3 class="text-2xl font-black uppercase text-white leading-none">Pinheiros</h3>
+                        </div>
+                        <span class="font-mono text-gray-500 text-xs">#COD991</span>
+                    </div>
+
+                    <div class="grid grid-cols-3 gap-2 border-t border-gray-800 pt-4 mb-4 text-center">
+                        <div>
+                            <span class="block text-xs text-gray-500 font-bold uppercase">Área</span>
+                            <span class="block text-white font-bold">94m²</span>
+                        </div>
+                        <div>
+                            <span class="block text-xs text-gray-500 font-bold uppercase">Dorms</span>
+                            <span class="block text-white font-bold">2</span>
+                        </div>
+                        <div>
+                            <span class="block text-xs text-gray-500 font-bold uppercase">Vagas</span>
+                            <span class="block text-white font-bold">2</span>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-between items-end">
+                        <div>
+                            <span class="text-xs text-gray-500 font-bold uppercase block">Mensal</span>
+                            <span class="text-2xl font-black text-primary">R$ 5.200</span>
+                        </div>
+                        <button class="text-white hover:text-primary transition-colors">
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-16 border-t border-concrete text-center md:text-left">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
+            <div>
+                <div class="font-black text-3xl tracking-tighter uppercase italic text-white mb-2">
+                    URBANO<span class="text-primary">.</span>
+                </div>
+                <p class="text-gray-500 text-sm max-w-xs">Manifesto urbano. Arquitetura é vida.</p>
+            </div>
+            <div class="flex gap-6">
+                <a href="#"
+                    class="w-12 h-12 border border-concrete flex items-center justify-center hover:bg-primary hover:border-primary hover:text-black transition-all">
+                    <span class="font-black">IG</span>
+                </a>
+                <a href="#"
+                    class="w-12 h-12 border border-concrete flex items-center justify-center hover:bg-primary hover:border-primary hover:text-black transition-all">
+                    <span class="font-black">FB</span>
+                </a>
+                <a href="#"
+                    class="w-12 h-12 border border-concrete flex items-center justify-center hover:bg-primary hover:border-primary hover:text-black transition-all">
+                    <span class="font-black">TT</span>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <a href="layout-sites.html"
+        class="fixed bottom-6 right-6 bg-primary text-black px-6 py-3 font-black uppercase hover:bg-white transition-colors z-50 shadow-[4px_4px_0px_0px_rgba(255,255,255,1)] flex items-center gap-2">
+        <span class="material-icons text-xl">grid_view</span> Voltar
+    </a>
+
+    <script src="js/chatbot.js"></script>
+</body>
+
+</html>

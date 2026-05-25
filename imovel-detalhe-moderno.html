@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Imóvel - Modelo Horizonte</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        secondary: '#1E40AF',
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-sm fixed w-full z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center">
+                    <a href="site-modelo-moderno.html" class="text-2xl font-bold text-primary">HORIZONTE</a>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="site-modelo-moderno.html" class="text-gray-600 hover:text-primary font-medium">Início</a>
+                    <a href="#" class="text-gray-600 hover:text-primary font-medium">Imóveis</a>
+                    <a href="#" class="text-gray-600 hover:text-primary font-medium">Lançamentos</a>
+                    <a href="#" class="text-gray-600 hover:text-primary font-medium">Contato</a>
+                </div>
+                <div class="hidden md:flex">
+                    <a href="#"
+                        class="bg-primary hover:bg-secondary text-white px-6 py-2.5 rounded-full font-medium transition-colors">
+                        Fale Conosco
+                    </a>
+                </div>
+                <button class="md:hidden text-gray-600">
+                    <span class="material-icons-outlined text-3xl">menu</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="pt-28 pb-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <!-- Breadcrumbs -->
+            <nav class="text-sm text-gray-500 mb-6 flex items-center gap-2">
+                <a href="site-modelo-moderno.html" class="hover:text-primary">Início</a>
+                <span class="material-icons-outlined text-xs">chevron_right</span>
+                <a href="#" class="hover:text-primary">Pelotas</a>
+                <span class="material-icons-outlined text-xs">chevron_right</span>
+                <a href="#" class="hover:text-primary">Laranjal</a>
+                <span class="material-icons-outlined text-xs">chevron_right</span>
+                <span class="text-gray-800 font-medium">Residencial Alphaville</span>
+            </nav>
+
+            <!-- Gallery -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4 h-[500px] mb-8 rounded-2xl overflow-hidden">
+                <!-- Main Image -->
+                <div class="md:col-span-2 relative h-full group">
+                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c"
+                        class="w-full h-full object-cover cursor-pointer hover:scale-105 transition-transform duration-500"
+                        alt="Fachada">
+                    <div
+                        class="absolute bottom-4 left-4 bg-black/50 text-white px-3 py-1 rounded-full text-xs font-bold backdrop-blur-sm">
+                        <i class="fa-solid fa-camera mr-1"></i> 15 Fotos
+                    </div>
+                </div>
+                <!-- Side Grid -->
+                <div class="md:col-span-2 grid grid-cols-2 gap-4 h-full">
+                    <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3"
+                        class="w-full h-full object-cover rounded-xl cursor-pointer hover:opacity-90 transition-opacity"
+                        alt="Sala">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
+                        class="w-full h-full object-cover rounded-xl cursor-pointer hover:opacity-90 transition-opacity"
+                        alt="Cozinha">
+                    <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea"
+                        class="w-full h-full object-cover rounded-xl cursor-pointer hover:opacity-90 transition-opacity"
+                        alt="Quarto">
+                    <div class="relative h-full">
+                        <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfe1"
+                            class="w-full h-full object-cover rounded-xl cursor-pointer hover:opacity-90 transition-opacity"
+                            alt="Banheiro">
+                        <div
+                            class="absolute inset-0 bg-black/60 flex items-center justify-center rounded-xl cursor-pointer hover:bg-black/70 transition-colors">
+                            <span class="text-white font-bold text-lg">+11 Fotos</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+
+                <!-- Left Column: Details -->
+                <div class="lg:col-span-2 space-y-10">
+
+                    <!-- Header Info -->
+                    <div>
+                        <div class="flex flex-wrap gap-3 mb-4">
+                            <span
+                                class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide">Venda</span>
+                            <span
+                                class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide">Casa
+                                em Condomínio</span>
+                        </div>
+                        <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-2">Residencial Alphaville de Alto
+                            Padrão</h1>
+                        <p class="text-gray-500 flex items-center gap-1 text-lg">
+                            <span class="material-icons-outlined text-primary">place</span> Laranjal, Pelotas - RS
+                        </p>
+
+                        <!-- Key Features -->
+                        <div
+                            class="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-8 bg-white p-6 rounded-2xl border border-gray-100 shadow-sm">
+                            <div class="text-center border-r border-gray-100 last:border-0">
+                                <span class="block text-3xl font-bold text-primary mb-1">185</span>
+                                <span class="text-gray-500 text-sm">m² Úteis</span>
+                            </div>
+                            <div class="text-center border-r border-gray-100 last:border-0">
+                                <span class="block text-3xl font-bold text-primary mb-1">3</span>
+                                <span class="text-gray-500 text-sm">Quartos</span>
+                            </div>
+                            <div class="text-center border-r border-gray-100 last:border-0">
+                                <span class="block text-3xl font-bold text-primary mb-1">3</span>
+                                <span class="text-gray-500 text-sm">Banheiros</span>
+                            </div>
+                            <div class="text-center">
+                                <span class="block text-3xl font-bold text-primary mb-1">2</span>
+                                <span class="text-gray-500 text-sm">Vagas</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Description -->
+                    <section>
+                        <h2 class="text-xl font-bold text-gray-900 mb-4">Sobre o Imóvel</h2>
+                        <div class="prose text-gray-600 leading-relaxed space-y-4">
+                            <p>
+                                Viva momentos inesquecíveis nesta magnífica residência localizada no prestigiado
+                                condomínio Alphaville. Com um projeto arquitetônico moderno que privilegia a luz natural
+                                e a integração dos ambientes, esta casa é o equilíbrio perfeito entre sofisticação e
+                                conforto.
+                            </p>
+                            <p>
+                                O living possui pé direito duplo e conecta-se harmoniosamente à área gourmet, criando um
+                                espaço ideal para receber amigos e familiares. A suíte master conta com closet espaçoso
+                                e hidromassagem, proporcionando um verdadeiro refúgio particular.
+                            </p>
+                            <p>
+                                Acabamentos de altíssimo padrão, porcelanato na área social, piso laminado nos
+                                dormitórios e aberturas em PVC automatizadas.
+                            </p>
+                        </div>
+                    </section>
+
+                    <!-- Property Amenities -->
+                    <section>
+                        <h2 class="text-xl font-bold text-gray-900 mb-6">O que este imóvel oferece</h2>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8">
+                            <div class="flex items-center gap-3 text-gray-600">
+                                <span class="material-icons-outlined text-primary">ac_unit</span> Ar Condicionado
+                            </div>
+                            <div class="flex items-center gap-3 text-gray-600">
+                                <span class="material-icons-outlined text-primary">soup_kitchen</span> Cozinha Planejada
+                            </div>
+                            <div class="flex items-center gap-3 text-gray-600">
+                                <span class="material-icons-outlined text-primary">deck</span> Varanda Gourmet
+                            </div>
+                            <div class="flex items-center gap-3 text-gray-600">
+                                <span class="material-icons-outlined text-primary">water_drop</span> Hidromassagem
+                            </div>
+                            <div class="flex items-center gap-3 text-gray-600">
+                                <span class="material-icons-outlined text-primary">fireplace</span> Lareira
+                            </div>
+                            <div class="flex items-center gap-3 text-gray-600">
+                                <span class="material-icons-outlined text-primary">checkroom</span> Closet
+                            </div>
+                            <div class="flex items-center gap-3 text-gray-600">
+                                <span class="material-icons-outlined text-primary">work</span> Home Office
+                            </div>
+                            <div class="flex items-center gap-3 text-gray-600">
+                                <span class="material-icons-outlined text-primary">solar_power</span> Energia Solar
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Condo Amenities -->
+                    <section>
+                        <h2 class="text-xl font-bold text-gray-900 mb-6">Comodidades do Condomínio</h2>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8">
+                            <div class="flex items-center gap-3 text-gray-600">
+                                <span class="material-icons-outlined text-green-600">security</span> Portaria 24h
+                            </div>
+                            <div class="flex items-center gap-3 text-gray-600">
+                                <span class="material-icons-outlined text-green-600">pool</span> Piscina Térmica
+                            </div>
+                            <div class="flex items-center gap-3 text-gray-600">
+                                <span class="material-icons-outlined text-green-600">fitness_center</span> Academia
+                                Completa
+                            </div>
+                            <div class="flex items-center gap-3 text-gray-600">
+                                <span class="material-icons-outlined text-green-600">sports_tennis</span> Quadra de
+                                Tênis
+                            </div>
+                            <div class="flex items-center gap-3 text-gray-600">
+                                <span class="material-icons-outlined text-green-600">local_florist</span> Área Verde
+                                Preservada
+                            </div>
+                            <div class="flex items-center gap-3 text-gray-600">
+                                <span class="material-icons-outlined text-green-600">celebration</span> Salão de Festas
+                            </div>
+                        </div>
+                    </section>
+
+                </div>
+
+                <!-- Right Sidebar: Sticky Actions -->
+                <div class="lg:col-span-1">
+                    <div class="bg-white p-8 rounded-2xl shadow-xl border border-gray-100 sticky top-24">
+                        <div class="mb-6">
+                            <span class="text-sm text-gray-500 font-medium">Valor de Venda</span>
+                            <div class="flex items-baseline gap-2">
+                                <span class="text-4xl font-bold text-secondary">R$ 850.000</span>
+                            </div>
+                        </div>
+
+                        <div class="space-y-3 mb-8 border-t border-b border-gray-100 py-4">
+                            <div class="flex justify-between text-sm">
+                                <span class="text-gray-500">Condomínio</span>
+                                <span class="font-bold text-gray-800">R$ 850,00</span>
+                            </div>
+                            <div class="flex justify-between text-sm">
+                                <span class="text-gray-500">IPTU (Mensal)</span>
+                                <span class="font-bold text-gray-800">R$ 220,00</span>
+                            </div>
+                        </div>
+
+                        <div class="space-y-3">
+                            <button
+                                class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-4 rounded-xl shadow-lg hover:shadow-green-500/30 transition-all flex items-center justify-center gap-2">
+                                <i class="fa-brands fa-whatsapp text-xl"></i> Pagar Contato via WhatsApp
+                            </button>
+                            <button
+                                class="w-full bg-primary hover:bg-secondary text-white font-bold py-3 rounded-xl transition-all flex items-center justify-center gap-2">
+                                <span class="material-icons-outlined">calendar_today</span> Agendar Visita
+                            </button>
+                        </div>
+
+                        <div class="mt-8 flex justify-center gap-4 text-gray-400">
+                            <button class="hover:text-red-500 transition-colors flex items-center gap-1 text-sm"><span
+                                    class="material-icons-outlined">favorite_border</span> Salvar</button>
+                            <button class="hover:text-primary transition-colors flex items-center gap-1 text-sm"><span
+                                    class="material-icons-outlined">share</span> Compartilhar</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Related Properties -->
+            <section class="mt-20">
+                <h2 class="text-2xl font-bold text-gray-900 mb-8">Outros imóveis que você pode gostar</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Related Card 1 -->
+                    <div
+                        class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col group hover:shadow-2xl transition-all duration-300 border border-gray-100">
+                        <div class="relative h-64 overflow-hidden">
+                            <div class="absolute top-4 left-4 z-10 flex gap-2">
+                                <span
+                                    class="bg-green-500 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-sm">Venda</span>
+                            </div>
+                            <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00"
+                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                alt="Relacionado">
+                        </div>
+                        <div class="p-6">
+                            <span
+                                class="text-xs text-secondary font-bold uppercase tracking-wider mb-1 block">Apartamento</span>
+                            <h3 class="text-lg font-bold text-gray-900">Edifício Panorâmico</h3>
+                            <span class="text-secondary font-bold text-xl block mt-2">R$ 680.000</span>
+                        </div>
+                    </div>
+
+                    <!-- Related Card 2 -->
+                    <div
+                        class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col group hover:shadow-2xl transition-all duration-300 border border-gray-100">
+                        <div class="relative h-64 overflow-hidden">
+                            <div class="absolute top-4 left-4 z-10 flex gap-2">
+                                <span
+                                    class="bg-green-500 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-sm">Venda</span>
+                            </div>
+                            <img src="https://images.unsplash.com/photo-1512915922686-57c11dde9b6b"
+                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                alt="Relacionado">
+                        </div>
+                        <div class="p-6">
+                            <span
+                                class="text-xs text-secondary font-bold uppercase tracking-wider mb-1 block">Loft</span>
+                            <h3 class="text-lg font-bold text-gray-900">Studio Moderno</h3>
+                            <span class="text-secondary font-bold text-xl block mt-2">R$ 450.000</span>
+                        </div>
+                    </div>
+
+                    <!-- Related Card 3 -->
+                    <div
+                        class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col group hover:shadow-2xl transition-all duration-300 border border-gray-100">
+                        <div class="relative h-64 overflow-hidden">
+                            <div class="absolute top-4 left-4 z-10 flex gap-2">
+                                <span
+                                    class="bg-blue-600 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-sm">Lançamento</span>
+                            </div>
+                            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
+                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                alt="Relacionado">
+                        </div>
+                        <div class="p-6">
+                            <span class="text-xs text-secondary font-bold uppercase tracking-wider mb-1 block">Casa de
+                                Condomínio</span>
+                            <h3 class="text-lg font-bold text-gray-900">Casa Reserva</h3>
+                            <span class="text-secondary font-bold text-xl block mt-2">R$ 1.200.000</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <span class="text-2xl font-bold">HORIZONTE</span>
+                    <p class="text-gray-400 mt-2 text-sm">A excelência em morar bem.</p>
+                </div>
+                <div class="flex space-x-6 text-sm text-gray-400">
+                    <a href="#" class="hover:text-white">Sobre</a>
+                    <a href="#" class="hover:text-white">Termos</a>
+                    <a href="#" class="hover:text-white">Privacidade</a>
+                    <a href="#" class="hover:text-white">Contato</a>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-500">
+                &copy; 2024 Horizonte Imóveis. Template Demonstrativo.
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/chatbot.js"></script>
+</body>
+
+</html>

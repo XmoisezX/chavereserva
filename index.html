@@ -1,0 +1,1339 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="pt-br">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Chave Reserva | CRM Imobiliário &amp; Site Integrado</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#1d4ed8", // Corporate Blue
+                        "background-light": "#f8fafc",
+                        "background-dark": "#0f172a",
+                    },
+                    fontFamily: {
+                        display: ["Inter", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                    },
+                },
+            },
+        };
+    </script>
+    <style type="text/tailwindcss">
+        body { font-family: 'Inter', sans-serif; }
+        .journey-line {
+            background-image: linear-gradient(to right, #1d4ed8 50%, transparent 50%);
+            background-size: 15px 1px;
+            background-repeat: repeat-x;
+        }
+    </style>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-200 transition-colors duration-300">
+    <header
+        class="fixed w-full top-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <a href="index.html" class="flex items-center gap-2">
+                    <img alt="Chave Reserva Logo" class="h-10 w-auto" src="logo.png" />
+                </a>
+                <nav class="hidden md:flex space-x-8 items-center">
+                    <a class="text-sm font-medium hover:text-primary transition-colors"
+                        href="features.html">Funcionalidades</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="portal.html">Portal</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="pricing.html">Preços</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="blog.html">Blog</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="layout-sites.html">Layout
+                        Sites</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="login.html">Login</a>
+                    <a class="bg-primary text-white px-5 py-2.5 rounded hover:bg-blue-700 transition-all font-semibold"
+                        href="#">Teste Grátis</a>
+                </nav>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-500 hover:text-primary p-2">
+                        <span class="material-symbols-outlined text-2xl">menu</span>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden pb-4 space-y-2">
+                <a class="block py-2 text-sm font-medium hover:text-primary transition-colors hover:bg-slate-50 dark:hover:bg-slate-800 px-2 rounded"
+                    href="features.html">Funcionalidades</a>
+                <a class="block py-2 text-sm font-medium hover:text-primary transition-colors hover:bg-slate-50 dark:hover:bg-slate-800 px-2 rounded"
+                    href="portal.html">Portal</a>
+                <a class="block py-2 text-sm font-medium hover:text-primary transition-colors hover:bg-slate-50 dark:hover:bg-slate-800 px-2 rounded"
+                    href="pricing.html">Preços</a>
+                <a class="block py-2 text-sm font-medium hover:text-primary transition-colors hover:bg-slate-50 dark:hover:bg-slate-800 px-2 rounded"
+                    href="blog.html">Blog</a>
+                <a class="block py-2 text-sm font-medium hover:text-primary transition-colors hover:bg-slate-50 dark:hover:bg-slate-800 px-2 rounded"
+                    href="layout-sites.html">Layout Sites</a>
+                <a class="block py-2 text-sm font-medium hover:text-primary transition-colors hover:bg-slate-50 dark:hover:bg-slate-800 px-2 rounded"
+                    href="login.html">Login</a>
+                <a class="block py-2 mt-2 bg-primary text-white px-5 rounded hover:bg-blue-700 transition-all font-semibold text-center"
+                    href="#">Teste Grátis</a>
+            </div>
+        </div>
+        </div>
+    </header>
+    <section class="relative pt-32 pb-24 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:flex items-center gap-16">
+                <div class="lg:w-3/5 space-y-8">
+                    <div
+                        class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-900/30 text-primary text-sm font-semibold">
+                        <span class="material-symbols-outlined text-sm">trending_up</span>
+                        Ideal para equipes em crescimento
+                    </div>
+                    <h1 class="text-4xl lg:text-6xl font-extrabold leading-tight text-slate-900 dark:text-white"
+                        data-aos="fade-up" data-aos-duration="1000">
+                        Tudo o que sua imobiliária precisa para vender mais, <span class="text-primary italic">em um
+                            único sistema</span>
+                    </h1>
+                    <p class="text-xl text-slate-600 dark:text-slate-400 max-w-2xl leading-relaxed" data-aos="fade-up"
+                        data-aos-delay="100">
+                        Potencialize a colaboração do seu time e acelere seu crescimento. Unificamos todas as etapas da
+                        jornada de venda para que sua equipe foque no que realmente importa: fechar negócios.
+                    </p>
+                    <div class="flex flex-wrap gap-4 pt-4">
+                        <button
+                            class="bg-primary text-white px-8 py-4 rounded text-lg font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-500/20 flex items-center gap-2">
+                            Começar agora
+                            <span class="material-symbols-outlined">rocket_launch</span>
+                        </button>
+                        <button
+                            class="border border-slate-300 dark:border-slate-700 px-8 py-4 rounded text-lg font-semibold hover:bg-slate-50 dark:hover:bg-slate-800 transition-all">
+                            Ver demonstração
+                        </button>
+                    </div>
+                </div>
+                <div class="lg:w-2/5 mt-16 lg:mt-0 relative" data-aos="fade-left" data-aos-delay="200">
+                    <div class="relative">
+                        <img alt="Equipe imobiliária colaborando em escritório moderno" class="w-full h-auto"
+                            src="public/foto inicial.svg" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO SHOWCASE INTERATIVA: CONHEÇA O SISTEMA POR DENTRO -->
+    <section class="py-24 bg-slate-50 dark:bg-slate-900/40 border-t border-b border-slate-100 dark:border-slate-800" id="sistema-showcase">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Cabeçalho da Seção -->
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-900/30 text-primary text-sm font-semibold mb-4">
+                    <span class="material-symbols-outlined text-sm">visibility</span>
+                    Demonstração Interativa
+                </span>
+                <h2 class="text-3xl lg:text-5xl font-bold text-slate-900 dark:text-white mb-6">
+                    Sua imobiliária em alta performance por dentro
+                </h2>
+                <p class="text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto leading-relaxed">
+                    Navegue pelas abas abaixo para explorar a interface do sistema Chave Reserva. Veja como organizamos cada etapa do seu negócio em telas rápidas, limpas e responsivas.
+                </p>
+            </div>
+
+            <!-- Menu de Abas Horizontal (Scrollable no mobile) -->
+            <div class="relative mb-12" data-aos="fade-up" data-aos-delay="100">
+                <div class="flex overflow-x-auto pb-4 xl:pb-0 justify-start xl:justify-center gap-2 sm:gap-3 no-scrollbar scroll-smooth px-4 md:px-8">
+                    <!-- Aba Dashboard -->
+                    <button onclick="switchShowcaseTab('dashboard', 'public/dashboard.png', 'dashboard')" 
+                        id="tab-dashboard"
+                        class="showcase-tab shrink-0 flex items-center gap-2.5 px-5 py-3 rounded-full border border-primary bg-primary text-white font-semibold transition-all whitespace-nowrap cursor-pointer shadow-lg shadow-blue-500/20">
+                        <span class="material-symbols-outlined text-xl">dashboard</span>
+                        <span>Dashboard</span>
+                    </button>
+                    <!-- Aba Imóveis -->
+                    <button onclick="switchShowcaseTab('imoveis', 'public/imoveis.png', 'imoveis')" 
+                        id="tab-imoveis"
+                        class="showcase-tab shrink-0 flex items-center gap-2.5 px-5 py-3 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 font-medium hover:bg-slate-100 dark:hover:bg-slate-700/50 hover:text-primary transition-all whitespace-nowrap cursor-pointer">
+                        <span class="material-symbols-outlined text-xl">home_work</span>
+                        <span>Imóveis</span>
+                    </button>
+                    <!-- Aba Clientes -->
+                    <button onclick="switchShowcaseTab('clientes', 'public/clientes.png', 'clientes')" 
+                        id="tab-clientes"
+                        class="showcase-tab shrink-0 flex items-center gap-2.5 px-5 py-3 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 font-medium hover:bg-slate-100 dark:hover:bg-slate-700/50 hover:text-primary transition-all whitespace-nowrap cursor-pointer">
+                        <span class="material-symbols-outlined text-xl">groups</span>
+                        <span>Clientes</span>
+                    </button>
+                    <!-- Aba Chaves -->
+                    <button onclick="switchShowcaseTab('chaves', 'public/chaves.png', 'chaves')" 
+                        id="tab-chaves"
+                        class="showcase-tab shrink-0 flex items-center gap-2.5 px-5 py-3 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 font-medium hover:bg-slate-100 dark:hover:bg-slate-700/50 hover:text-primary transition-all whitespace-nowrap cursor-pointer">
+                        <span class="material-symbols-outlined text-xl">vpn_key</span>
+                        <span>Chaves</span>
+                    </button>
+                    <!-- Aba Negócio -->
+                    <button onclick="switchShowcaseTab('negocios', 'public/negocios.png', 'negocios')" 
+                        id="tab-negocios"
+                        class="showcase-tab shrink-0 flex items-center gap-2.5 px-5 py-3 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 font-medium hover:bg-slate-100 dark:hover:bg-slate-700/50 hover:text-primary transition-all whitespace-nowrap cursor-pointer">
+                        <span class="material-symbols-outlined text-xl">handshake</span>
+                        <span>Negócio</span>
+                    </button>
+                    <!-- Aba Empreendimentos -->
+                    <button onclick="switchShowcaseTab('empreendimentos', 'public/empreendimentos.png', 'empreendimentos')" 
+                        id="tab-empreendimentos"
+                        class="showcase-tab shrink-0 flex items-center gap-2.5 px-5 py-3 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 font-medium hover:bg-slate-100 dark:hover:bg-slate-700/50 hover:text-primary transition-all whitespace-nowrap cursor-pointer">
+                        <span class="material-symbols-outlined text-xl">domain</span>
+                        <span>Empreendimentos</span>
+                    </button>
+                    <!-- Aba Leads -->
+                    <button onclick="switchShowcaseTab('leads', 'public/leads.png', 'leads')" 
+                        id="tab-leads"
+                        class="showcase-tab shrink-0 flex items-center gap-2.5 px-5 py-3 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 font-medium hover:bg-slate-100 dark:hover:bg-slate-700/50 hover:text-primary transition-all whitespace-nowrap cursor-pointer">
+                        <span class="material-symbols-outlined text-xl">filter_alt</span>
+                        <span>Leads</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mockup do Navegador Web -->
+            <div class="relative max-w-6xl mx-auto" data-aos="zoom-in" data-aos-delay="200">
+                <!-- Efeitos de luz no background (Glow) -->
+                <div class="absolute -inset-1 rounded-3xl bg-gradient-to-r from-blue-600 to-indigo-600 opacity-20 blur-xl group-hover:opacity-30 transition duration-1000 -z-10"></div>
+                
+                <div class="bg-white dark:bg-slate-950 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-2xl overflow-hidden flex flex-col">
+                    
+                    <!-- Área de Conteúdo do Navegador -->
+                    <div class="relative bg-slate-100 dark:bg-slate-900 min-h-[400px] md:min-h-[550px] flex flex-col justify-center items-center overflow-hidden transition-all duration-300">
+                        <!-- Imagem do Print Real -->
+                        <img id="showcase-image" 
+                            src="public/dashboard.png" 
+                            alt="Mockup do Sistema Chave Reserva"
+                            class="w-full h-auto object-cover object-top transition-opacity duration-300 opacity-100"
+                            onload="onShowcaseImageLoaded(this)"
+                            onerror="onShowcaseImageError(this)" />
+
+                        <!-- Mensagem informativa de imagem ausente quando em Fallback HTML -->
+                        <div id="showcase-fallback-notice" class="hidden absolute top-4 right-4 z-20 bg-slate-900/90 text-white text-xs px-3 py-1.5 rounded-full font-medium shadow-lg flex items-center gap-2 backdrop-blur-sm transition-all duration-300">
+                            <span class="material-symbols-outlined text-xs text-amber-400">info</span>
+                            <span>Visualizando Prévia Interativa (HTML). Adicione <code id="missing-filename-notice" class="bg-slate-800 text-blue-300 px-1.5 py-0.5 rounded font-mono">public/dashboard.png</code> para ver sua tela real.</span>
+                        </div>
+
+                        <!-- Fallback em HTML/CSS (Ultra-Elegante caso a imagem dê erro) -->
+                        <div id="showcase-html-fallback" class="hidden w-full h-full min-h-[550px] bg-slate-50 dark:bg-slate-950 p-6 md:p-8 overflow-y-auto self-stretch">
+                            
+                            <!-- 1. DASHBOARD FALLBACK -->
+                            <div id="fallback-dashboard" class="fallback-screen space-y-6">
+                                <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-100 dark:border-slate-800 pb-4">
+                                    <div>
+                                        <h3 class="text-2xl font-bold text-slate-800 dark:text-white">Que bom ver você, Moisez!</h3>
+                                        <p class="text-sm text-slate-500 dark:text-slate-400">Aqui está o resumo das suas atividades recentes e principais indicadores.</p>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <div class="flex items-center justify-center w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800">
+                                            <span class="material-symbols-outlined text-slate-500">notifications</span>
+                                        </div>
+                                        <div class="flex items-center gap-2 bg-slate-100 dark:bg-slate-800 px-3 py-1.5 rounded-lg">
+                                            <div class="w-8 h-8 rounded-full bg-blue-600 text-white font-bold flex items-center justify-center text-xs">MS</div>
+                                            <span class="text-xs font-semibold text-slate-700 dark:text-slate-300">Moisez Silva</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Cards de Métricas Grid -->
+                                <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+                                    <div class="bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+                                        <div class="flex items-center justify-between text-emerald-500 mb-2">
+                                            <span class="text-xs font-medium uppercase tracking-wider text-slate-400">Valor Total Carteira</span>
+                                            <span class="material-symbols-outlined">payments</span>
+                                        </div>
+                                        <p class="text-lg md:text-2xl font-extrabold text-slate-800 dark:text-white">R$ 8.432.750,00</p>
+                                        <span class="text-xs text-emerald-500 font-semibold flex items-center gap-1 mt-1">
+                                            <span class="material-symbols-outlined text-xs">trending_up</span> 12,5% vs. mês anterior
+                                        </span>
+                                    </div>
+                                    <div class="bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+                                        <div class="flex items-center justify-between text-blue-500 mb-2">
+                                            <span class="text-xs font-medium uppercase tracking-wider text-slate-400">Ticket Médio</span>
+                                            <span class="material-symbols-outlined">analytics</span>
+                                        </div>
+                                        <p class="text-lg md:text-2xl font-extrabold text-slate-800 dark:text-white">R$ 356.890,00</p>
+                                        <span class="text-xs text-blue-500 font-semibold flex items-center gap-1 mt-1">
+                                            <span class="material-symbols-outlined text-xs">trending_up</span> 8,3% vs. mês anterior
+                                        </span>
+                                    </div>
+                                    <div class="bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+                                        <div class="flex items-center justify-between text-purple-500 mb-2">
+                                            <span class="text-xs font-medium uppercase tracking-wider text-slate-400">Total de Imóveis</span>
+                                            <span class="material-symbols-outlined">home</span>
+                                        </div>
+                                        <p class="text-lg md:text-2xl font-extrabold text-slate-800 dark:text-white">234</p>
+                                        <span class="text-xs text-emerald-500 font-semibold flex items-center gap-1 mt-1">
+                                            <span class="material-symbols-outlined text-xs">trending_up</span> 7,4% vs. mês anterior
+                                        </span>
+                                    </div>
+                                    <div class="bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+                                        <div class="flex items-center justify-between text-orange-500 mb-2">
+                                            <span class="text-xs font-medium uppercase tracking-wider text-slate-400">Imóveis À Venda</span>
+                                            <span class="material-symbols-outlined">sell</span>
+                                        </div>
+                                        <p class="text-lg md:text-2xl font-extrabold text-slate-800 dark:text-white">156</p>
+                                        <span class="text-xs text-emerald-500 font-semibold flex items-center gap-1 mt-1">
+                                            <span class="material-symbols-outlined text-xs">trending_up</span> 5,2% vs. mês anterior
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <!-- Gráfico / Funil e Atividades Recentes -->
+                                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                                    <!-- Funil de Vendas -->
+                                    <div class="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col">
+                                        <h4 class="font-bold text-slate-800 dark:text-white mb-4 flex items-center gap-2">
+                                            <span class="material-symbols-outlined text-primary">filter_alt</span> Funil de Vendas
+                                        </h4>
+                                        <div class="space-y-4 my-auto">
+                                            <div>
+                                                <div class="flex justify-between text-xs font-bold mb-1">
+                                                    <span>Leads (Visitantes)</span>
+                                                    <span>542 (100%)</span>
+                                                </div>
+                                                <div class="w-full bg-slate-100 dark:bg-slate-800 h-2.5 rounded-full overflow-hidden">
+                                                    <div class="bg-blue-600 h-full rounded-full" style="width: 100%"></div>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="flex justify-between text-xs font-bold mb-1">
+                                                    <span>Visitas Realizadas</span>
+                                                    <span>198 (36.5%)</span>
+                                                </div>
+                                                <div class="w-full bg-slate-100 dark:bg-slate-800 h-2.5 rounded-full overflow-hidden">
+                                                    <div class="bg-indigo-500 h-full rounded-full" style="width: 36.5%"></div>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="flex justify-between text-xs font-bold mb-1">
+                                                    <span>Propostas Enviadas</span>
+                                                    <span>87 (16.1%)</span>
+                                                </div>
+                                                <div class="w-full bg-slate-100 dark:bg-slate-800 h-2.5 rounded-full overflow-hidden">
+                                                    <div class="bg-amber-500 h-full rounded-full" style="width: 16.1%"></div>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="flex justify-between text-xs font-bold mb-1">
+                                                    <span>Negócios Fechados</span>
+                                                    <span>34 (6.3%)</span>
+                                                </div>
+                                                <div class="w-full bg-slate-100 dark:bg-slate-800 h-2.5 rounded-full overflow-hidden">
+                                                    <div class="bg-emerald-500 h-full rounded-full" style="width: 6.3%"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Atividade Recente -->
+                                    <div class="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+                                        <h4 class="font-bold text-slate-800 dark:text-white mb-4 flex items-center gap-2">
+                                            <span class="material-symbols-outlined text-primary">history</span> Atividade Recente
+                                        </h4>
+                                        <div class="space-y-4">
+                                            <div class="flex items-start gap-3 text-sm">
+                                                <div class="w-2 h-2 rounded-full bg-emerald-500 mt-1.5"></div>
+                                                <div class="flex-1">
+                                                    <span class="font-semibold text-slate-700 dark:text-slate-300">Matheus</span> adicionou um novo cliente
+                                                    <span class="block text-xs text-slate-400 mt-0.5">12/10/2026 14:30</span>
+                                                </div>
+                                                <span class="bg-emerald-50 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 text-xs px-2 py-0.5 rounded-full font-bold">Clientes</span>
+                                            </div>
+                                            <div class="flex items-start gap-3 text-sm">
+                                                <div class="w-2 h-2 rounded-full bg-blue-500 mt-1.5"></div>
+                                                <div class="flex-1">
+                                                    <span class="font-semibold text-slate-700 dark:text-slate-300">Moisez</span> cadastrou um novo imóvel
+                                                    <span class="block text-xs text-slate-400 mt-0.5">12/10/2026 14:25</span>
+                                                </div>
+                                                <span class="bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-xs px-2 py-0.5 rounded-full font-bold">Imóveis</span>
+                                            </div>
+                                            <div class="flex items-start gap-3 text-sm">
+                                                <div class="w-2 h-2 rounded-full bg-purple-500 mt-1.5"></div>
+                                                <div class="flex-1">
+                                                    <span class="font-semibold text-slate-700 dark:text-slate-300">Alessandro</span> vendeu um imóvel
+                                                    <span class="block text-xs text-slate-400 mt-0.5">12/10/2026 13:55</span>
+                                                </div>
+                                                <span class="bg-purple-50 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 text-xs px-2 py-0.5 rounded-full font-bold">Vendas</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 2. IMÓVEIS FALLBACK -->
+                            <div id="fallback-imoveis" class="fallback-screen hidden space-y-6">
+                                <div class="flex items-center justify-between border-b border-slate-100 dark:border-slate-800 pb-4">
+                                    <div>
+                                        <h3 class="text-2xl font-bold text-slate-800 dark:text-white">Inventário de Imóveis</h3>
+                                        <p class="text-sm text-slate-500 dark:text-slate-400">Gerenciamento inteligente do seu portfólio de imóveis.</p>
+                                    </div>
+                                    <button class="bg-primary text-white text-sm px-4 py-2 rounded-lg font-bold hover:bg-blue-700 transition flex items-center gap-1">
+                                        <span class="material-symbols-outlined text-sm">add</span> Adicionar Imóvel
+                                    </button>
+                                </div>
+
+                                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                                    <!-- Imóvel Card 1 -->
+                                    <div class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden flex flex-col">
+                                        <div class="h-40 bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-white relative">
+                                            <span class="material-symbols-outlined text-5xl">home</span>
+                                            <span class="absolute top-2 right-2 bg-emerald-500 text-white font-bold text-xs px-2.5 py-1 rounded-full">Exclusivo</span>
+                                        </div>
+                                        <div class="p-4 flex-1 flex flex-col justify-between">
+                                            <div>
+                                                <h4 class="font-bold text-lg text-slate-800 dark:text-white truncate">Cobertura Duplex no Leblon</h4>
+                                                <p class="text-xs text-slate-400 mb-2">Av. Delfim Moreira, Rio de Janeiro - RJ</p>
+                                                <div class="flex items-center gap-3 text-slate-500 dark:text-slate-400 text-xs mb-4">
+                                                    <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">bed</span> 4 Quartos</span>
+                                                    <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">bathtub</span> 5 Banhs</span>
+                                                    <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">square_foot</span> 380m²</span>
+                                                </div>
+                                            </div>
+                                            <div class="flex items-center justify-between border-t border-slate-100 dark:border-slate-800 pt-3">
+                                                <span class="text-lg font-extrabold text-primary">R$ 4.200.000</span>
+                                                <span class="text-xs text-slate-400">Ref: CR-00122</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Imóvel Card 2 -->
+                                    <div class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden flex flex-col">
+                                        <div class="h-40 bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white relative">
+                                            <span class="material-symbols-outlined text-5xl">holiday_village</span>
+                                            <span class="absolute top-2 right-2 bg-amber-500 text-white font-bold text-xs px-2.5 py-1 rounded-full">Em Destaque</span>
+                                        </div>
+                                        <div class="p-4 flex-1 flex flex-col justify-between">
+                                            <div>
+                                                <h4 class="font-bold text-lg text-slate-800 dark:text-white truncate">Casa Contemporânea Alphaville</h4>
+                                                <p class="text-xs text-slate-400 mb-2">Barueri, São Paulo - SP</p>
+                                                <div class="flex items-center gap-3 text-slate-500 dark:text-slate-400 text-xs mb-4">
+                                                    <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">bed</span> 3 Suítes</span>
+                                                    <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">bathtub</span> 4 Banhs</span>
+                                                    <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">square_foot</span> 290m²</span>
+                                                </div>
+                                            </div>
+                                            <div class="flex items-center justify-between border-t border-slate-100 dark:border-slate-800 pt-3">
+                                                <span class="text-lg font-extrabold text-primary">R$ 2.890.000</span>
+                                                <span class="text-xs text-slate-400">Ref: CR-00455</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Imóvel Card 3 -->
+                                    <div class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden flex flex-col">
+                                        <div class="h-40 bg-gradient-to-br from-teal-500 to-emerald-600 flex items-center justify-center text-white relative">
+                                            <span class="material-symbols-outlined text-5xl">apartment</span>
+                                        </div>
+                                        <div class="p-4 flex-1 flex flex-col justify-between">
+                                            <div>
+                                                <h4 class="font-bold text-lg text-slate-800 dark:text-white truncate">Apartamento Vista Mar Barra</h4>
+                                                <p class="text-xs text-slate-400 mb-2">Av. Lúcio Costa, Rio de Janeiro - RJ</p>
+                                                <div class="flex items-center gap-3 text-slate-500 dark:text-slate-400 text-xs mb-4">
+                                                    <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">bed</span> 2 Qts</span>
+                                                    <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">bathtub</span> 2 Banhs</span>
+                                                    <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">square_foot</span> 85m²</span>
+                                                </div>
+                                            </div>
+                                            <div class="flex items-center justify-between border-t border-slate-100 dark:border-slate-800 pt-3">
+                                                <span class="text-lg font-extrabold text-primary">R$ 1.750.000</span>
+                                                <span class="text-xs text-slate-400">Ref: CR-00912</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 3. CLIENTES FALLBACK -->
+                            <div id="fallback-clientes" class="fallback-screen hidden space-y-6">
+                                <div class="flex items-center justify-between border-b border-slate-100 dark:border-slate-800 pb-4">
+                                    <div>
+                                        <h3 class="text-2xl font-bold text-slate-800 dark:text-white">CRM - Gestão de Contatos</h3>
+                                        <p class="text-sm text-slate-500 dark:text-slate-400">Gerencie leads e clientes em um único banco de dados unificado.</p>
+                                    </div>
+                                </div>
+
+                                <div class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-x-auto">
+                                    <table class="w-full border-collapse text-left text-sm text-slate-600 dark:text-slate-300">
+                                        <thead class="bg-slate-50 dark:bg-slate-800/50 text-slate-700 dark:text-slate-200 font-bold border-b border-slate-200 dark:border-slate-800">
+                                            <tr>
+                                                <th class="p-4">Nome / Contato</th>
+                                                <th class="p-4">Tipo</th>
+                                                <th class="p-4">Status</th>
+                                                <th class="p-4">Última Interação</th>
+                                                <th class="p-4">Imóvel de Interesse</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="divide-y divide-slate-100 dark:divide-slate-800">
+                                            <tr>
+                                                <td class="p-4">
+                                                    <div class="font-bold text-slate-800 dark:text-white">Moisez Silva</div>
+                                                    <div class="text-xs text-slate-400">moisez@email.com • (21) 99888-7766</div>
+                                                </td>
+                                                <td class="p-4"><span class="bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-xs px-2 py-1 rounded font-bold">Comprador</span></td>
+                                                <td class="p-4"><span class="bg-amber-100 dark:bg-amber-900/30 text-amber-600 dark:text-amber-400 text-xs px-2.5 py-1 rounded-full font-bold">Em Negociação</span></td>
+                                                <td class="p-4">Visita realizada ontem às 15:00</td>
+                                                <td class="p-4 font-semibold text-primary">Cobertura Leblon</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="p-4">
+                                                    <div class="font-bold text-slate-800 dark:text-white">Matheus Costa</div>
+                                                    <div class="text-xs text-slate-400">matheus@email.com • (11) 97766-5544</div>
+                                                </td>
+                                                <td class="p-4"><span class="bg-purple-50 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 text-xs px-2 py-1 rounded font-bold">Proprietário</span></td>
+                                                <td class="p-4"><span class="bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 text-xs px-2.5 py-1 rounded-full font-bold">Ativo</span></td>
+                                                <td class="p-4">Avaliação do imóvel enviada hoje</td>
+                                                <td class="p-4 font-semibold text-slate-500">Apto Copacabana</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="p-4">
+                                                    <div class="font-bold text-slate-800 dark:text-white">Alessandra Reis</div>
+                                                    <div class="text-xs text-slate-400">alessandra@email.com • (11) 99912-3456</div>
+                                                </td>
+                                                <td class="p-4"><span class="bg-emerald-50 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 text-xs px-2 py-1 rounded font-bold">Investidor</span></td>
+                                                <td class="p-4"><span class="bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-xs px-2.5 py-1 rounded-full font-bold">Lead Novo</span></td>
+                                                <td class="p-4">Entrou via formulário do site oficial</td>
+                                                <td class="p-4 font-semibold text-primary">Lançamento Alphaville</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <!-- 4. CHAVES FALLBACK -->
+                            <div id="fallback-chaves" class="fallback-screen hidden space-y-6">
+                                <div class="flex items-center justify-between border-b border-slate-100 dark:border-slate-800 pb-4">
+                                    <div>
+                                        <h3 class="text-2xl font-bold text-slate-800 dark:text-white">Controle de Chaves</h3>
+                                        <p class="text-sm text-slate-500 dark:text-slate-400">Gerenciamento eletrônico de chaves de imóveis com QR Code e histórico.</p>
+                                    </div>
+                                    <button class="bg-emerald-600 text-white text-sm px-4 py-2 rounded-lg font-bold hover:bg-emerald-700 transition flex items-center gap-1">
+                                        <span class="material-symbols-outlined text-sm">key</span> Emprestar Chave
+                                    </button>
+                                </div>
+
+                                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                    <div class="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm flex items-start gap-4">
+                                        <div class="w-12 h-12 rounded-lg bg-emerald-50 dark:bg-emerald-900/20 text-emerald-500 flex items-center justify-center">
+                                            <span class="material-symbols-outlined text-2xl font-bold">key</span>
+                                        </div>
+                                        <div class="flex-1 min-w-0">
+                                            <h4 class="font-bold text-slate-800 dark:text-white truncate">Apto 101 - Edifício Paris</h4>
+                                            <p class="text-xs text-slate-400">Armário A • Gancho 12</p>
+                                            <span class="inline-block mt-2 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 text-xs px-2 py-0.5 rounded-full font-bold">Disponível</span>
+                                        </div>
+                                    </div>
+                                    <div class="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm flex items-start gap-4">
+                                        <div class="w-12 h-12 rounded-lg bg-amber-50 dark:bg-amber-900/20 text-amber-500 flex items-center justify-center">
+                                            <span class="material-symbols-outlined text-2xl font-bold">vpn_key</span>
+                                        </div>
+                                        <div class="flex-1 min-w-0">
+                                            <h4 class="font-bold text-slate-800 dark:text-white truncate">Casa 04 - Condomínio Lagos</h4>
+                                            <p class="text-xs text-slate-400">Com Corretor Bruno Santos</p>
+                                            <span class="inline-block mt-2 bg-amber-100 dark:bg-amber-900/30 text-amber-600 dark:text-amber-400 text-xs px-2 py-0.5 rounded-full font-bold">Emprestada (Hoje às 10h)</span>
+                                        </div>
+                                    </div>
+                                    <div class="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm flex items-start gap-4">
+                                        <div class="w-12 h-12 rounded-lg bg-emerald-50 dark:bg-emerald-900/20 text-emerald-500 flex items-center justify-center">
+                                            <span class="material-symbols-outlined text-2xl font-bold">key</span>
+                                        </div>
+                                        <div class="flex-1 min-w-0">
+                                            <h4 class="font-bold text-slate-800 dark:text-white truncate">Sala 204 - Prime Center</h4>
+                                            <p class="text-xs text-slate-400">Armário B • Gancho 05</p>
+                                            <span class="inline-block mt-2 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 text-xs px-2 py-0.5 rounded-full font-bold">Disponível</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 5. NEGÓCIOS FALLBACK -->
+                            <div id="fallback-negocios" class="fallback-screen hidden space-y-6">
+                                <div class="flex items-center justify-between border-b border-slate-100 dark:border-slate-800 pb-4">
+                                    <div>
+                                        <h3 class="text-2xl font-bold text-slate-800 dark:text-white">Pipeline de Negócios (Funil)</h3>
+                                        <p class="text-sm text-slate-500 dark:text-slate-400">Visualize todas as oportunidades de venda em colunas arrastáveis de Kanban.</p>
+                                    </div>
+                                </div>
+
+                                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                                    <!-- Coluna 1 -->
+                                    <div class="bg-slate-100/50 dark:bg-slate-900/50 p-4 rounded-xl border border-slate-200/50 dark:border-slate-800/50 flex flex-col gap-3 min-h-[300px]">
+                                        <div class="flex justify-between items-center px-1">
+                                            <span class="font-bold text-slate-700 dark:text-slate-300 text-xs uppercase tracking-wider">Prospecção (2)</span>
+                                            <span class="text-xs bg-slate-200 dark:bg-slate-800 px-2 py-0.5 rounded font-bold">R$ 2.450.000</span>
+                                        </div>
+                                        <!-- Card Negócio 1 -->
+                                        <div class="bg-white dark:bg-slate-950 p-4 rounded-lg border border-slate-200 dark:border-slate-850 shadow-sm space-y-2 cursor-grab">
+                                            <div class="flex justify-between items-start">
+                                                <h5 class="font-bold text-sm text-slate-800 dark:text-white">Moisez Silva</h5>
+                                                <span class="w-2 h-2 rounded-full bg-blue-500"></span>
+                                            </div>
+                                            <p class="text-xs text-slate-500 dark:text-slate-400">Apto 3 Quartos Leblon</p>
+                                            <div class="flex justify-between items-center text-xs font-semibold pt-2 border-t border-slate-50 dark:border-slate-900">
+                                                <span class="text-primary">R$ 1.500.000</span>
+                                                <span class="text-slate-400 text-[10px]">1 dia parado</span>
+                                            </div>
+                                        </div>
+                                        <!-- Card Negócio 2 -->
+                                        <div class="bg-white dark:bg-slate-950 p-4 rounded-lg border border-slate-200 dark:border-slate-850 shadow-sm space-y-2 cursor-grab">
+                                            <div class="flex justify-between items-start">
+                                                <h5 class="font-bold text-sm text-slate-800 dark:text-white">Ana Santos</h5>
+                                                <span class="w-2 h-2 rounded-full bg-blue-500"></span>
+                                            </div>
+                                            <p class="text-xs text-slate-500 dark:text-slate-400">Casa 3 Quartos Lagos</p>
+                                            <div class="flex justify-between items-center text-xs font-semibold pt-2 border-t border-slate-50 dark:border-slate-900">
+                                                <span class="text-primary">R$ 950.000</span>
+                                                <span class="text-slate-400 text-[10px]">Hoje</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Coluna 2 -->
+                                    <div class="bg-slate-100/50 dark:bg-slate-900/50 p-4 rounded-xl border border-slate-200/50 dark:border-slate-800/50 flex flex-col gap-3 min-h-[300px]">
+                                        <div class="flex justify-between items-center px-1">
+                                            <span class="font-bold text-slate-700 dark:text-slate-300 text-xs uppercase tracking-wider">Visita Agendada (1)</span>
+                                            <span class="text-xs bg-slate-200 dark:bg-slate-800 px-2 py-0.5 rounded font-bold">R$ 450.000</span>
+                                        </div>
+                                        <!-- Card Negócio 3 -->
+                                        <div class="bg-white dark:bg-slate-950 p-4 rounded-lg border border-slate-200 dark:border-slate-850 shadow-sm space-y-2 cursor-grab">
+                                            <div class="flex justify-between items-start">
+                                                <h5 class="font-bold text-sm text-slate-800 dark:text-white">Carlos Eduardo</h5>
+                                                <span class="w-2 h-2 rounded-full bg-amber-500"></span>
+                                            </div>
+                                            <p class="text-xs text-slate-500 dark:text-slate-400">Sala Comercial Prime</p>
+                                            <div class="flex justify-between items-center text-xs font-semibold pt-2 border-t border-slate-50 dark:border-slate-900">
+                                                <span class="text-primary">R$ 450.000</span>
+                                                <span class="text-amber-500 text-[10px] font-bold">Amanhã às 14:00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Coluna 3 -->
+                                    <div class="bg-slate-100/50 dark:bg-slate-900/50 p-4 rounded-xl border border-slate-200/50 dark:border-slate-800/50 flex flex-col gap-3 min-h-[300px]">
+                                        <div class="flex justify-between items-center px-1">
+                                            <span class="font-bold text-slate-700 dark:text-slate-300 text-xs uppercase tracking-wider">Proposta (1)</span>
+                                            <span class="text-xs bg-slate-200 dark:bg-slate-800 px-2 py-0.5 rounded font-bold">R$ 680.000</span>
+                                        </div>
+                                        <!-- Card Negócio 4 -->
+                                        <div class="bg-white dark:bg-slate-950 p-4 rounded-lg border border-slate-200 dark:border-slate-850 shadow-sm space-y-2 cursor-grab">
+                                            <div class="flex justify-between items-start">
+                                                <h5 class="font-bold text-sm text-slate-800 dark:text-white">Matheus Costa</h5>
+                                                <span class="w-2 h-2 rounded-full bg-purple-500"></span>
+                                            </div>
+                                            <p class="text-xs text-slate-500 dark:text-slate-400">Terreno Alphaville Residencial</p>
+                                            <div class="flex justify-between items-center text-xs font-semibold pt-2 border-t border-slate-50 dark:border-slate-900">
+                                                <span class="text-primary">R$ 680.000</span>
+                                                <span class="text-emerald-500 text-[10px] font-bold">Aguardando resposta</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 6. EMPREENDIMENTOS FALLBACK -->
+                            <div id="fallback-empreendimentos" class="fallback-screen hidden space-y-6">
+                                <div class="flex items-center justify-between border-b border-slate-100 dark:border-slate-800 pb-4">
+                                    <div>
+                                        <h3 class="text-2xl font-bold text-slate-800 dark:text-white">Lançamentos &amp; Empreendimentos</h3>
+                                        <p class="text-sm text-slate-500 dark:text-slate-400">Acompanhamento e espelho de vendas completo de incorporadoras e condomínios.</p>
+                                    </div>
+                                </div>
+
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <!-- Empreendimento 1 -->
+                                    <div class="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
+                                        <div class="flex justify-between items-start">
+                                            <div>
+                                                <h4 class="font-bold text-lg text-slate-800 dark:text-white">Vanguard Residence</h4>
+                                                <p class="text-xs text-slate-400">Vanguard Construtora • Barra da Tijuca, RJ</p>
+                                            </div>
+                                            <span class="bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-xs px-2.5 py-1 rounded font-bold">Em Obras</span>
+                                        </div>
+                                        <div class="space-y-1">
+                                            <div class="flex justify-between text-xs font-semibold text-slate-500">
+                                                <span>Progresso da Construção</span>
+                                                <span>85% Concluído</span>
+                                            </div>
+                                            <div class="w-full bg-slate-100 dark:bg-slate-800 h-2.5 rounded-full overflow-hidden">
+                                                <div class="bg-blue-600 h-full rounded-full" style="width: 85%"></div>
+                                            </div>
+                                        </div>
+                                        <div class="flex justify-between text-xs font-medium border-t border-slate-100 dark:border-slate-800 pt-3">
+                                            <span>Estoque Disponível: <strong class="text-slate-800 dark:text-white">12 unidades</strong></span>
+                                            <span class="text-primary font-bold">Ver espelho de vendas →</span>
+                                        </div>
+                                    </div>
+                                    <!-- Empreendimento 2 -->
+                                    <div class="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
+                                        <div class="flex justify-between items-start">
+                                            <div>
+                                                <h4 class="font-bold text-lg text-slate-800 dark:text-white">PrimeState Tower</h4>
+                                                <p class="text-xs text-slate-400">PrimeState Inc • Itaim Bibi, SP</p>
+                                            </div>
+                                            <span class="bg-amber-50 dark:bg-amber-900/30 text-amber-600 dark:text-amber-400 text-xs px-2.5 py-1 rounded font-bold">Lançamento</span>
+                                        </div>
+                                        <div class="space-y-1">
+                                            <div class="flex justify-between text-xs font-semibold text-slate-500">
+                                                <span>Progresso da Construção</span>
+                                                <span>40% Concluído</span>
+                                            </div>
+                                            <div class="w-full bg-slate-100 dark:bg-slate-800 h-2.5 rounded-full overflow-hidden">
+                                                <div class="bg-amber-500 h-full rounded-full" style="width: 40%"></div>
+                                            </div>
+                                        </div>
+                                        <div class="flex justify-between text-xs font-medium border-t border-slate-100 dark:border-slate-800 pt-3">
+                                            <span>Estoque Disponível: <strong class="text-slate-800 dark:text-white">28 unidades</strong></span>
+                                            <span class="text-primary font-bold">Ver espelho de vendas →</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 7. LEADS FALLBACK -->
+                            <div id="fallback-leads" class="fallback-screen hidden space-y-6">
+                                <div class="flex items-center justify-between border-b border-slate-100 dark:border-slate-800 pb-4">
+                                    <div>
+                                        <h3 class="text-2xl font-bold text-slate-800 dark:text-white">Entrada de Leads (Distribuição)</h3>
+                                        <p class="text-sm text-slate-500 dark:text-slate-400">Leads capturados em tempo real dos maiores portais imobiliários nacionais.</p>
+                                    </div>
+                                </div>
+
+                                <div class="space-y-3">
+                                    <!-- Lead 1 -->
+                                    <div class="bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4">
+                                        <div class="flex items-start md:items-center gap-3">
+                                            <!-- Ícone do Portal Simulado -->
+                                            <div class="w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 font-bold flex items-center justify-center text-xs whitespace-nowrap px-1">
+                                                ZAP
+                                            </div>
+                                            <div>
+                                                <div class="flex items-center gap-2">
+                                                    <h4 class="font-bold text-slate-800 dark:text-white text-base">Bruno Ramos</h4>
+                                                    <span class="bg-slate-100 dark:bg-slate-800 text-slate-500 text-[10px] px-2 py-0.5 rounded font-semibold">Novo</span>
+                                                </div>
+                                                <p class="text-xs text-slate-500 dark:text-slate-400">"Deseja agendar uma visita para sábado no Apto de 3 Qts no Leblon."</p>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center gap-2 self-end md:self-auto">
+                                            <span class="text-xs text-slate-400 font-semibold mr-2">Recebido há 5 min</span>
+                                            <button class="bg-emerald-600 hover:bg-emerald-700 text-white text-xs px-3.5 py-2 rounded-lg font-bold transition flex items-center gap-1.5">
+                                                <span class="material-symbols-outlined text-sm">chat</span> Conversar no WhatsApp
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <!-- Lead 2 -->
+                                    <div class="bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4">
+                                        <div class="flex items-start md:items-center gap-3">
+                                            <!-- Ícone do Portal Simulado -->
+                                            <div class="w-10 h-10 rounded-full bg-orange-100 dark:bg-orange-900/30 text-orange-600 dark:text-orange-400 font-bold flex items-center justify-center text-xs whitespace-nowrap px-1">
+                                                OLX
+                                            </div>
+                                            <div>
+                                                <div class="flex items-center gap-2">
+                                                    <h4 class="font-bold text-slate-800 dark:text-white text-base">Juliana Mendes</h4>
+                                                    <span class="bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-[10px] px-2 py-0.5 rounded font-semibold">Em Distribuição</span>
+                                                </div>
+                                                <p class="text-xs text-slate-500 dark:text-slate-400">"Gostaria de saber opções de financiamento para a Casa em Alphaville."</p>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center gap-2 self-end md:self-auto">
+                                            <span class="text-xs text-slate-400 font-semibold mr-2">Recebido há 12 min</span>
+                                            <button class="bg-emerald-600 hover:bg-emerald-700 text-white text-xs px-3.5 py-2 rounded-lg font-bold transition flex items-center gap-1.5">
+                                                <span class="material-symbols-outlined text-sm">chat</span> Conversar no WhatsApp
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <!-- Lead 3 -->
+                                    <div class="bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4">
+                                        <div class="flex items-start md:items-center gap-3">
+                                            <!-- Ícone do Portal Simulado -->
+                                            <div class="w-10 h-10 rounded-full bg-indigo-100 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 font-bold flex items-center justify-center text-xs whitespace-nowrap px-1">
+                                                SITE
+                                            </div>
+                                            <div>
+                                                <div class="flex items-center gap-2">
+                                                    <h4 class="font-bold text-slate-800 dark:text-white text-base">Ricardo Souza</h4>
+                                                    <span class="bg-slate-100 dark:bg-slate-800 text-slate-500 text-[10px] px-2 py-0.5 rounded font-semibold">Atendido</span>
+                                                </div>
+                                                <p class="text-xs text-slate-500 dark:text-slate-400">"Solicitou o catálogo digital completo do Vanguard Residence."</p>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center gap-2 self-end md:self-auto">
+                                            <span class="text-xs text-slate-400 font-semibold mr-2">Recebido há 2 horas</span>
+                                            <button class="bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 text-xs px-3.5 py-2 rounded-lg font-bold transition flex items-center gap-1.5">
+                                                <span class="material-symbols-outlined text-sm">check_circle</span> Visualizar Atendimento
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Script de interatividade do Showcase -->
+    <script>
+        function switchShowcaseTab(tabId, imagePath, slug) {
+            // 1. Atualizar estilos das abas (Active / Inactive)
+            const tabs = document.querySelectorAll('.showcase-tab');
+            tabs.forEach(tab => {
+                tab.className = "showcase-tab shrink-0 flex items-center gap-2.5 px-5 py-3 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 font-medium hover:bg-slate-100 dark:hover:bg-slate-700/50 hover:text-primary transition-all whitespace-nowrap cursor-pointer";
+            });
+
+            const activeTab = document.getElementById('tab-' + tabId);
+            if (activeTab) {
+                activeTab.className = "showcase-tab shrink-0 flex items-center gap-2.5 px-5 py-3 rounded-full border border-primary bg-primary text-white font-semibold transition-all whitespace-nowrap cursor-pointer shadow-lg shadow-blue-500/20";
+            }
+
+            // 2. Atualizar Slug do Browser Simulador
+            const slugEl = document.getElementById('browser-slug');
+            if (slugEl) {
+                slugEl.textContent = slug;
+            }
+
+            // 3. Atualizar e carregar a Imagem Real com efeito de Fade
+            const img = document.getElementById('showcase-image');
+            if (img) {
+                img.style.opacity = '0';
+                setTimeout(() => {
+                    // Adicionamos um cache-buster dinâmico (?t=...) para evitar que o navegador cacheie erros 404 anteriores
+                    img.src = imagePath + '?t=' + new Date().getTime();
+                    img.alt = "Mockup do Chave Reserva - Tela de " + tabId.charAt(0).toUpperCase() + tabId.slice(1);
+                    
+                    // Manter o aviso de arquivo ausente atualizado
+                    const missingNoticeFile = document.getElementById('missing-filename-notice');
+                    if (missingNoticeFile) {
+                        missingNoticeFile.textContent = imagePath;
+                    }
+                }, 150);
+            }
+        }
+
+        function onShowcaseImageLoaded(imgEl) {
+            // Imagem carregou com sucesso: exibe a imagem e oculta o fallback de HTML e o aviso
+            imgEl.classList.remove('hidden');
+            imgEl.style.opacity = '1';
+            
+            const fallbackContainer = document.getElementById('showcase-html-fallback');
+            if (fallbackContainer) {
+                fallbackContainer.classList.add('hidden');
+            }
+
+            const notice = document.getElementById('showcase-sidebar-notice') || document.getElementById('showcase-fallback-notice');
+            if (notice) {
+                notice.classList.add('hidden');
+            }
+        }
+
+        function onShowcaseImageError(imgEl) {
+            // Falha ao carregar a imagem real: oculta o elemento img e ativa o fallback elegante
+            imgEl.classList.add('hidden');
+            
+            const fallbackContainer = document.getElementById('showcase-html-fallback');
+            if (fallbackContainer) {
+                fallbackContainer.classList.remove('hidden');
+            }
+
+            const notice = document.getElementById('showcase-fallback-notice');
+            if (notice) {
+                notice.classList.remove('hidden');
+            }
+
+            // Descobrir qual aba está ativa atualmente e mostrar apenas seu fallback HTML
+            const activeTabButton = document.querySelector('.showcase-tab.bg-primary');
+            if (activeTabButton) {
+                const tabId = activeTabButton.id.replace('tab-', '');
+                
+                // Ocultar todas as telas de fallback
+                const screens = document.querySelectorAll('.fallback-screen');
+                screens.forEach(screen => {
+                    screen.classList.add('hidden');
+                });
+                
+                // Exibir a tela correspondente ao tabId
+                const targetScreen = document.getElementById('fallback-' + tabId);
+                if (targetScreen) {
+                    targetScreen.classList.remove('hidden');
+                }
+            }
+        }
+    </script>
+
+    <section
+        class="py-16 border-y border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-10">
+            <p class="text-sm font-bold uppercase tracking-widest text-slate-500 dark:text-slate-400">
+                Os clientes que escolheram o Chave Reserva
+            </p>
+        </div>
+
+        <!-- Animated Carousel Container -->
+        <div class="relative w-full overflow-hidden group">
+            <div class="flex items-center gap-16 animate-marquee whitespace-nowrap">
+                <!-- Logo 1: Imperial Paris (Real) -->
+                <!-- Logo 1: Imperial Paris (Real) -->
+                <a href="#"
+                    class="flex flex-col items-center justify-center grayscale hover:grayscale-0 transition-all duration-500 opacity-60 hover:opacity-100 transform hover:scale-110 mx-8">
+                    <img src="/public/imperial_paris_logo.png" alt="Imperial Paris Imóveis"
+                        class="h-12 w-auto object-contain">
+                </a>
+
+                <!-- Logo 2: Fictional -->
+                <a href="#"
+                    class="flex flex-col items-center justify-center grayscale hover:grayscale-0 transition-all duration-500 opacity-60 hover:opacity-100 transform hover:scale-110 mx-8">
+                    <div class="flex items-center gap-2 font-display font-bold text-xl text-slate-800 dark:text-white">
+                        <span class="material-symbols-outlined text-3xl text-emerald-500">apartment</span>
+                        Vanguard
+                    </div>
+                </a>
+
+                <!-- Logo 3: Fictional -->
+                <a href="#"
+                    class="flex flex-col items-center justify-center grayscale hover:grayscale-0 transition-all duration-500 opacity-60 hover:opacity-100 transform hover:scale-110 mx-8">
+                    <div class="flex items-center gap-2 font-display font-bold text-xl text-slate-800 dark:text-white">
+                        <span class="material-symbols-outlined text-3xl text-blue-500">home_work</span>
+                        PrimeState
+                    </div>
+                </a>
+
+                <!-- Logo 4: Fictional -->
+                <a href="#"
+                    class="flex flex-col items-center justify-center grayscale hover:grayscale-0 transition-all duration-500 opacity-60 hover:opacity-100 transform hover:scale-110 mx-8">
+                    <div class="flex items-center gap-2 font-display font-bold text-xl text-slate-800 dark:text-white">
+                        <span class="material-symbols-outlined text-3xl text-purple-500">domain</span>
+                        UrbanKey
+                    </div>
+                </a>
+
+                <!-- Logo 5: Fictional -->
+                <a href="#"
+                    class="flex flex-col items-center justify-center grayscale hover:grayscale-0 transition-all duration-500 opacity-60 hover:opacity-100 transform hover:scale-110 mx-8">
+                    <div class="flex items-center gap-2 font-display font-bold text-xl text-slate-800 dark:text-white">
+                        <span class="material-symbols-outlined text-3xl text-orange-500">real_estate_agent</span>
+                        NovaCasa
+                    </div>
+                </a>
+
+                <!-- Logo 6: Fictional -->
+                <a href="#"
+                    class="flex flex-col items-center justify-center grayscale hover:grayscale-0 transition-all duration-500 opacity-60 hover:opacity-100 transform hover:scale-110 mx-8">
+                    <div class="flex items-center gap-2 font-display font-bold text-xl text-slate-800 dark:text-white">
+                        <span class="material-symbols-outlined text-3xl text-indigo-500">vpn_key</span>
+                        Selectimob
+                    </div>
+                </a>
+
+                <!-- Duplicated for Infinite Loop Effect -->
+                <!-- Logo 1 Copy -->
+                <a href="#"
+                    class="flex flex-col items-center justify-center grayscale hover:grayscale-0 transition-all duration-500 opacity-60 hover:opacity-100 transform hover:scale-110 mx-8">
+                    <img src="/public/imperial_paris_logo.png" alt="Imperial Paris Imóveis"
+                        class="h-12 w-auto object-contain">
+                </a>
+
+                <!-- Logo 2 Copy -->
+                <a href="#"
+                    class="flex flex-col items-center justify-center grayscale hover:grayscale-0 transition-all duration-500 opacity-60 hover:opacity-100 transform hover:scale-110 mx-8">
+                    <div class="flex items-center gap-2 font-display font-bold text-xl text-slate-800 dark:text-white">
+                        <span class="material-symbols-outlined text-3xl text-emerald-500">apartment</span>
+                        Vanguard
+                    </div>
+                </a>
+                <!-- Logo 3 Copy -->
+                <a href="#"
+                    class="flex flex-col items-center justify-center grayscale hover:grayscale-0 transition-all duration-500 opacity-60 hover:opacity-100 transform hover:scale-110 mx-8">
+                    <div class="flex items-center gap-2 font-display font-bold text-xl text-slate-800 dark:text-white">
+                        <span class="material-symbols-outlined text-3xl text-blue-500">home_work</span>
+                        PrimeState
+                    </div>
+                </a>
+                <!-- Logo 4 Copy -->
+                <a href="#"
+                    class="flex flex-col items-center justify-center grayscale hover:grayscale-0 transition-all duration-500 opacity-60 hover:opacity-100 transform hover:scale-110 mx-8">
+                    <div class="flex items-center gap-2 font-display font-bold text-xl text-slate-800 dark:text-white">
+                        <span class="material-symbols-outlined text-3xl text-purple-500">domain</span>
+                        UrbanKey
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Style for infinite scrolling animation -->
+    <style>
+        @keyframes marquee {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .animate-marquee {
+            animation: marquee 30s linear infinite;
+        }
+
+        .animate-marquee:hover {
+            animation-play-state: paused;
+        }
+    </style>
+    <section class="py-24 bg-background-light dark:bg-background-dark" id="funcionalidades">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-20">
+            <p class="text-primary font-bold uppercase tracking-wider text-sm mb-4">Fluxo de Sucesso</p>
+            <h2 class="text-3xl lg:text-5xl font-bold dark:text-white max-w-3xl mx-auto">Uma jornada integrada do
+                anúncio ao contrato assinado</h2>
+        </div>
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="hidden lg:block absolute top-1/2 left-0 w-full h-px journey-line -translate-y-1/2 -z-10"></div>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-8">
+                <div class="relative flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div
+                        class="w-24 h-24 rounded-full bg-white dark:bg-slate-800 border-4 border-primary flex items-center justify-center shadow-xl mb-8 z-10">
+                        <span class="material-symbols-outlined text-4xl text-primary">web</span>
+                        <div
+                            class="absolute -top-2 -right-2 bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm">
+                            01</div>
+                    </div>
+                    <div
+                        class="bg-white dark:bg-slate-800 p-8 rounded-3xl shadow-sm border border-slate-100 dark:border-slate-700 hover:shadow-xl transition-all h-full">
+                        <h3 class="text-2xl font-bold mb-4 dark:text-white">Site de Alta Performance</h3>
+                        <p class="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
+                            Atraia mais leads com um site otimizado para SEO e conversão, onde cada detalhe é pensado
+                            para destacar sua carteira.
+                        </p>
+                        <div class="flex items-center justify-center gap-2 text-primary font-semibold">
+                            <span>Capture mais leads</span>
+                            <span class="material-symbols-outlined text-sm">trending_up</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div
+                        class="w-24 h-24 rounded-full bg-white dark:bg-slate-800 border-4 border-primary flex items-center justify-center shadow-xl mb-8 z-10">
+                        <span class="material-symbols-outlined text-4xl text-primary">groups_2</span>
+                        <div
+                            class="absolute -top-2 -right-2 bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm">
+                            02</div>
+                    </div>
+                    <div
+                        class="bg-white dark:bg-slate-800 p-8 rounded-3xl shadow-sm border border-slate-100 dark:border-slate-700 hover:shadow-xl transition-all h-full scale-105 lg:scale-110 ring-2 ring-primary ring-opacity-10">
+                        <h3 class="text-2xl font-bold mb-4 dark:text-white">CRM Colaborativo</h3>
+                        <p class="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
+                            Gerencie sua equipe com funis compartilhados, automação de tarefas e histórico centralizado
+                            de cada atendimento.
+                        </p>
+                        <div class="flex items-center justify-center gap-2 text-primary font-semibold">
+                            <span>Venda em equipe</span>
+                            <span class="material-symbols-outlined text-sm">handshake</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div
+                        class="w-24 h-24 rounded-full bg-white dark:bg-slate-800 border-4 border-primary flex items-center justify-center shadow-xl mb-8 z-10">
+                        <span class="material-symbols-outlined text-4xl text-primary">account_balance_wallet</span>
+                        <div
+                            class="absolute -top-2 -right-2 bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm">
+                            03</div>
+                    </div>
+                    <div
+                        class="bg-white dark:bg-slate-800 p-8 rounded-3xl shadow-sm border border-slate-100 dark:border-slate-700 hover:shadow-xl transition-all h-full">
+                        <h3 class="text-2xl font-bold mb-4 dark:text-white">Gestão Inteligente</h3>
+                        <p class="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
+                            Automatize contratos, repasses e boletos. Escalabilidade real sem aumentar a complexidade do
+                            seu administrativo.
+                        </p>
+                        <div class="flex items-center justify-center gap-2 text-primary font-semibold">
+                            <span>Escala sustentável</span>
+                            <span class="material-symbols-outlined text-sm">auto_graph</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-24 bg-white dark:bg-slate-900" id="integracoes">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:flex items-center gap-20">
+                <div class="lg:w-1/2 mb-12 lg:mb-0">
+                    <p class="text-primary font-bold uppercase tracking-wider text-sm mb-4">Ecosystem</p>
+                    <h2 class="text-3xl lg:text-4xl font-bold mb-6 dark:text-white">Integração nativa com as ferramentas
+                        que você já usa</h2>
+                    <p class="text-lg text-slate-600 dark:text-slate-400 mb-8">
+                        Não mude seu jeito de trabalhar, apenas melhore-o. Conectamos seu inventário aos maiores portais
+                        do Brasil e às ferramentas de produtividade favoritas do seu time.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-primary">sync_saved_locally</span>
+                            <span class="font-medium">Sincronização em tempo real</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-primary">hub</span>
+                            <span class="font-medium">Fluxo de leads centralizado</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-primary">analytics</span>
+                            <span class="font-medium">Relatórios avançados</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-primary">chat</span>
+                            <span class="font-medium">Multi-atendimento WhatsApp</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2">
+                    <div class="grid grid-cols-3 gap-6">
+                        <a href="#"
+                            class="group bg-slate-50 dark:bg-slate-800 p-6 rounded-2xl flex justify-center items-center shadow-sm hover:shadow-lg hover:bg-white dark:hover:bg-slate-700 transition-all transform hover:-translate-y-1 border border-transparent hover:border-slate-200 dark:hover:border-slate-600">
+                            <img alt="Zap Imóveis"
+                                class="h-10 w-auto object-contain transition-all duration-300 transform group-hover:scale-110"
+                                src="public/zap_logo.svg" />
+                        </a>
+                        <a href="#"
+                            class="group bg-slate-50 dark:bg-slate-800 p-6 rounded-2xl flex justify-center items-center shadow-sm hover:shadow-lg hover:bg-white dark:hover:bg-slate-700 transition-all transform hover:-translate-y-1 border border-transparent hover:border-slate-200 dark:hover:border-slate-600">
+                            <img alt="VivaReal"
+                                class="h-10 w-auto object-contain transition-all duration-300 transform group-hover:scale-110"
+                                src="public/vivareal-blue.svg" />
+                        </a>
+                        <a href="#"
+                            class="group bg-slate-50 dark:bg-slate-800 p-6 rounded-2xl flex justify-center items-center shadow-sm hover:shadow-lg hover:bg-white dark:hover:bg-slate-700 transition-all transform hover:-translate-y-1 border border-transparent hover:border-slate-200 dark:hover:border-slate-600">
+                            <img alt="Mercado Livre"
+                                class="h-10 w-auto object-contain transition-all duration-300 transform group-hover:scale-110"
+                                src="public/mercado-livre_logo.svg" />
+                        </a>
+                        <a href="#"
+                            class="group bg-slate-50 dark:bg-slate-800 p-6 rounded-2xl flex justify-center items-center shadow-sm hover:shadow-lg hover:bg-white dark:hover:bg-slate-700 transition-all transform hover:-translate-y-1 border border-transparent hover:border-slate-200 dark:hover:border-slate-600">
+                            <img alt="OLX"
+                                class="h-8 w-auto object-contain transition-all duration-300 transform group-hover:scale-110"
+                                src="public/olx_icon.svg" />
+                        </a>
+                        <a href="#"
+                            class="group bg-slate-50 dark:bg-slate-800 p-6 rounded-2xl flex justify-center items-center shadow-sm hover:shadow-lg hover:bg-white dark:hover:bg-slate-700 transition-all transform hover:-translate-y-1 border border-transparent hover:border-slate-200 dark:hover:border-slate-600">
+                            <img alt="Facebook Ads"
+                                class="h-10 w-auto object-contain transition-all duration-300 transform group-hover:scale-110"
+                                src="public/facebook-ads.svg" />
+                        </a>
+                        <a href="#"
+                            class="group bg-slate-50 dark:bg-slate-800 p-6 rounded-2xl flex justify-center items-center shadow-sm hover:shadow-lg hover:bg-white dark:hover:bg-slate-700 transition-all transform hover:-translate-y-1 border border-transparent hover:border-slate-200 dark:hover:border-slate-600">
+                            <img alt="ChatGPT"
+                                class="h-10 w-auto object-contain transition-all duration-300 transform group-hover:scale-110"
+                                src="public/logo_chatGPT.svg" />
+                        </a>
+                        <a href="#"
+                            class="group bg-slate-50 dark:bg-slate-800 p-6 rounded-2xl flex justify-center items-center shadow-sm hover:shadow-lg hover:bg-white dark:hover:bg-slate-700 transition-all transform hover:-translate-y-1 border border-transparent hover:border-slate-200 dark:hover:border-slate-600">
+                            <img alt="Orulo"
+                                class="h-8 w-auto object-contain transition-all duration-300 transform group-hover:scale-110"
+                                src="public/orulo_logo.svg" />
+                        </a>
+                        <a href="#"
+                            class="group bg-slate-50 dark:bg-slate-800 p-6 rounded-2xl flex justify-center items-center shadow-sm hover:shadow-lg hover:bg-white dark:hover:bg-slate-700 transition-all transform hover:-translate-y-1 border border-transparent hover:border-slate-200 dark:hover:border-slate-600">
+                            <img alt="RD Station"
+                                class="h-10 w-auto object-contain transition-all duration-300 transform group-hover:scale-110"
+                                src="public/rd-station-default.svg" />
+                        </a>
+                        <a href="#"
+                            class="group bg-slate-50 dark:bg-slate-800 p-6 rounded-2xl flex justify-center items-center shadow-sm hover:shadow-lg hover:bg-white dark:hover:bg-slate-700 transition-all transform hover:-translate-y-1 border border-transparent hover:border-slate-200 dark:hover:border-slate-600">
+                            <img alt="Autentique"
+                                class="h-10 w-auto object-contain transition-all duration-300 transform group-hover:scale-110"
+                                src="public/Autentique.svg" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-24 bg-slate-50 dark:bg-slate-800/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-16">
+            <h2 class="text-3xl font-bold dark:text-white">Histórias de quem cresceu com a gente</h2>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-3 gap-8">
+            <div
+                class="bg-white dark:bg-slate-900 p-8 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-800">
+                <div class="flex gap-1 text-yellow-400 mb-4">
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                </div>
+                <p class="text-slate-600 dark:text-slate-400 italic mb-6 leading-relaxed">
+                    "Aumentamos nossas vendas em 40% nos primeiros seis meses usando a Chave Reserva. A colaboração
+                    entre os corretores nunca foi tão fluida."
+                </p>
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-full bg-slate-200 overflow-hidden">
+                        <img alt="User"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdRhulesqVdYMidwTtEYWJ-fDVvLqNeRtkjfgsps3dZzDytCxz9yi-GZvCCIc5H0HegykoEpgoZzPntsQMWk8lGp0NFaVn8apC2qcReN0Tpj7cCs_lrW8EfRXYDsjtHC9xukG-rNuayqORFQrGHSiSDyHkgMiYbsOHeEp3t6o4M3O2lnuAbBUQ_XYFE-qKTLlhkpnlqEYEjTneGVtHQXcsjNAyX8jp-DOuQ6zT6cnqno8Cqx0MXMre5c6mygWmr_WzdWJ3--B87P9J" />
+                    </div>
+                    <div>
+                        <h4 class="font-bold dark:text-white">Ana Paula Mendes</h4>
+                        <p class="text-xs text-slate-500">Diretora na ImobPrime</p>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="bg-white dark:bg-slate-900 p-8 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-800">
+                <div class="flex gap-1 text-yellow-400 mb-4">
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                </div>
+                <p class="text-slate-600 dark:text-slate-400 italic mb-6 leading-relaxed">
+                    "O site integrado é lindo e funciona perfeitamente. Nossos clientes elogiam muito a experiência, e o
+                    CRM nos ajuda a nunca perder um lead."
+                </p>
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-full bg-slate-200 overflow-hidden">
+                        <img alt="User"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaOWnnTd8jAoeFYuW5Ax5fQU_dm19kvXe2vw0VbnoECxtlC1zDEnwNrFCWnHdklOqXdj95DU5v4OK5LTj99D67AOaLyPNgqSWd0lIBX93lYYSEa_lH3fAB8g9aci-41dnRhhNczJ-JRhea1cjDjt80FPMWz88CcHAzftsLa5cpGSl4iIFbfm3TN7SxIfpj8VUN6pW5nV8WrICzSqZa82L6kSIufb4gf0SZo6xOlf4S8qDGuuwwClci3a8becM4QbkRQ1xoDQ7KIzcR" />
+                    </div>
+                    <div>
+                        <h4 class="font-bold dark:text-white">Bruno Silva</h4>
+                        <p class="text-xs text-slate-500">Gestor de Equipe</p>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="bg-white dark:bg-slate-900 p-8 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-800">
+                <div class="flex gap-1 text-yellow-400 mb-4">
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                </div>
+                <p class="text-slate-600 dark:text-slate-400 italic mb-6 leading-relaxed">
+                    "O suporte deles é excepcional. Sempre que tive dúvidas sobre como escalar nossas operações, me
+                    ajudaram a configurar os fluxos ideais."
+                </p>
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-full bg-slate-200 overflow-hidden">
+                        <img alt="User"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBahgBG9pS6xblwveZvX9_5ALTGa4oJw6_60PACz_shjO1GMQ_N0OLsvxCaHetqeWMXV8Vu6QwoE-oa3e8la7K-8LSO3T_k56GbEzC9Cv1Gjk7VZXZBQcV9da263RqOw7Zmk8Qb2Mc5oanxpGGPHjKmrfLw2x8lz1fu7_5gM4kGdIC5Kpp-ZVs7_CkyF356eZmTDV63dR4Ho3VN8WbXnyi0DznqJBaKcH3WzD9le2CzD3cSVmCesoZlS2u2L6fbFaUDuuBiChl909r" />
+                    </div>
+                    <div>
+                        <h4 class="font-bold dark:text-white">Carla Vasconcelos</h4>
+                        <p class="text-xs text-slate-500">Gerente na CasaFácil</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-24 bg-primary overflow-hidden relative">
+        <div class="absolute inset-0 bg-blue-900/20 opacity-50"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <h2 class="text-3xl lg:text-5xl font-extrabold text-white mb-8">
+                Pronto para levar seu time ao próximo nível?
+            </h2>
+            <p class="text-blue-100 text-lg mb-12 max-w-2xl mx-auto">
+                Junte-se a mais de 2.000 imobiliárias que já escalaram seus negócios com a Chave Reserva. Teste grátis
+                por 7 dias e sinta a diferença da colaboração real.
+            </p>
+            <div class="flex flex-wrap justify-center gap-6">
+                <button
+                    class="bg-white text-primary px-10 py-5 rounded-xl text-lg font-bold hover:shadow-2xl hover:scale-105 transition-all">
+                    Começar Agora Grátis
+                </button>
+                <button
+                    class="border-2 border-white/30 text-white px-10 py-5 rounded-xl text-lg font-bold hover:bg-white/10 transition-all">
+                    Falar com Consultor
+                </button>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-white dark:bg-slate-950 pt-20 pb-10 border-t border-slate-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-4 gap-12 mb-16">
+            <div class="col-span-2 md:col-span-1">
+                <div class="flex items-center gap-2 mb-6">
+                    <img alt="Chave Reserva Logo" class="h-10 w-auto" src="logo.png" />
+                    <span class="text-xl font-bold tracking-tight text-primary">Chave Reserva</span>
+                </div>
+                <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-6">
+                    A plataforma completa para gestão e vendas focada no crescimento de equipes imobiliárias. Inovação e
+                    eficiência em cada etapa.
+                </p>
+                <div class="flex gap-4">
+                    <a class="w-10 h-10 rounded-full border border-slate-200 dark:border-slate-800 flex items-center justify-center text-slate-400 hover:text-primary hover:border-primary transition-all"
+                        href="#">
+                        <span class="material-symbols-outlined text-sm">public</span>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <h4 class="font-bold mb-6 dark:text-white">Plataforma</h4>
+                <ul class="space-y-4 text-sm text-slate-500 dark:text-slate-400">
+                    <li><a class="hover:text-primary transition-colors" href="#">CRM Imobiliário</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="#">Site para Imobiliária</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="#">Integração com Portais</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="#">Gestão de Aluguel</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-6 dark:text-white">Recursos</h4>
+                <ul class="space-y-4 text-sm text-slate-500 dark:text-slate-400">
+                    <li><a class="hover:text-primary transition-colors" href="#">Central de Ajuda</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="#">Blog da Chave</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="#">Webinars de Vendas</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="#">API Developers</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-6 dark:text-white">Contato</h4>
+                <ul class="space-y-4 text-sm text-slate-500 dark:text-slate-400">
+                    <li class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-sm text-primary">mail</span>
+                        contato@chavereserva.com.br
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-sm text-primary">phone</span>
+                        0800 123 4567
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-sm text-primary">location_on</span>
+                        São Paulo, SP - Brasil
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div
+            class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 border-t border-slate-100 dark:border-slate-800 flex flex-col md:flex-row justify-between items-center text-xs text-slate-400 gap-4">
+            <p>© 2024 Chave Reserva - Tecnologia para imobiliárias em crescimento.</p>
+            <div class="flex gap-8">
+                <a class="hover:text-primary" href="#">Termos de Uso</a>
+                <a class="hover:text-primary" href="#">Política de Privacidade</a>
+            </div>
+        </div>
+    </footer>
+    <div class="fixed bottom-6 right-6 z-50">
+        <button
+            class="bg-white dark:bg-slate-800 p-4 rounded-full shadow-2xl border border-slate-200 dark:border-slate-700 flex items-center justify-center transition-all hover:scale-110 active:scale-95"
+            onclick="document.documentElement.classList.toggle('dark')">
+            <span class="material-symbols-outlined text-slate-800 dark:hidden">dark_mode</span>
+            <span class="material-symbols-outlined text-yellow-400 hidden dark:block">light_mode</span>
+        </button>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/chatbot.js"></script>
+</body>
+
+</html>

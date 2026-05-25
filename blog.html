@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html class="light" lang="pt-br">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Blog Chave Reserva | Conteúdo Imobiliário</title>
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#0066FF",
+            "background-light": "#F8FAFC",
+            "background-dark": "#0F172A",
+          },
+          fontFamily: {
+            display: ["Inter", "sans-serif"],
+          },
+          borderRadius: {
+            DEFAULT: "0.5rem",
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+
+    .glass-effect {
+      backdrop-filter: blur(8px);
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+
+    .dark .glass-effect {
+      background-color: rgba(15, 23, 42, 0.8);
+    }
+  </style>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body
+  class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 transition-colors duration-300">
+  <nav class="sticky top-0 z-50 glass-effect border-b border-slate-200 dark:border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <div class="flex items-center space-x-3">
+          <a href="index.html" class="flex items-center space-x-3">
+            <img alt="Chave Reserva Logo" class="h-10 w-auto" src="logo.png" />
+          </a>
+        </div>
+        <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
+          <a class="text-primary border-b-2 border-primary pb-1" href="blog.html">Blog</a>
+          <a class="hover:text-primary transition-colors" href="layout-sites.html">Layout Sites</a>
+          <a class="hover:text-primary transition-colors" href="portal.html">Portal</a>
+          <a class="hover:text-primary transition-colors" href="features.html">Funcionalidades</a>
+          <a class="hover:text-primary transition-colors" href="pricing.html">Preços</a>
+        </div>
+        <div class="flex items-center space-x-4">
+          <button class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+            onclick="document.documentElement.classList.toggle('dark')">
+            <span class="material-symbols-outlined dark:hidden">dark_mode</span>
+            <span class="material-symbols-outlined hidden dark:block">light_mode</span>
+          </button>
+          <a class="text-sm font-semibold hover:text-primary transition-colors" href="login.html">Login</a>
+          <a class="bg-primary hover:bg-blue-700 text-white px-5 py-2.5 rounded-lg font-semibold text-sm transition-all transform hover:scale-105"
+            href="#">
+            Teste Grátis
+          </a>
+        </div>
+        <div class="md:hidden flex items-center ml-2">
+          <button id="mobile-menu-btn" class="text-slate-500 hover:text-primary p-2">
+            <span class="material-symbols-outlined text-2xl">menu</span>
+          </button>
+        </div>
+      </div>
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden pb-4 space-y-2">
+        <a class="block py-2 text-sm text-primary font-medium hover:bg-slate-50 dark:hover:bg-slate-800 px-2 rounded"
+          href="blog.html">Blog</a>
+        <a class="block py-2 text-sm hover:text-primary transition-colors hover:bg-slate-50 dark:hover:bg-slate-800 px-2 rounded"
+          href="layout-sites.html">Layout Sites</a>
+        <a class="block py-2 text-sm hover:text-primary transition-colors hover:bg-slate-50 dark:hover:bg-slate-800 px-2 rounded"
+          href="portal.html">Portal</a>
+        <a class="block py-2 text-sm hover:text-primary transition-colors hover:bg-slate-50 dark:hover:bg-slate-800 px-2 rounded"
+          href="features.html">Funcionalidades</a>
+        <a class="block py-2 text-sm hover:text-primary transition-colors hover:bg-slate-50 dark:hover:bg-slate-800 px-2 rounded"
+          href="pricing.html">Preços</a>
+        <a class="block py-2 mt-2 bg-primary text-white px-5 rounded-full font-bold text-center" href="#">Teste
+          Grátis</a>
+      </div>
+    </div>
+  </nav>
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <section class="mb-16">
+      <div class="relative group overflow-hidden rounded-3xl bg-slate-900 h-[500px] flex items-end">
+        <img alt="Apartamento moderno de luxo"
+          class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuXIi-g411JPgalB9ZL4iMe4cWV522_rntMyzbTe6Sk993T23ABBNJ3heJ-ZMYwfmvUulAsBXL_63w055ibbMJ25XuC5N2BKnRrbNw2l_-xJ_zwdnrgfNLBZGMI3hVkkf52BUSFP2snNGg0GIG3RyAL3KKJDAnJx90lRlCeQcD1SU3xjQ1TIIf8_zILfksMV_CZdRvXOm8a7P5zfgQ1bQ-yenWmWku44o220IZuEzqCPWhpyzD-gZ0_CwZFR941Q8DUv61DOpH__Yj" />
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent"></div>
+        <div class="relative p-8 md:p-12 w-full max-w-3xl">
+          <span
+            class="bg-primary text-white text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-4 inline-block">Destaque</span>
+          <h1 class="text-3xl md:text-5xl font-extrabold text-white mb-6 leading-tight">Como a transformação digital
+            está mudando o mercado imobiliário em 2024</h1>
+          <p class="text-slate-200 text-lg mb-8 line-clamp-2">Entenda as principais tendências tecnológicas que estão
+            redefinindo a forma como compramos, vendemos e alugamos imóveis no Brasil.</p>
+          <div class="flex items-center space-x-4">
+            <div class="flex items-center space-x-2">
+              <img alt="Autor" class="w-10 h-10 rounded-full border-2 border-primary"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHGQTXILsG_nGNEKyiZure5Iz5U6HPhmn2k-JiIjDhtRWpF3iAJtzy0Q5h22nFX0UgqrZKYBHRKoR5xo8SXiGgyX3RtKRCjtDlHi92plvNmStiCWagxF2qVxXepJZSSJ_IzDuf-dIFqpos_ckn6VrS5uUXXzHQMJYq4U35JZZT_8-RsYswK-OPxVhsE61UM0fGDZ7TKNMD1sASoQzRM2obmHX5FCd0ldwMXwjVXkkPm3a10halw6E3zRChMbGPRmc_XsqqgkGQGvvU" />
+              <span class="text-white font-medium">Carlos Eduardo</span>
+            </div>
+            <span class="text-slate-400">•</span>
+            <span class="text-slate-300">5 min de leitura</span>
+          </div>
+        </div>
+        <a aria-label="Ler artigo em destaque" class="absolute inset-0" href="#"></a>
+      </div>
+    </section>
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+      <div class="lg:col-span-8 space-y-12">
+        <div class="flex items-center justify-between mb-8">
+          <h2 class="text-2xl font-bold">Últimas Publicações</h2>
+          <div class="h-1 flex-grow mx-6 bg-slate-200 dark:bg-slate-800 rounded-full"></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <article class="flex flex-col group cursor-pointer">
+            <div class="relative overflow-hidden rounded-2xl aspect-video mb-5">
+              <img alt="Gestão imobiliária"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeLWdvhopb5LjYgzuveer9jBCzbNIRdr26E4mMGFCP67UafuzOndrCAT3s2cEiCU1ya76og21Cf49HMKIaldyWISqfTPB9IKQLt33YxSrMo6oleRovV_R1UsyvmHnB7l-cb8GLhRqb5xW0eWk90SVHraMJzcSjpCRfARYPx5v1LbVEeCBjrK5mmODOl9AtzS3Z11Helq5QAlPKlnwuNaOdCMb-9Qusy2HLfWS3hBv78g7y_Y9eesu8sHIpu3WhRXnvIPzHd9NS3fzi" />
+              <div class="absolute top-4 left-4">
+                <span
+                  class="bg-white/90 dark:bg-slate-900/90 backdrop-blur text-primary text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded">Gestão</span>
+              </div>
+            </div>
+            <h3 class="text-xl font-bold mb-3 group-hover:text-primary transition-colors">5 Dicas essenciais para
+              melhorar a gestão do seu aluguel</h3>
+            <p class="text-slate-600 dark:text-slate-400 text-sm mb-4 line-clamp-2">Automatizar processos e manter uma
+              comunicação clara com proprietários e inquilinos são as chaves para o sucesso.</p>
+            <div class="flex items-center text-xs text-slate-500 dark:text-slate-500 space-x-4">
+              <span>15 Mai, 2024</span>
+              <span>•</span>
+              <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">schedule</span> 4
+                min</span>
+            </div>
+          </article>
+          <article class="flex flex-col group cursor-pointer">
+            <div class="relative overflow-hidden rounded-2xl aspect-video mb-5">
+              <img alt="Marketing para corretores"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcX6VKkt-39q8pGfJbsltjD8iLaVKPCb1MvHrwqvUZiCGLKEmGeKTxYfA8ztbAHeDhjYbeT6PSFObpaRE8WkPZFwXgc1Yx2vJDjnTQSGIwnk48AJHfP7y8yz_xlW-63oTqePZNMibwufe3aDgv63Yt8zp8mzsT1ZQlAIXM_MW7qQIR1aKwTftbMPtsvf1SSJiv5yMWnFyQxcDoxMaNvzY55L0xYBi9H5Hi0XkYUMIjhGagoB5Cpdd8xt3VE1I7ybfqphapMnYI-tAE" />
+              <div class="absolute top-4 left-4">
+                <span
+                  class="bg-white/90 dark:bg-slate-900/90 backdrop-blur text-primary text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded">Marketing</span>
+              </div>
+            </div>
+            <h3 class="text-xl font-bold mb-3 group-hover:text-primary transition-colors">Estratégias de Instagram para
+              corretores de alta performance</h3>
+            <p class="text-slate-600 dark:text-slate-400 text-sm mb-4 line-clamp-2">Como utilizar o Reels e os Stories
+              para criar autoridade e converter seguidores em leads qualificados.</p>
+            <div class="flex items-center text-xs text-slate-500 dark:text-slate-500 space-x-4">
+              <span>12 Mai, 2024</span>
+              <span>•</span>
+              <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">schedule</span> 6
+                min</span>
+            </div>
+          </article>
+          <article class="flex flex-col group cursor-pointer">
+            <div class="relative overflow-hidden rounded-2xl aspect-video mb-5">
+              <img alt="Arquitetura moderna"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzSj3CNBh2691AJTQYOopMz-nLfE-j_7Se9V_i_LyCXSD5oH5QZeDF77XImLt81Ctn49l82MkhZnZ-FQmFbleujInvTMnOyMl6Kg4_cZPVTVzVXmnMnSnpnZU5Fas6X-Psi4ai2xZJvVMDXX6uiNpdX4vYWjOK6KWiRtEfOSY5T9UCjkYYX-_Ad163I2c84HGBtHn-kK9MtXF8XupLIe_B5nj2u3nAE5ApM0Jr0hluSmWsmXckqjcwPTyaQ71israsD85NRGJsmFBa" />
+              <div class="absolute top-4 left-4">
+                <span
+                  class="bg-white/90 dark:bg-slate-900/90 backdrop-blur text-primary text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded">Tendências</span>
+              </div>
+            </div>
+            <h3 class="text-xl font-bold mb-3 group-hover:text-primary transition-colors">Casas inteligentes: O que os
+              compradores buscam hoje?</h3>
+            <p class="text-slate-600 dark:text-slate-400 text-sm mb-4 line-clamp-2">A automação residencial deixou de
+              ser luxo e passou a ser requisito para imóveis de médio e alto padrão.</p>
+            <div class="flex items-center text-xs text-slate-500 dark:text-slate-500 space-x-4">
+              <span>10 Mai, 2024</span>
+              <span>•</span>
+              <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">schedule</span> 5
+                min</span>
+            </div>
+          </article>
+          <article class="flex flex-col group cursor-pointer">
+            <div class="relative overflow-hidden rounded-2xl aspect-video mb-5">
+              <img alt="Leis imobiliárias"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCemRK14rrmwbzj73wjm81ntNSsouOYzKIkTrwgpYJlecnN4JXx53augKXnq3IKB8IEwb9Qcl2pRoxGFsqLFtet-daZW4XBA-xAWgONLIgbzAs8lhOV-E_ttM2-LOtI8TRl7BZDzmD5l66tXcbeZD0FoP-tD9ulhRK8FMLawya5xS7jI62EaiG9LhLnZ2nnikirn9N1S8YznDr_3xJY90mVjC6_uvLlR3qt3jS79CDPxWPsfRk0nMoSB6hOZQ3e4zZdM3GCFJzpBvEK" />
+              <div class="absolute top-4 left-4">
+                <span
+                  class="bg-white/90 dark:bg-slate-900/90 backdrop-blur text-primary text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded">Jurídico</span>
+              </div>
+            </div>
+            <h3 class="text-xl font-bold mb-3 group-hover:text-primary transition-colors">Segurança jurídica em
+              contratos de locação digital</h3>
+            <p class="text-slate-600 dark:text-slate-400 text-sm mb-4 line-clamp-2">Tudo o que você precisa saber sobre
+              assinaturas eletrônicas e validade jurídica de documentos online.</p>
+            <div class="flex items-center text-xs text-slate-500 dark:text-slate-500 space-x-4">
+              <span>08 Mai, 2024</span>
+              <span>•</span>
+              <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">schedule</span> 8
+                min</span>
+            </div>
+          </article>
+        </div>
+        <div class="flex justify-center pt-8">
+          <nav class="flex items-center space-x-2">
+            <button
+              class="p-2 rounded-lg border border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors disabled:opacity-50">
+              <span class="material-symbols-outlined">chevron_left</span>
+            </button>
+            <button class="w-10 h-10 rounded-lg bg-primary text-white font-bold">1</button>
+            <button class="w-10 h-10 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">2</button>
+            <button class="w-10 h-10 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">3</button>
+            <span class="px-2">...</span>
+            <button
+              class="w-10 h-10 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">12</button>
+            <button
+              class="p-2 rounded-lg border border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+              <span class="material-symbols-outlined">chevron_right</span>
+            </button>
+          </nav>
+        </div>
+      </div>
+      <aside class="lg:col-span-4 space-y-10">
+        <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-100 dark:border-slate-800 shadow-sm">
+          <h3 class="text-lg font-bold mb-4">Buscar no Blog</h3>
+          <div class="relative">
+            <input
+              class="w-full bg-slate-50 dark:bg-slate-800 border-none rounded-xl py-3 pl-12 pr-4 focus:ring-2 focus:ring-primary focus:bg-white transition-all text-sm"
+              placeholder="Pesquisar artigos..." type="text" />
+            <span
+              class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">search</span>
+          </div>
+        </div>
+        <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-100 dark:border-slate-800 shadow-sm">
+          <h3 class="text-lg font-bold mb-4">Categorias Populares</h3>
+          <ul class="space-y-2">
+            <li>
+              <a class="flex items-center justify-between group p-2 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-all"
+                href="#">
+                <span class="group-hover:text-primary transition-colors">Gestão Imobiliária</span>
+                <span
+                  class="bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 text-[10px] font-bold px-2 py-0.5 rounded-full">24</span>
+              </a>
+            </li>
+            <li>
+              <a class="flex items-center justify-between group p-2 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-all"
+                href="#">
+                <span class="group-hover:text-primary transition-colors">Marketing Digital</span>
+                <span
+                  class="bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 text-[10px] font-bold px-2 py-0.5 rounded-full">18</span>
+              </a>
+            </li>
+            <li>
+              <a class="flex items-center justify-between group p-2 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-all"
+                href="#">
+                <span class="group-hover:text-primary transition-colors">Tecnologia (PropTech)</span>
+                <span
+                  class="bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 text-[10px] font-bold px-2 py-0.5 rounded-full">15</span>
+              </a>
+            </li>
+            <li>
+              <a class="flex items-center justify-between group p-2 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-all"
+                href="#">
+                <span class="group-hover:text-primary transition-colors">Direito Imobiliário</span>
+                <span
+                  class="bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 text-[10px] font-bold px-2 py-0.5 rounded-full">12</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="bg-primary p-8 rounded-3xl text-white relative overflow-hidden">
+          <div class="relative z-10">
+            <h3 class="text-2xl font-bold mb-4">Mantenha-se atualizado</h3>
+            <p class="text-blue-100 text-sm mb-6">Receba as melhores dicas do mercado imobiliário diretamente no seu
+              e-mail.</p>
+            <form class="space-y-3">
+              <input
+                class="w-full bg-white/10 border-white/20 rounded-xl py-3 px-4 placeholder:text-blue-200 focus:ring-white text-sm"
+                placeholder="Seu melhor e-mail" type="email" />
+              <button
+                class="w-full bg-white text-primary font-bold py-3 rounded-xl hover:bg-blue-50 transition-colors text-sm shadow-lg"
+                type="submit">Inscrever agora</button>
+            </form>
+            <p class="text-[10px] text-blue-200 mt-4 text-center">Prometemos não enviar spam. Cancele quando quiser.</p>
+          </div>
+          <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-white/10 rounded-full blur-3xl"></div>
+          <div class="absolute -top-10 -left-10 w-40 h-40 bg-blue-400/20 rounded-full blur-3xl"></div>
+        </div>
+        <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-100 dark:border-slate-800 shadow-sm">
+          <h3 class="text-lg font-bold mb-6">Mais Lidos da Semana</h3>
+          <div class="space-y-6">
+            <a class="flex gap-4 group" href="#">
+              <span
+                class="text-2xl font-black text-slate-200 dark:text-slate-800 group-hover:text-primary transition-colors leading-none">01</span>
+              <div>
+                <h4 class="text-sm font-bold leading-snug group-hover:text-primary transition-colors">A importância da
+                  vistoria detalhada no aluguel</h4>
+                <span class="text-[10px] text-slate-400 uppercase tracking-widest mt-1 inline-block">Gestão</span>
+              </div>
+            </a>
+            <a class="flex gap-4 group" href="#">
+              <span
+                class="text-2xl font-black text-slate-200 dark:text-slate-800 group-hover:text-primary transition-colors leading-none">02</span>
+              <div>
+                <h4 class="text-sm font-bold leading-snug group-hover:text-primary transition-colors">Como criar fotos
+                  de imóveis que vendem mais</h4>
+                <span class="text-[10px] text-slate-400 uppercase tracking-widest mt-1 inline-block">Dicas</span>
+              </div>
+            </a>
+            <a class="flex gap-4 group" href="#">
+              <span
+                class="text-2xl font-black text-slate-200 dark:text-slate-800 group-hover:text-primary transition-colors leading-none">03</span>
+              <div>
+                <h4 class="text-sm font-bold leading-snug group-hover:text-primary transition-colors">Por que usar CRM
+                  no dia a dia do corretor</h4>
+                <span class="text-[10px] text-slate-400 uppercase tracking-widest mt-1 inline-block">CRM</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </main>
+  <footer class="bg-slate-50 dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 pt-20 pb-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+        <div class="col-span-1 md:col-span-1">
+          <div class="flex items-center space-x-3 mb-6">
+            <div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
+              <span class="material-symbols-outlined text-white text-sm">key</span>
+            </div>
+            <span class="text-lg font-bold tracking-tight text-slate-900 dark:text-white uppercase">Chave Reserva</span>
+          </div>
+          <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-6">A plataforma definitiva para
+            simplificar sua gestão imobiliária e impulsionar suas vendas.</p>
+          <div class="flex space-x-4">
+            <a class="w-10 h-10 rounded-full bg-slate-200 dark:bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all"
+              href="#">
+              <i class="fab fa-facebook-f text-sm"></i>
+              <span class="sr-only">Facebook</span>
+            </a>
+            <a class="w-10 h-10 rounded-full bg-slate-200 dark:bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all"
+              href="#">
+              <i class="fab fa-instagram text-sm"></i>
+              <span class="sr-only">Instagram</span>
+            </a>
+            <a class="w-10 h-10 rounded-full bg-slate-200 dark:bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all"
+              href="#">
+              <i class="fab fa-linkedin-in text-sm"></i>
+              <span class="sr-only">LinkedIn</span>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-bold text-slate-900 dark:text-white mb-6">Plataforma</h4>
+          <ul class="space-y-4 text-sm text-slate-500 dark:text-slate-400">
+            <li><a class="hover:text-primary transition-colors" href="#">Como Funciona</a></li>
+            <li><a class="hover:text-primary transition-colors" href="#">Funcionalidades</a></li>
+            <li><a class="hover:text-primary transition-colors" href="#">Integrações</a></li>
+            <li><a class="hover:text-primary transition-colors" href="#">Preços</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-slate-900 dark:text-white mb-6">Conteúdo</h4>
+          <ul class="space-y-4 text-sm text-slate-500 dark:text-slate-400">
+            <li><a class="hover:text-primary transition-colors" href="#">Blog</a></li>
+            <li><a class="hover:text-primary transition-colors" href="#">E-books</a></li>
+            <li><a class="hover:text-primary transition-colors" href="#">Webinars</a></li>
+            <li><a class="hover:text-primary transition-colors" href="#">Dicas para Corretores</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-slate-900 dark:text-white mb-6">Suporte</h4>
+          <ul class="space-y-4 text-sm text-slate-500 dark:text-slate-400">
+            <li><a class="hover:text-primary transition-colors" href="#">Central de Ajuda</a></li>
+            <li><a class="hover:text-primary transition-colors" href="#">Fale Conosco</a></li>
+            <li><a class="hover:text-primary transition-colors" href="#">Treinamentos</a></li>
+            <li><a class="hover:text-primary transition-colors" href="#">Termos de Uso</a></li>
+          </ul>
+        </div>
+      </div>
+      <div
+        class="border-t border-slate-200 dark:border-slate-800 pt-8 flex flex-col md:row justify-between items-center text-xs text-slate-400">
+        <p>© 2024 Chave Reserva - Todos os direitos reservados. Feito com paixão para o mercado imobiliário.</p>
+        <div class="flex space-x-6 mt-4 md:mt-0">
+          <a class="hover:text-slate-600 dark:hover:text-slate-200" href="#">Política de Privacidade</a>
+          <a class="hover:text-slate-600 dark:hover:text-slate-200" href="#">Segurança de Dados</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="js/scripts.js"></script>
+  <script src="js/chatbot.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Imóvel - Modelo Tradição</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e3a8a', /* Navy */
+                        secondary: '#d97706', /* Amber */
+                        beige: '#fcfbf9'
+                    },
+                    fontFamily: {
+                        serif: ['Merriweather', 'serif'],
+                        sans: ['Open Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-beige text-gray-800 font-sans">
+
+    <!-- Top Bar -->
+    <div class="bg-primary text-white py-2 text-sm">
+        <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
+            <div class="flex items-center gap-4">
+                <span class="flex items-center gap-1"><span class="material-icons-outlined text-xs">phone</span> (11)
+                    3344-5566</span>
+                <span class="flex items-center gap-1"><span class="material-icons-outlined text-xs">email</span>
+                    contato@tradicao.com.br</span>
+            </div>
+            <div class="flex gap-4">
+                <a href="#" class="hover:text-secondary">Área do Cliente</a>
+                <a href="#" class="hover:text-secondary">Corretores</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm py-6 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
+            <a href="site-modelo-classico.html"
+                class="text-3xl font-serif font-bold text-primary tracking-tight">Família.</a>
+            <nav class="hidden md:flex space-x-8 font-semibold text-gray-600">
+                <a href="site-modelo-classico.html" class="text-primary hover:text-secondary">Início</a>
+                <a href="#" class="hover:text-secondary">Comprar</a>
+                <a href="#" class="hover:text-secondary">Alugar</a>
+                <a href="#" class="hover:text-secondary">Quem Somos</a>
+                <a href="#" class="hover:text-secondary">Fale Conosco</a>
+            </nav>
+            <a href="#"
+                class="bg-secondary text-white px-6 py-2 rounded shadow hover:bg-orange-700 transition-colors font-bold">
+                Agendar Visita
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="py-12">
+        <div class="max-w-7xl mx-auto px-4">
+
+            <!-- Breadcrumbs -->
+            <nav class="text-sm text-gray-500 mb-6 flex items-center gap-2 font-serif">
+                <a href="site-modelo-classico.html" class="hover:text-secondary">Início</a>
+                <span class="material-icons-outlined text-xs">chevron_right</span>
+                <a href="#" class="hover:text-secondary">São Paulo</a>
+                <span class="material-icons-outlined text-xs">chevron_right</span>
+                <a href="#" class="hover:text-secondary">Brooklin</a>
+                <span class="material-icons-outlined text-xs">chevron_right</span>
+                <span class="text-primary font-bold">Sobrado Clássico</span>
+            </nav>
+
+            <!-- Gallery -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-2 h-[500px] mb-8 border-4 border-white shadow-lg">
+                <!-- Main Image -->
+                <div class="md:col-span-2 relative h-full group">
+                    <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be"
+                        class="w-full h-full object-cover cursor-pointer hover:opacity-95 transition-opacity"
+                        alt="Fachada">
+                    <div class="absolute bottom-4 left-4 bg-primary text-white px-4 py-1 text-sm font-serif font-bold">
+                        <i class="fa-solid fa-camera mr-1"></i> 12 Fotos
+                    </div>
+                </div>
+                <!-- Side Grid -->
+                <div class="md:col-span-2 grid grid-cols-2 gap-2 h-full">
+                    <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2"
+                        class="w-full h-full object-cover cursor-pointer hover:opacity-90 transition-opacity"
+                        alt="Sala">
+                    <img src="https://images.unsplash.com/photo-1556912173-3db996ea0622"
+                        class="w-full h-full object-cover cursor-pointer hover:opacity-90 transition-opacity"
+                        alt="Cozinha">
+                    <img src="https://images.unsplash.com/photo-1616594039964-40891a91295f"
+                        class="w-full h-full object-cover cursor-pointer hover:opacity-90 transition-opacity"
+                        alt="Quarto">
+                    <div class="relative h-full">
+                        <img src="https://images.unsplash.com/photo-1584622050111-993a426fbf0a"
+                            class="w-full h-full object-cover cursor-pointer hover:opacity-90 transition-opacity"
+                            alt="Banheiro">
+                        <div
+                            class="absolute inset-0 bg-primary/60 flex items-center justify-center cursor-pointer hover:bg-primary/70 transition-colors">
+                            <span class="text-white font-serif font-bold text-lg">+8 Fotos</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+
+                <!-- Left Column: Details -->
+                <div class="lg:col-span-2 space-y-10">
+
+                    <!-- Header Info -->
+                    <div class="border-b border-gray-200 pb-8">
+                        <div class="flex flex-wrap gap-3 mb-4">
+                            <span
+                                class="bg-secondary text-white px-4 py-1 rounded shadow-sm text-xs font-bold uppercase tracking-wide">Venda</span>
+                            <span
+                                class="bg-primary text-white px-4 py-1 rounded shadow-sm text-xs font-bold uppercase tracking-wide">Sobrado</span>
+                        </div>
+                        <h1 class="text-3xl md:text-4xl font-serif font-bold text-primary mb-2">Sobrado Clássico no
+                            Brooklin</h1>
+                        <p class="text-gray-500 flex items-center gap-1 text-lg">
+                            <span class="material-icons-outlined text-secondary">place</span> Brooklin, São Paulo - SP
+                        </p>
+
+                        <!-- Key Features -->
+                        <div
+                            class="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-8 bg-white p-6 border-t-4 border-secondary shadow-md">
+                            <div class="text-center border-r border-gray-200 last:border-0">
+                                <span class="block text-2xl font-serif font-bold text-primary mb-1">220</span>
+                                <span class="text-gray-600 text-sm font-semibold">m² Úteis</span>
+                            </div>
+                            <div class="text-center border-r border-gray-200 last:border-0">
+                                <span class="block text-2xl font-serif font-bold text-primary mb-1">3</span>
+                                <span class="text-gray-600 text-sm font-semibold">Quartos</span>
+                            </div>
+                            <div class="text-center border-r border-gray-200 last:border-0">
+                                <span class="block text-2xl font-serif font-bold text-primary mb-1">2</span>
+                                <span class="text-gray-600 text-sm font-semibold">Banheiros</span>
+                            </div>
+                            <div class="text-center">
+                                <span class="block text-2xl font-serif font-bold text-primary mb-1">2</span>
+                                <span class="text-gray-600 text-sm font-semibold">Vagas</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Description -->
+                    <section class="border-b border-gray-200 pb-8">
+                        <h2 class="text-2xl font-serif font-bold text-primary mb-4">Descrição do Imóvel</h2>
+                        <div class="prose text-gray-700 leading-relaxed space-y-4 font-serif">
+                            <p>
+                                Encante-se com este sobrado de arquitetura clássica, situado em uma das ruas mais
+                                arborizadas do Brooklin. Construído com materiais nobres e acabamento impecável, este
+                                imóvel oferece o espaço e o conforto que sua família merece.
+                            </p>
+                            <p>
+                                A sala de estar ampla, com piso em madeira maciça e lareira, convida a momentos de
+                                aconchego. A cozinha, recentemente reformada, mantém o charme tradicional com
+                                modernidade. No quintal, uma bela área de jardim com churrasqueira completa o lazer.
+                            </p>
+                            <p>
+                                Localização privilegiada, próximo a escolas renomadas, comércios locais e fácil acesso
+                                às principais vias da cidade.
+                            </p>
+                        </div>
+                    </section>
+
+                    <!-- Property Amenities -->
+                    <section class="border-b border-gray-200 pb-8">
+                        <h2 class="text-2xl font-serif font-bold text-primary mb-6">Destaques e Comodidades</h2>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8">
+                            <div class="flex items-center gap-3 text-gray-700">
+                                <i class="fa-solid fa-fire text-secondary w-5"></i> Lareira
+                            </div>
+                            <div class="flex items-center gap-3 text-gray-700">
+                                <i class="fa-solid fa-tree text-secondary w-5"></i> Jardim Privativo
+                            </div>
+                            <div class="flex items-center gap-3 text-gray-700">
+                                <i class="fa-solid fa-utensils text-secondary w-5"></i> Área Gourmet
+                            </div>
+                            <div class="flex items-center gap-3 text-gray-700">
+                                <i class="fa-solid fa-box text-secondary w-5"></i> Piso de Madeira
+                            </div>
+                            <div class="flex items-center gap-3 text-gray-700">
+                                <i class="fa-solid fa-fan text-secondary w-5"></i> Ar Condicionado
+                            </div>
+                            <div class="flex items-center gap-3 text-gray-700">
+                                <i class="fa-solid fa-warehouse text-secondary w-5"></i> Edícula
+                            </div>
+                        </div>
+                    </section>
+
+                </div>
+
+                <!-- Right Sidebar: Sticky Actions -->
+                <div class="lg:col-span-1">
+                    <div class="bg-white p-8 shadow-xl border-t-4 border-primary sticky top-28">
+                        <div class="mb-6 text-center">
+                            <span class="text-sm text-gray-500 uppercase tracking-widest block mb-2">Investimento</span>
+                            <span class="text-4xl font-serif font-bold text-secondary">R$ 850.000</span>
+                        </div>
+
+                        <div class="space-y-4 mb-8 bg-gray-50 p-4 rounded border border-gray-200">
+                            <div class="flex justify-between text-sm">
+                                <span class="text-gray-600 font-semibold">IPTU (Anual)</span>
+                                <span class="font-bold text-primary">R$ 3.500,00</span>
+                            </div>
+                            <div class="flex justify-between text-sm">
+                                <span class="text-gray-600 font-semibold">Área Total</span>
+                                <span class="font-bold text-primary">300m²</span>
+                            </div>
+                        </div>
+
+                        <div class="space-y-3">
+                            <button
+                                class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 rounded shadow hover:shadow-lg transition-all flex items-center justify-center gap-2">
+                                <i class="fa-brands fa-whatsapp text-xl"></i> Falar no WhatsApp
+                            </button>
+                            <button
+                                class="w-full bg-primary hover:bg-blue-900 text-white font-bold py-3 rounded shadow hover:shadow-lg transition-all flex items-center justify-center gap-2">
+                                <span class="material-icons-outlined">calendar_today</span> Agendar Visita
+                            </button>
+                            <button
+                                class="w-full border-2 border-secondary text-secondary hover:bg-secondary hover:text-white font-bold py-3 rounded transition-all flex items-center justify-center gap-2">
+                                <span class="material-icons-outlined">mail</span> Enviar E-mail
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Related Properties -->
+            <section class="mt-20">
+                <div class="text-center mb-10">
+                    <h2 class="text-2xl font-serif font-bold text-primary mb-2">Veja Também</h2>
+                    <div class="h-1 w-16 bg-secondary mx-auto"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Card 1 -->
+                    <div
+                        class="bg-white rounded shadow-md overflow-hidden flex flex-col group hover:shadow-xl transition-all duration-300 border border-gray-200">
+                        <div class="relative h-64 overflow-hidden">
+                            <div class="absolute top-4 left-4 z-10 flex gap-2">
+                                <span
+                                    class="bg-secondary text-white text-xs font-bold px-3 py-1 rounded shadow-sm">Venda</span>
+                            </div>
+                            <img src="https://images.unsplash.com/photo-1576941089067-dbde68d01a10"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                alt="Relacionado">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold font-serif text-primary mb-1">Casa Térrea Morumbi</h3>
+                            <span class="text-lg font-bold text-secondary block mt-2">R$ 920.000</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div
+                        class="bg-white rounded shadow-md overflow-hidden flex flex-col group hover:shadow-xl transition-all duration-300 border border-gray-200">
+                        <div class="relative h-64 overflow-hidden">
+                            <div class="absolute top-4 left-4 z-10 flex gap-2">
+                                <span
+                                    class="bg-green-600 text-white text-xs font-bold px-3 py-1 rounded shadow-sm">Aluguel</span>
+                            </div>
+                            <img src="https://images.unsplash.com/photo-1523217582562-09d0def993a6"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                alt="Relacionado">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold font-serif text-primary mb-1">Apartamento Moema</h3>
+                            <span class="text-lg font-bold text-secondary block mt-2">R$ 3.800 <small
+                                    class="text-gray-500 font-normal">/mês</small></span>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div
+                        class="bg-white rounded shadow-md overflow-hidden flex flex-col group hover:shadow-xl transition-all duration-300 border border-gray-200">
+                        <div class="relative h-64 overflow-hidden">
+                            <div class="absolute top-4 left-4 z-10 flex gap-2">
+                                <span
+                                    class="bg-secondary text-white text-xs font-bold px-3 py-1 rounded shadow-sm">Venda</span>
+                            </div>
+                            <img src="https://images.unsplash.com/photo-1625602845260-30a859002a91?ixlib=rb-4.0.3"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                alt="Relacionado">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold font-serif text-primary mb-1">Cobertura Jardins</h3>
+                            <span class="text-lg font-bold text-secondary block mt-2">R$ 2.500.000</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-12 border-t-4 border-secondary">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+                <h4 class="text-xl font-serif font-bold mb-4">Família.</h4>
+                <p class="text-blue-200 text-sm">Desde 1980 realizando sonhos e construindo histórias felizes.</p>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4">Contato</h4>
+                <p class="text-blue-200 text-sm mb-2">Rua das Flores, 123</p>
+                <p class="text-blue-200 text-sm mb-2">(11) 3344-5566</p>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4">Links Úteis</h4>
+                <ul class="text-blue-200 text-sm space-y-2">
+                    <li><a href="#" class="hover:text-white">Financiamento</a></li>
+                    <li><a href="#" class="hover:text-white">Documentação</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4">Social</h4>
+                <div class="flex gap-4">
+                    <span
+                        class="w-8 h-8 bg-blue-800 rounded flex items-center justify-center cursor-pointer hover:bg-secondary transition-colors">F</span>
+                    <span
+                        class="w-8 h-8 bg-blue-800 rounded flex items-center justify-center cursor-pointer hover:bg-secondary transition-colors">I</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/chatbot.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="pt-br">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Portal Chave - Encontre o Imóvel dos Seus Sonhos</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#0066FF",
+                        "background-light": "#F8FAFC",
+                        "background-dark": "#0F172A",
+                    },
+                    fontFamily: {
+                        display: ["Inter", "sans-serif"],
+                        sans: ["Inter", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                        'xl': '1rem',
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 transition-colors duration-300">
+    <header
+        class="sticky top-0 z-50 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center gap-2">
+                    <a href="index.html">
+                        <img alt="Portal Chave Logo" class="h-8 w-auto filter dark:invert" src="logo.png" />
+                    </a>
+                </div>
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="portal.html">Comprar</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors"
+                        href="features.html">Recursos</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="pricing.html">Planos</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="blog.html">Blog</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="layout-sites.html">Layout
+                        Sites</a>
+                </nav>
+                <div class="flex items-center gap-4">
+                    <button class="md:hidden p-2 text-slate-500 hover:text-primary dark:text-slate-400"
+                        id="mobile-menu-btn">
+                        <span class="material-icons-outlined">menu</span>
+                    </button>
+                    <button class="p-2 text-slate-500 hover:text-primary dark:text-slate-400">
+                        <span class="material-icons-outlined">favorite_border</span>
+                    </button>
+                    <a href="login.html"
+                        class="bg-primary hover:bg-blue-700 text-white px-5 py-2 rounded-lg text-sm font-semibold transition-all shadow-sm">
+                        Entrar
+                    </a>
+                </div>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden pb-4 space-y-2">
+                <a class="block py-2 text-sm font-medium hover:text-primary transition-colors px-2 rounded hover:bg-slate-50 dark:hover:bg-slate-800"
+                    href="portal.html">Comprar</a>
+                <a class="block py-2 text-sm font-medium hover:text-primary transition-colors px-2 rounded hover:bg-slate-50 dark:hover:bg-slate-800"
+                    href="features.html">Recursos</a>
+                <a class="block py-2 text-sm font-medium hover:text-primary transition-colors px-2 rounded hover:bg-slate-50 dark:hover:bg-slate-800"
+                    href="pricing.html">Planos</a>
+                <a class="block py-2 text-sm font-medium hover:text-primary transition-colors px-2 rounded hover:bg-slate-50 dark:hover:bg-slate-800"
+                    href="blog.html">Blog</a>
+                <a class="block py-2 text-sm font-medium hover:text-primary transition-colors px-2 rounded hover:bg-slate-50 dark:hover:bg-slate-800"
+                    href="layout-sites.html">Layout Sites</a>
+            </div>
+        </div>
+    </header>
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        <section
+            class="bg-white dark:bg-slate-900 p-4 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800 mb-8">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-4 items-end">
+                <div class="md:col-span-3">
+                    <label
+                        class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Finalidade</label>
+                    <div class="flex p-1 bg-slate-100 dark:bg-slate-800 rounded-lg">
+                        <button
+                            class="flex-1 py-2 text-sm font-medium bg-white dark:bg-slate-700 shadow-sm rounded-md">Comprar</button>
+                        <button
+                            class="flex-1 py-2 text-sm font-medium text-slate-500 hover:text-slate-700 dark:hover:text-slate-300">Alugar</button>
+                    </div>
+                </div>
+                <div class="md:col-span-4">
+                    <label
+                        class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Localização</label>
+                    <div class="relative">
+                        <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-slate-400">
+                            <span class="material-icons-outlined text-sm">location_on</span>
+                        </span>
+                        <input
+                            class="block w-full pl-10 pr-3 py-2 border border-slate-200 dark:border-slate-700 dark:bg-slate-800 rounded-lg focus:ring-primary focus:border-primary text-sm"
+                            placeholder="Cidade, bairro ou CEP" type="text" />
+                    </div>
+                </div>
+                <div class="md:col-span-3">
+                    <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Tipo de
+                        Imóvel</label>
+                    <select
+                        class="block w-full py-2 border border-slate-200 dark:border-slate-700 dark:bg-slate-800 rounded-lg focus:ring-primary focus:border-primary text-sm">
+                        <option>Todos os tipos</option>
+                        <option>Apartamento</option>
+                        <option>Casa</option>
+                        <option>Terreno</option>
+                    </select>
+                </div>
+                <div class="md:col-span-2">
+                    <button
+                        class="w-full bg-primary hover:bg-blue-700 text-white py-2 rounded-lg font-semibold flex items-center justify-center gap-2 transition-all">
+                        <span class="material-icons-outlined text-lg">search</span>
+                        Buscar
+                    </button>
+                </div>
+            </div>
+            <div class="flex flex-wrap gap-4 mt-4 pt-4 border-t border-slate-100 dark:border-slate-800">
+                <button
+                    class="flex items-center gap-2 px-3 py-1.5 border border-slate-200 dark:border-slate-700 rounded-full text-xs font-medium hover:border-primary transition-colors">
+                    Preço: Qualquer <span class="material-icons-outlined text-xs">expand_more</span>
+                </button>
+                <button
+                    class="flex items-center gap-2 px-3 py-1.5 border border-slate-200 dark:border-slate-700 rounded-full text-xs font-medium hover:border-primary transition-colors">
+                    Quartos: 2+ <span class="material-icons-outlined text-xs">expand_more</span>
+                </button>
+                <button
+                    class="flex items-center gap-2 px-3 py-1.5 border border-slate-200 dark:border-slate-700 rounded-full text-xs font-medium hover:border-primary transition-colors">
+                    Vagas: 1+ <span class="material-icons-outlined text-xs">expand_more</span>
+                </button>
+                <button class="ml-auto text-primary text-xs font-bold uppercase tracking-wider hover:underline">
+                    Mais Filtros
+                </button>
+            </div>
+        </section>
+        <div class="flex justify-between items-center mb-6">
+            <h1 class="text-xl font-bold">Imóveis para comprar em <span class="text-primary">São Paulo - SP</span></h1>
+            <div class="flex items-center gap-2">
+                <span class="text-sm text-slate-500">Ordenar por:</span>
+                <select class="text-sm border-none bg-transparent font-semibold focus:ring-0 cursor-pointer">
+                    <option>Mais recentes</option>
+                    <option>Menor preço</option>
+                    <option>Maior preço</option>
+                </select>
+                <div class="flex bg-slate-100 dark:bg-slate-800 p-1 rounded-md ml-4">
+                    <button class="p-1.5 bg-white dark:bg-slate-700 rounded shadow-sm text-primary">
+                        <span class="material-icons-outlined text-sm">grid_view</span>
+                    </button>
+                    <button class="p-1.5 text-slate-400 hover:text-slate-600 dark:hover:text-slate-300">
+                        <span class="material-icons-outlined text-sm">map</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="flex gap-8">
+            <div class="flex-1">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <div
+                        class="group bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200 dark:border-slate-800">
+                        <div class="relative h-64 overflow-hidden">
+                            <img alt="Apartamento moderno"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiNyJHibJboXtK0iRg4cPBk8Nq7CwszTJz_PilNLfQau5yvCcfhFuo2_aSIHV49yeTFEjQ1LajfBFQfNteRMoWvMWKjK1bi9W1D_zv9VX-CJmFyOXiZ8grRO4OfcigCFvFBYGbmi8wkifaPRLJrJH6xnKz9echCbAIA366q7yR_ri50lKJwjnwUpCZbIYhTZCfC04-KSH7GSPtRlVf8TLy48B4IAoDsDwYQZnVBohf4uzLsdcUSDt_aGEW65sArVhwSsDuTHxmSiag" />
+                            <div class="absolute top-3 left-3 flex gap-2">
+                                <span
+                                    class="bg-primary text-white text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider">Destaque</span>
+                                <span
+                                    class="bg-slate-900/60 backdrop-blur-md text-white text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider">Venda</span>
+                            </div>
+                            <button
+                                class="absolute top-3 right-3 p-2 bg-white/20 hover:bg-white/40 backdrop-blur-md text-white rounded-full transition-all">
+                                <span class="material-icons-outlined text-xl">favorite_border</span>
+                            </button>
+                            <div class="absolute bottom-3 left-3 right-3 flex justify-between items-center text-white">
+                                <div
+                                    class="bg-slate-900/40 backdrop-blur-md px-2 py-1 rounded text-xs flex items-center gap-1">
+                                    <span class="material-icons-outlined text-xs">photo_camera</span> 12
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-5">
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="text-xl font-bold">R$ 1.250.000</h3>
+                                <p class="text-[10px] text-slate-400 uppercase tracking-widest font-bold">Condomínio R$
+                                    900</p>
+                            </div>
+                            <h4 class="text-slate-600 dark:text-slate-400 font-medium mb-3 truncate">Cobertura Duplex no
+                                Itaim Bibi</h4>
+                            <p class="text-sm text-slate-500 dark:text-slate-500 mb-4 flex items-center gap-1">
+                                <span class="material-icons-outlined text-sm">location_on</span> Itaim Bibi, São Paulo
+                            </p>
+                            <div
+                                class="flex items-center gap-4 text-slate-600 dark:text-slate-400 border-t border-slate-100 dark:border-slate-800 pt-4">
+                                <div class="flex items-center gap-1">
+                                    <span class="material-icons-outlined text-lg">square_foot</span>
+                                    <span class="text-sm">180m²</span>
+                                </div>
+                                <div class="flex items-center gap-1">
+                                    <span class="material-icons-outlined text-lg">king_bed</span>
+                                    <span class="text-sm">3</span>
+                                </div>
+                                <div class="flex items-center gap-1">
+                                    <span class="material-icons-outlined text-lg">directions_car</span>
+                                    <span class="text-sm">2</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="group bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200 dark:border-slate-800">
+                        <div class="relative h-64 overflow-hidden">
+                            <img alt="Casa luxuosa"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-DB3o05SPqTVYf2UN08M-g8Kzpda91SvcsE7RSzq1aeMSGPcFQvcM7bjHi9vNmuP5EwkfivoHHO4xBS7YRRVcOiImoggeEyQ5M94jqWhnDEd5kf9cAzPe9UwiFPFuHurK71VQXZWr5T2vbR9PsDCKskEHyxbYdt5URP43sKWgdvReAmhhoq8T2WerXAsq4vddxxoP9L43xbvAL_XfHaFX55DdXlOiTLGaNFSmdVdBYwBd42yV4aCYfRsEoOt01BghAtRt-a9TJ5vJ" />
+                            <div class="absolute top-3 left-3 flex gap-2">
+                                <span
+                                    class="bg-emerald-500 text-white text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider">Novo</span>
+                            </div>
+                            <button
+                                class="absolute top-3 right-3 p-2 bg-white/20 hover:bg-white/40 backdrop-blur-md text-white rounded-full transition-all">
+                                <span class="material-icons-outlined text-xl">favorite_border</span>
+                            </button>
+                        </div>
+                        <div class="p-5">
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="text-xl font-bold">R$ 2.400.000</h3>
+                                <p class="text-[10px] text-slate-400 uppercase tracking-widest font-bold">IPTU R$
+                                    450/mês</p>
+                            </div>
+                            <h4 class="text-slate-600 dark:text-slate-400 font-medium mb-3 truncate">Casa de Condomínio
+                                em Alphaville</h4>
+                            <p class="text-sm text-slate-500 dark:text-slate-500 mb-4 flex items-center gap-1">
+                                <span class="material-icons-outlined text-sm">location_on</span> Alphaville, Barueri
+                            </p>
+                            <div
+                                class="flex items-center gap-4 text-slate-600 dark:text-slate-400 border-t border-slate-100 dark:border-slate-800 pt-4">
+                                <div class="flex items-center gap-1">
+                                    <span class="material-icons-outlined text-lg">square_foot</span>
+                                    <span class="text-sm">450m²</span>
+                                </div>
+                                <div class="flex items-center gap-1">
+                                    <span class="material-icons-outlined text-lg">king_bed</span>
+                                    <span class="text-sm">4</span>
+                                </div>
+                                <div class="flex items-center gap-1">
+                                    <span class="material-icons-outlined text-lg">directions_car</span>
+                                    <span class="text-sm">4</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="group bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200 dark:border-slate-800">
+                        <div class="relative h-64 overflow-hidden">
+                            <img alt="Loft moderno"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDX7rhv7yASCmNu73oJiL6JKLio0uXMFQ1s4WeNJ4lK_uo03fkxZPZ-ikieUYRIrdJAkG35fcM1Z4z_LRpUEBlvefYtKkT5w0u8FUeXqZvVWQ5rn9Ct7PMsOFjbKts07BvCoPbHu1ZHnjeS4J80xkMwL0mKlmuklKcDL1wtYLGTF2vsfu8gcFfy9t48XGNHo_E8SV6nQS-MFAX8yhY5LnQpRgCY6SAUWPorDKglCz3QSHpeK4GsYf4NtT2hIwnuync5mGcIMt7FMUQL" />
+                            <button
+                                class="absolute top-3 right-3 p-2 bg-white/20 hover:bg-white/40 backdrop-blur-md text-white rounded-full transition-all">
+                                <span class="material-icons-outlined text-xl">favorite_border</span>
+                            </button>
+                        </div>
+                        <div class="p-5">
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="text-xl font-bold">R$ 580.000</h3>
+                                <p class="text-[10px] text-slate-400 uppercase tracking-widest font-bold">Condomínio R$
+                                    400</p>
+                            </div>
+                            <h4 class="text-slate-600 dark:text-slate-400 font-medium mb-3 truncate">Loft Design Vila
+                                Madalena</h4>
+                            <p class="text-sm text-slate-500 dark:text-slate-500 mb-4 flex items-center gap-1">
+                                <span class="material-icons-outlined text-sm">location_on</span> Vila Madalena, São
+                                Paulo
+                            </p>
+                            <div
+                                class="flex items-center gap-4 text-slate-600 dark:text-slate-400 border-t border-slate-100 dark:border-slate-800 pt-4">
+                                <div class="flex items-center gap-1">
+                                    <span class="material-icons-outlined text-lg">square_foot</span>
+                                    <span class="text-sm">45m²</span>
+                                </div>
+                                <div class="flex items-center gap-1">
+                                    <span class="material-icons-outlined text-lg">king_bed</span>
+                                    <span class="text-sm">1</span>
+                                </div>
+                                <div class="flex items-center gap-1">
+                                    <span class="material-icons-outlined text-lg">directions_car</span>
+                                    <span class="text-sm">1</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="group bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200 dark:border-slate-800">
+                        <div class="relative h-64 overflow-hidden">
+                            <img alt="Apartamento reformado"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWY25_3pgKVZRsBhDkNnfwy2DnzLhtPSIRhAvNktZq3g2VeAZJpFH5l_JCj7MmhHfzPG_pV6Rbb-HMtepbIsP7azWyU8haufgBaoBnElVsVJ1IdSKZeCuIAco5_8aYIuWy2o4_U5ZpfGCmCG_yDJtXmY-PzyqleZhmHksSpZSZ-2DN6hy6eZeW-r9BMRh9ZZdEJU8VAXnjvUW80Oa7pcQJXC3NovqBKpMXMXW_EqfEIz1rlEKf1AF-pQickccTO6wwkftB1JI2JJkJ" />
+                            <button
+                                class="absolute top-3 right-3 p-2 bg-white/20 hover:bg-white/40 backdrop-blur-md text-white rounded-full transition-all">
+                                <span class="material-icons-outlined text-xl">favorite_border</span>
+                            </button>
+                        </div>
+                        <div class="p-5">
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="text-xl font-bold">R$ 890.000</h3>
+                                <p class="text-[10px] text-slate-400 uppercase tracking-widest font-bold">Condomínio R$
+                                    650</p>
+                            </div>
+                            <h4 class="text-slate-600 dark:text-slate-400 font-medium mb-3 truncate">Apartamento
+                                Reformado nos Jardins</h4>
+                            <p class="text-sm text-slate-500 dark:text-slate-500 mb-4 flex items-center gap-1">
+                                <span class="material-icons-outlined text-sm">location_on</span> Jardins, São Paulo
+                            </p>
+                            <div
+                                class="flex items-center gap-4 text-slate-600 dark:text-slate-400 border-t border-slate-100 dark:border-slate-800 pt-4">
+                                <div class="flex items-center gap-1">
+                                    <span class="material-icons-outlined text-lg">square_foot</span>
+                                    <span class="text-sm">95m²</span>
+                                </div>
+                                <div class="flex items-center gap-1">
+                                    <span class="material-icons-outlined text-lg">king_bed</span>
+                                    <span class="text-sm">2</span>
+                                </div>
+                                <div class="flex items-center gap-1">
+                                    <span class="material-icons-outlined text-lg">directions_car</span>
+                                    <span class="text-sm">1</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-12 flex justify-center">
+                    <nav class="flex items-center gap-2">
+                        <button
+                            class="p-2 border border-slate-200 dark:border-slate-700 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-400">
+                            <span class="material-icons-outlined">chevron_left</span>
+                        </button>
+                        <button class="w-10 h-10 rounded-lg bg-primary text-white font-bold">1</button>
+                        <button
+                            class="w-10 h-10 rounded-lg border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800">2</button>
+                        <button
+                            class="w-10 h-10 rounded-lg border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800">3</button>
+                        <span class="px-2">...</span>
+                        <button
+                            class="w-10 h-10 rounded-lg border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800">12</button>
+                        <button
+                            class="p-2 border border-slate-200 dark:border-slate-700 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-400">
+                            <span class="material-icons-outlined">chevron_right</span>
+                        </button>
+                    </nav>
+                </div>
+            </div>
+            <aside class="hidden xl:block w-96 shrink-0">
+                <div
+                    class="sticky top-24 bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-sm border border-slate-200 dark:border-slate-800 h-[calc(100vh-8rem)]">
+                    <div class="relative h-full bg-slate-100 dark:bg-slate-800 flex flex-col">
+                        <div class="absolute inset-0 grayscale opacity-40">
+                            <img alt="Mapa" class="w-full h-full object-cover"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfE8M2YrHx75smw0BXy2PQ4z3LGExGpitzhaOuJcfZOp1WfsJ22aVE2Y3vkImN1YG7v2XdHgoUs-CUMLI1yxvpirD5t_tFD3FuYozKeBcP5dgMKnNEZllxRDgWWQj9aeYXc29_60_LhbCTBY5klzdIrJoajjckfgXSSgpJPg9fTEAJbEJaBlpAs3OxXWqXIg2jJrVk4Uj5TXmJf-nLQCtCr--O1RZb17_AxD6BXWzTCb6pZK10Nko0iDcaWOoOaGucWAFZSp4t1LTb" />
+                        </div>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div
+                                class="p-4 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md rounded-xl text-center shadow-xl">
+                                <span class="material-icons-outlined text-4xl text-primary mb-2">map</span>
+                                <p class="text-sm font-semibold mb-2">Visualização em Mapa</p>
+                                <button
+                                    class="bg-primary text-white px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider">Expandir
+                                    Mapa</button>
+                            </div>
+                        </div>
+                        <div
+                            class="mt-auto p-6 relative z-10 bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800">
+                            <h5 class="font-bold mb-4">Fique por dentro</h5>
+                            <p class="text-xs text-slate-500 mb-4">Receba novos imóveis com esse perfil diretamente no
+                                seu e-mail.</p>
+                            <div class="space-y-3">
+                                <input
+                                    class="w-full px-4 py-2.5 text-sm border border-slate-200 dark:border-slate-700 dark:bg-slate-800 rounded-lg focus:ring-primary focus:border-primary"
+                                    placeholder="Seu e-mail" type="email" />
+                                <button
+                                    class="w-full bg-slate-900 dark:bg-primary text-white py-2.5 rounded-lg text-sm font-bold">Criar
+                                    Alerta</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+    <footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 mt-20 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-1 md:col-span-1">
+                    <img alt="Portal Chave Logo" class="h-6 mb-6 filter dark:invert" src="logo.png" />
+                    <p class="text-sm text-slate-500 leading-relaxed">O Portal Chave centraliza as melhores
+                        oportunidades do mercado imobiliário em um só lugar. Encontre sua próxima conquista conosco.</p>
+                </div>
+                <div>
+                    <h6 class="font-bold mb-6">Navegação</h6>
+                    <ul class="space-y-4 text-sm text-slate-500">
+                        <li><a class="hover:text-primary transition-colors" href="#">Imóveis para Comprar</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Imóveis para Alugar</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Lançamentos</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Imobiliárias Parceiras</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h6 class="font-bold mb-6">Suporte</h6>
+                    <ul class="space-y-4 text-sm text-slate-500">
+                        <li><a class="hover:text-primary transition-colors" href="#">Central de Ajuda</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Termos de Uso</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Política de Privacidade</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Fale Conosco</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h6 class="font-bold mb-6">Redes Sociais</h6>
+                    <div class="flex gap-4">
+                        <a class="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:bg-primary hover:text-white transition-all"
+                            href="#">
+                            <span class="material-icons-outlined text-lg">facebook</span>
+                        </a>
+                        <a class="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:bg-primary hover:text-white transition-all"
+                            href="#">
+                            <span class="material-icons-outlined text-lg">camera_alt</span>
+                        </a>
+                        <a class="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:bg-primary hover:text-white transition-all"
+                            href="#">
+                            <span class="material-icons-outlined text-lg">alternate_email</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="pt-8 border-t border-slate-100 dark:border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-xs text-slate-400">© 2024 Portal Chave. Todos os direitos reservados. Parte da rede Chave
+                    Reserva.</p>
+                <div class="flex items-center gap-6">
+                    <button
+                        class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:text-primary"
+                        id="theme-toggle">
+                        <span class="material-icons-outlined dark:hidden">dark_mode</span>
+                        <span class="material-icons-outlined hidden dark:block">light_mode</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Simple dark mode toggle logic
+        const themeToggle = document.getElementById('theme-toggle');
+        const html = document.documentElement;
+        // Initial check
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            html.classList.add('dark');
+        }
+        themeToggle.addEventListener('click', () => {
+            html.classList.toggle('dark');
+        });
+    </script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/chatbot.js"></script>
+</body>
+
+</html>
