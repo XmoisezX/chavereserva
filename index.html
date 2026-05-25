@@ -95,17 +95,16 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="lg:flex items-center gap-16">
                 <div class="lg:w-3/5 space-y-8">
-                    <div
-                        class="inline-flex items-center gap-2 px-3 py-1 rounded-md border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 text-slate-600 dark:text-slate-400 text-xs font-semibold uppercase tracking-widest">
-                        Plataforma CRM Integrada
-                    </div>
-                    <h1 class="text-4xl lg:text-5xl font-bold leading-tight tracking-tight text-slate-900 dark:text-white"
+
+                    <h1 class="text-4xl lg:text-6xl font-extrabold leading-tight text-slate-900 dark:text-white aos-init aos-animate"
                         data-aos="fade-up" data-aos-duration="1000">
-                        Gestão inteligente. <br /> Controle absoluto de ponta a ponta.
+                        Tudo o que sua imobiliária precisa para vender mais, <span class="text-primary italic">em um
+                            único sistema</span>
                     </h1>
                     <p class="text-lg text-slate-500 dark:text-slate-400 max-w-2xl leading-relaxed" data-aos="fade-up"
                         data-aos-delay="100">
-                        Uma plataforma completa desenvolvida para imobiliárias de alta performance. Centralize seus leads, imóveis e atendimento em um único ecossistema robusto e seguro.
+                        Uma plataforma completa desenvolvida para imobiliárias de alta performance. Centralize seus
+                        leads, imóveis e atendimento em um único ecossistema robusto e seguro.
                     </p>
                     <div class="flex flex-wrap gap-4 pt-4">
                         <button
@@ -130,70 +129,66 @@
     </section>
 
     <!-- SEÇÃO SHOWCASE INTERATIVA: CONHEÇA O SISTEMA POR DENTRO -->
-    <section class="py-24 bg-slate-50 dark:bg-slate-900/40 border-t border-b border-slate-100 dark:border-slate-800" id="sistema-showcase">
+    <section class="py-24 bg-slate-50 dark:bg-slate-900/40 border-t border-b border-slate-100 dark:border-slate-800"
+        id="sistema-showcase">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <!-- Cabeçalho da Seção -->
             <div class="text-center mb-16" data-aos="fade-up">
-                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-900/30 text-primary text-sm font-semibold mb-4">
-                    <span class="material-symbols-outlined text-sm">visibility</span>
-                    Demonstração Interativa
-                </span>
+
                 <h2 class="text-3xl lg:text-5xl font-bold text-slate-900 dark:text-white mb-6">
-                    Sua imobiliária em alta performance por dentro
+                    Conheça o Chave Reserva Por Dentro
                 </h2>
                 <p class="text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto leading-relaxed">
-                    Navegue pelas abas abaixo para explorar a interface do sistema Chave Reserva. Veja como organizamos cada etapa do seu negócio em telas rápidas, limpas e responsivas.
+                    Navegue pelas abas abaixo para explorar a interface do sistema Chave Reserva. Veja como organizamos
+                    cada etapa do seu negócio em telas rápidas, limpas e responsivas.
                 </p>
             </div>
 
             <!-- Menu de Abas Horizontal (Scrollable no mobile) -->
             <div class="relative mb-12" data-aos="fade-up" data-aos-delay="100">
-                <div class="flex overflow-x-auto pb-4 xl:pb-0 justify-start gap-2 sm:gap-3 no-scrollbar scroll-smooth px-4 md:px-8 mx-auto w-max max-w-full">
+                <div
+                    class="flex overflow-x-auto pb-4 xl:pb-0 justify-start gap-2 sm:gap-3 no-scrollbar scroll-smooth px-4 md:px-8 mx-auto w-max max-w-full">
                     <!-- Aba Dashboard -->
-                    <button onclick="switchShowcaseTab('dashboard', 'public/dashboard.png', 'dashboard')" 
+                    <button onclick="switchShowcaseTab('dashboard', 'public/dashboard.png', 'dashboard')"
                         id="tab-dashboard"
                         class="showcase-tab shrink-0 flex items-center gap-2 px-4 py-2.5 rounded-lg border border-slate-900 dark:border-white bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-semibold transition-all whitespace-nowrap cursor-pointer shadow-sm">
                         <span class="material-symbols-outlined text-lg">dashboard</span>
                         <span class="text-sm">Dashboard</span>
                     </button>
                     <!-- Aba Imóveis -->
-                    <button onclick="switchShowcaseTab('imoveis', 'public/imoveis.png', 'imoveis')" 
-                        id="tab-imoveis"
+                    <button onclick="switchShowcaseTab('imoveis', 'public/imoveis.png', 'imoveis')" id="tab-imoveis"
                         class="showcase-tab shrink-0 flex items-center gap-2 px-4 py-2.5 rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-slate-600 dark:text-slate-400 font-medium hover:bg-slate-50 dark:hover:bg-slate-900 transition-all whitespace-nowrap cursor-pointer">
                         <span class="material-symbols-outlined text-lg">home_work</span>
                         <span class="text-sm">Imóveis</span>
                     </button>
                     <!-- Aba Clientes -->
-                    <button onclick="switchShowcaseTab('clientes', 'public/clientes.png', 'clientes')" 
-                        id="tab-clientes"
+                    <button onclick="switchShowcaseTab('clientes', 'public/clientes.png', 'clientes')" id="tab-clientes"
                         class="showcase-tab shrink-0 flex items-center gap-2 px-4 py-2.5 rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-slate-600 dark:text-slate-400 font-medium hover:bg-slate-50 dark:hover:bg-slate-900 transition-all whitespace-nowrap cursor-pointer">
                         <span class="material-symbols-outlined text-lg">groups</span>
                         <span class="text-sm">Clientes</span>
                     </button>
                     <!-- Aba Chaves -->
-                    <button onclick="switchShowcaseTab('chaves', 'public/chaves.png', 'chaves')" 
-                        id="tab-chaves"
+                    <button onclick="switchShowcaseTab('chaves', 'public/chaves.png', 'chaves')" id="tab-chaves"
                         class="showcase-tab shrink-0 flex items-center gap-2 px-4 py-2.5 rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-slate-600 dark:text-slate-400 font-medium hover:bg-slate-50 dark:hover:bg-slate-900 transition-all whitespace-nowrap cursor-pointer">
                         <span class="material-symbols-outlined text-lg">vpn_key</span>
                         <span class="text-sm">Chaves</span>
                     </button>
                     <!-- Aba Negócio -->
-                    <button onclick="switchShowcaseTab('negocios', 'public/negocios.png', 'negocios')" 
-                        id="tab-negocios"
+                    <button onclick="switchShowcaseTab('negocios', 'public/negocios.png', 'negocios')" id="tab-negocios"
                         class="showcase-tab shrink-0 flex items-center gap-2 px-4 py-2.5 rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-slate-600 dark:text-slate-400 font-medium hover:bg-slate-50 dark:hover:bg-slate-900 transition-all whitespace-nowrap cursor-pointer">
                         <span class="material-symbols-outlined text-lg">handshake</span>
                         <span class="text-sm">Negócio</span>
                     </button>
                     <!-- Aba Empreendimentos -->
-                    <button onclick="switchShowcaseTab('empreendimentos', 'public/empreedimentos.png', 'empreendimentos')" 
+                    <button
+                        onclick="switchShowcaseTab('empreendimentos', 'public/empreedimentos.png', 'empreendimentos')"
                         id="tab-empreendimentos"
                         class="showcase-tab shrink-0 flex items-center gap-2 px-4 py-2.5 rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-slate-600 dark:text-slate-400 font-medium hover:bg-slate-50 dark:hover:bg-slate-900 transition-all whitespace-nowrap cursor-pointer">
                         <span class="material-symbols-outlined text-lg">domain</span>
                         <span class="text-sm">Empreendimentos</span>
                     </button>
                     <!-- Aba Leads -->
-                    <button onclick="switchShowcaseTab('leads', 'public/leads.png', 'leads')" 
-                        id="tab-leads"
+                    <button onclick="switchShowcaseTab('leads', 'public/leads.png', 'leads')" id="tab-leads"
                         class="showcase-tab shrink-0 flex items-center gap-2 px-4 py-2.5 rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-slate-600 dark:text-slate-400 font-medium hover:bg-slate-50 dark:hover:bg-slate-900 transition-all whitespace-nowrap cursor-pointer">
                         <span class="material-symbols-outlined text-lg">filter_alt</span>
                         <span class="text-sm">Leads</span>
@@ -203,85 +198,120 @@
 
             <!-- Mockup do Navegador Web -->
             <div class="relative max-w-6xl mx-auto" data-aos="zoom-in" data-aos-delay="200">
-                <div class="bg-white dark:bg-slate-950 rounded-xl border border-slate-200 dark:border-slate-800 shadow-xl overflow-hidden flex flex-col">
-                    
+                <div
+                    class="bg-white dark:bg-slate-950 rounded-xl border border-slate-200 dark:border-slate-800 shadow-xl overflow-hidden flex flex-col">
+
                     <!-- Área de Conteúdo do Navegador -->
-                    <div class="relative bg-slate-100 dark:bg-slate-900 min-h-[400px] md:min-h-[550px] flex flex-col justify-center items-center overflow-hidden transition-all duration-300">
+                    <div
+                        class="relative bg-slate-100 dark:bg-slate-900 min-h-[400px] md:min-h-[550px] flex flex-col justify-center items-center overflow-hidden transition-all duration-300">
                         <!-- Imagem do Print Real -->
-                        <img id="showcase-image" 
-                            src="public/dashboard.png" 
-                            alt="Mockup do Sistema Chave Reserva"
+                        <img id="showcase-image" src="public/dashboard.png" alt="Mockup do Sistema Chave Reserva"
                             class="w-full h-auto object-cover object-top transition-opacity duration-300 opacity-100"
-                            onload="onShowcaseImageLoaded(this)"
-                            onerror="onShowcaseImageError(this)" />
+                            onload="onShowcaseImageLoaded(this)" onerror="onShowcaseImageError(this)" />
 
                         <!-- Mensagem informativa de imagem ausente quando em Fallback HTML -->
-                        <div id="showcase-fallback-notice" class="hidden absolute top-4 right-4 z-20 bg-slate-900/90 text-white text-xs px-3 py-1.5 rounded-full font-medium shadow-lg flex items-center gap-2 backdrop-blur-sm transition-all duration-300">
+                        <div id="showcase-fallback-notice"
+                            class="hidden absolute top-4 right-4 z-20 bg-slate-900/90 text-white text-xs px-3 py-1.5 rounded-full font-medium shadow-lg flex items-center gap-2 backdrop-blur-sm transition-all duration-300">
                             <span class="material-symbols-outlined text-xs text-amber-400">info</span>
-                            <span>Visualizando Prévia Interativa (HTML). Adicione <code id="missing-filename-notice" class="bg-slate-800 text-blue-300 px-1.5 py-0.5 rounded font-mono">public/dashboard.png</code> para ver sua tela real.</span>
+                            <span>Visualizando Prévia Interativa (HTML). Adicione <code id="missing-filename-notice"
+                                    class="bg-slate-800 text-blue-300 px-1.5 py-0.5 rounded font-mono">public/dashboard.png</code>
+                                para ver sua tela real.</span>
                         </div>
 
                         <!-- Fallback em HTML/CSS (Ultra-Elegante caso a imagem dê erro) -->
-                        <div id="showcase-html-fallback" class="hidden w-full h-full min-h-[550px] bg-slate-50 dark:bg-slate-950 p-6 md:p-8 overflow-y-auto self-stretch">
-                            
+                        <div id="showcase-html-fallback"
+                            class="hidden w-full h-full min-h-[550px] bg-slate-50 dark:bg-slate-950 p-6 md:p-8 overflow-y-auto self-stretch">
+
                             <!-- 1. DASHBOARD FALLBACK -->
                             <div id="fallback-dashboard" class="fallback-screen space-y-6">
-                                <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-100 dark:border-slate-800 pb-4">
+                                <div
+                                    class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-100 dark:border-slate-800 pb-4">
                                     <div>
-                                        <h3 class="text-2xl font-bold text-slate-800 dark:text-white">Que bom ver você, Moisez!</h3>
-                                        <p class="text-sm text-slate-500 dark:text-slate-400">Aqui está o resumo das suas atividades recentes e principais indicadores.</p>
+                                        <h3 class="text-2xl font-bold text-slate-800 dark:text-white">Que bom ver você,
+                                            Moisez!</h3>
+                                        <p class="text-sm text-slate-500 dark:text-slate-400">Aqui está o resumo das
+                                            suas atividades recentes e principais indicadores.</p>
                                     </div>
                                     <div class="flex items-center gap-2">
-                                        <div class="flex items-center justify-center w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800">
+                                        <div
+                                            class="flex items-center justify-center w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800">
                                             <span class="material-symbols-outlined text-slate-500">notifications</span>
                                         </div>
-                                        <div class="flex items-center gap-2 bg-slate-100 dark:bg-slate-800 px-3 py-1.5 rounded-lg">
-                                            <div class="w-8 h-8 rounded-full bg-blue-600 text-white font-bold flex items-center justify-center text-xs">MS</div>
-                                            <span class="text-xs font-semibold text-slate-700 dark:text-slate-300">Moisez Silva</span>
+                                        <div
+                                            class="flex items-center gap-2 bg-slate-100 dark:bg-slate-800 px-3 py-1.5 rounded-lg">
+                                            <div
+                                                class="w-8 h-8 rounded-full bg-blue-600 text-white font-bold flex items-center justify-center text-xs">
+                                                MS</div>
+                                            <span
+                                                class="text-xs font-semibold text-slate-700 dark:text-slate-300">Moisez
+                                                Silva</span>
                                         </div>
                                     </div>
                                 </div>
 
                                 <!-- Cards de Métricas Grid -->
                                 <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
-                                    <div class="bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+                                    <div
+                                        class="bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
                                         <div class="flex items-center justify-between text-emerald-500 mb-2">
-                                            <span class="text-xs font-medium uppercase tracking-wider text-slate-400">Valor Total Carteira</span>
+                                            <span
+                                                class="text-xs font-medium uppercase tracking-wider text-slate-400">Valor
+                                                Total Carteira</span>
                                             <span class="material-symbols-outlined">payments</span>
                                         </div>
-                                        <p class="text-lg md:text-2xl font-extrabold text-slate-800 dark:text-white">R$ 8.432.750,00</p>
-                                        <span class="text-xs text-emerald-500 font-semibold flex items-center gap-1 mt-1">
-                                            <span class="material-symbols-outlined text-xs">trending_up</span> 12,5% vs. mês anterior
+                                        <p class="text-lg md:text-2xl font-extrabold text-slate-800 dark:text-white">R$
+                                            8.432.750,00</p>
+                                        <span
+                                            class="text-xs text-emerald-500 font-semibold flex items-center gap-1 mt-1">
+                                            <span class="material-symbols-outlined text-xs">trending_up</span> 12,5% vs.
+                                            mês anterior
                                         </span>
                                     </div>
-                                    <div class="bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+                                    <div
+                                        class="bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
                                         <div class="flex items-center justify-between text-blue-500 mb-2">
-                                            <span class="text-xs font-medium uppercase tracking-wider text-slate-400">Ticket Médio</span>
+                                            <span
+                                                class="text-xs font-medium uppercase tracking-wider text-slate-400">Ticket
+                                                Médio</span>
                                             <span class="material-symbols-outlined">analytics</span>
                                         </div>
-                                        <p class="text-lg md:text-2xl font-extrabold text-slate-800 dark:text-white">R$ 356.890,00</p>
+                                        <p class="text-lg md:text-2xl font-extrabold text-slate-800 dark:text-white">R$
+                                            356.890,00</p>
                                         <span class="text-xs text-blue-500 font-semibold flex items-center gap-1 mt-1">
-                                            <span class="material-symbols-outlined text-xs">trending_up</span> 8,3% vs. mês anterior
+                                            <span class="material-symbols-outlined text-xs">trending_up</span> 8,3% vs.
+                                            mês anterior
                                         </span>
                                     </div>
-                                    <div class="bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+                                    <div
+                                        class="bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
                                         <div class="flex items-center justify-between text-purple-500 mb-2">
-                                            <span class="text-xs font-medium uppercase tracking-wider text-slate-400">Total de Imóveis</span>
+                                            <span
+                                                class="text-xs font-medium uppercase tracking-wider text-slate-400">Total
+                                                de Imóveis</span>
                                             <span class="material-symbols-outlined">home</span>
                                         </div>
-                                        <p class="text-lg md:text-2xl font-extrabold text-slate-800 dark:text-white">234</p>
-                                        <span class="text-xs text-emerald-500 font-semibold flex items-center gap-1 mt-1">
-                                            <span class="material-symbols-outlined text-xs">trending_up</span> 7,4% vs. mês anterior
+                                        <p class="text-lg md:text-2xl font-extrabold text-slate-800 dark:text-white">234
+                                        </p>
+                                        <span
+                                            class="text-xs text-emerald-500 font-semibold flex items-center gap-1 mt-1">
+                                            <span class="material-symbols-outlined text-xs">trending_up</span> 7,4% vs.
+                                            mês anterior
                                         </span>
                                     </div>
-                                    <div class="bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+                                    <div
+                                        class="bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
                                         <div class="flex items-center justify-between text-orange-500 mb-2">
-                                            <span class="text-xs font-medium uppercase tracking-wider text-slate-400">Imóveis À Venda</span>
+                                            <span
+                                                class="text-xs font-medium uppercase tracking-wider text-slate-400">Imóveis
+                                                À Venda</span>
                                             <span class="material-symbols-outlined">sell</span>
                                         </div>
-                                        <p class="text-lg md:text-2xl font-extrabold text-slate-800 dark:text-white">156</p>
-                                        <span class="text-xs text-emerald-500 font-semibold flex items-center gap-1 mt-1">
-                                            <span class="material-symbols-outlined text-xs">trending_up</span> 5,2% vs. mês anterior
+                                        <p class="text-lg md:text-2xl font-extrabold text-slate-800 dark:text-white">156
+                                        </p>
+                                        <span
+                                            class="text-xs text-emerald-500 font-semibold flex items-center gap-1 mt-1">
+                                            <span class="material-symbols-outlined text-xs">trending_up</span> 5,2% vs.
+                                            mês anterior
                                         </span>
                                     </div>
                                 </div>
@@ -289,9 +319,12 @@
                                 <!-- Gráfico / Funil e Atividades Recentes -->
                                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
                                     <!-- Funil de Vendas -->
-                                    <div class="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col">
-                                        <h4 class="font-bold text-slate-800 dark:text-white mb-4 flex items-center gap-2">
-                                            <span class="material-symbols-outlined text-primary">filter_alt</span> Funil de Vendas
+                                    <div
+                                        class="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col">
+                                        <h4
+                                            class="font-bold text-slate-800 dark:text-white mb-4 flex items-center gap-2">
+                                            <span class="material-symbols-outlined text-primary">filter_alt</span> Funil
+                                            de Vendas
                                         </h4>
                                         <div class="space-y-4 my-auto">
                                             <div>
@@ -299,8 +332,10 @@
                                                     <span>Leads (Visitantes)</span>
                                                     <span>542 (100%)</span>
                                                 </div>
-                                                <div class="w-full bg-slate-100 dark:bg-slate-800 h-2.5 rounded-full overflow-hidden">
-                                                    <div class="bg-blue-600 h-full rounded-full" style="width: 100%"></div>
+                                                <div
+                                                    class="w-full bg-slate-100 dark:bg-slate-800 h-2.5 rounded-full overflow-hidden">
+                                                    <div class="bg-blue-600 h-full rounded-full" style="width: 100%">
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div>
@@ -308,8 +343,10 @@
                                                     <span>Visitas Realizadas</span>
                                                     <span>198 (36.5%)</span>
                                                 </div>
-                                                <div class="w-full bg-slate-100 dark:bg-slate-800 h-2.5 rounded-full overflow-hidden">
-                                                    <div class="bg-indigo-500 h-full rounded-full" style="width: 36.5%"></div>
+                                                <div
+                                                    class="w-full bg-slate-100 dark:bg-slate-800 h-2.5 rounded-full overflow-hidden">
+                                                    <div class="bg-indigo-500 h-full rounded-full" style="width: 36.5%">
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div>
@@ -317,8 +354,10 @@
                                                     <span>Propostas Enviadas</span>
                                                     <span>87 (16.1%)</span>
                                                 </div>
-                                                <div class="w-full bg-slate-100 dark:bg-slate-800 h-2.5 rounded-full overflow-hidden">
-                                                    <div class="bg-amber-500 h-full rounded-full" style="width: 16.1%"></div>
+                                                <div
+                                                    class="w-full bg-slate-100 dark:bg-slate-800 h-2.5 rounded-full overflow-hidden">
+                                                    <div class="bg-amber-500 h-full rounded-full" style="width: 16.1%">
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div>
@@ -326,42 +365,59 @@
                                                     <span>Negócios Fechados</span>
                                                     <span>34 (6.3%)</span>
                                                 </div>
-                                                <div class="w-full bg-slate-100 dark:bg-slate-800 h-2.5 rounded-full overflow-hidden">
-                                                    <div class="bg-emerald-500 h-full rounded-full" style="width: 6.3%"></div>
+                                                <div
+                                                    class="w-full bg-slate-100 dark:bg-slate-800 h-2.5 rounded-full overflow-hidden">
+                                                    <div class="bg-emerald-500 h-full rounded-full" style="width: 6.3%">
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    
+
                                     <!-- Atividade Recente -->
-                                    <div class="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
-                                        <h4 class="font-bold text-slate-800 dark:text-white mb-4 flex items-center gap-2">
-                                            <span class="material-symbols-outlined text-primary">history</span> Atividade Recente
+                                    <div
+                                        class="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+                                        <h4
+                                            class="font-bold text-slate-800 dark:text-white mb-4 flex items-center gap-2">
+                                            <span class="material-symbols-outlined text-primary">history</span>
+                                            Atividade Recente
                                         </h4>
                                         <div class="space-y-4">
                                             <div class="flex items-start gap-3 text-sm">
                                                 <div class="w-2 h-2 rounded-full bg-emerald-500 mt-1.5"></div>
                                                 <div class="flex-1">
-                                                    <span class="font-semibold text-slate-700 dark:text-slate-300">Matheus</span> adicionou um novo cliente
-                                                    <span class="block text-xs text-slate-400 mt-0.5">12/10/2026 14:30</span>
+                                                    <span
+                                                        class="font-semibold text-slate-700 dark:text-slate-300">Matheus</span>
+                                                    adicionou um novo cliente
+                                                    <span class="block text-xs text-slate-400 mt-0.5">12/10/2026
+                                                        14:30</span>
                                                 </div>
-                                                <span class="bg-emerald-50 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 text-xs px-2 py-0.5 rounded-full font-bold">Clientes</span>
+                                                <span
+                                                    class="bg-emerald-50 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 text-xs px-2 py-0.5 rounded-full font-bold">Clientes</span>
                                             </div>
                                             <div class="flex items-start gap-3 text-sm">
                                                 <div class="w-2 h-2 rounded-full bg-blue-500 mt-1.5"></div>
                                                 <div class="flex-1">
-                                                    <span class="font-semibold text-slate-700 dark:text-slate-300">Moisez</span> cadastrou um novo imóvel
-                                                    <span class="block text-xs text-slate-400 mt-0.5">12/10/2026 14:25</span>
+                                                    <span
+                                                        class="font-semibold text-slate-700 dark:text-slate-300">Moisez</span>
+                                                    cadastrou um novo imóvel
+                                                    <span class="block text-xs text-slate-400 mt-0.5">12/10/2026
+                                                        14:25</span>
                                                 </div>
-                                                <span class="bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-xs px-2 py-0.5 rounded-full font-bold">Imóveis</span>
+                                                <span
+                                                    class="bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-xs px-2 py-0.5 rounded-full font-bold">Imóveis</span>
                                             </div>
                                             <div class="flex items-start gap-3 text-sm">
                                                 <div class="w-2 h-2 rounded-full bg-purple-500 mt-1.5"></div>
                                                 <div class="flex-1">
-                                                    <span class="font-semibold text-slate-700 dark:text-slate-300">Alessandro</span> vendeu um imóvel
-                                                    <span class="block text-xs text-slate-400 mt-0.5">12/10/2026 13:55</span>
+                                                    <span
+                                                        class="font-semibold text-slate-700 dark:text-slate-300">Alessandro</span>
+                                                    vendeu um imóvel
+                                                    <span class="block text-xs text-slate-400 mt-0.5">12/10/2026
+                                                        13:55</span>
                                                 </div>
-                                                <span class="bg-purple-50 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 text-xs px-2 py-0.5 rounded-full font-bold">Vendas</span>
+                                                <span
+                                                    class="bg-purple-50 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 text-xs px-2 py-0.5 rounded-full font-bold">Vendas</span>
                                             </div>
                                         </div>
                                     </div>
@@ -370,77 +426,119 @@
 
                             <!-- 2. IMÓVEIS FALLBACK -->
                             <div id="fallback-imoveis" class="fallback-screen hidden space-y-6">
-                                <div class="flex items-center justify-between border-b border-slate-100 dark:border-slate-800 pb-4">
+                                <div
+                                    class="flex items-center justify-between border-b border-slate-100 dark:border-slate-800 pb-4">
                                     <div>
-                                        <h3 class="text-2xl font-bold text-slate-800 dark:text-white">Inventário de Imóveis</h3>
-                                        <p class="text-sm text-slate-500 dark:text-slate-400">Gerenciamento inteligente do seu portfólio de imóveis.</p>
+                                        <h3 class="text-2xl font-bold text-slate-800 dark:text-white">Inventário de
+                                            Imóveis</h3>
+                                        <p class="text-sm text-slate-500 dark:text-slate-400">Gerenciamento inteligente
+                                            do seu portfólio de imóveis.</p>
                                     </div>
-                                    <button class="bg-primary text-white text-sm px-4 py-2 rounded-lg font-bold hover:bg-blue-700 transition flex items-center gap-1">
+                                    <button
+                                        class="bg-primary text-white text-sm px-4 py-2 rounded-lg font-bold hover:bg-blue-700 transition flex items-center gap-1">
                                         <span class="material-symbols-outlined text-sm">add</span> Adicionar Imóvel
                                     </button>
                                 </div>
 
                                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                                     <!-- Imóvel Card 1 -->
-                                    <div class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden flex flex-col">
-                                        <div class="h-40 bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-white relative">
+                                    <div
+                                        class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden flex flex-col">
+                                        <div
+                                            class="h-40 bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-white relative">
                                             <span class="material-symbols-outlined text-5xl">home</span>
-                                            <span class="absolute top-2 right-2 bg-emerald-500 text-white font-bold text-xs px-2.5 py-1 rounded-full">Exclusivo</span>
+                                            <span
+                                                class="absolute top-2 right-2 bg-emerald-500 text-white font-bold text-xs px-2.5 py-1 rounded-full">Exclusivo</span>
                                         </div>
                                         <div class="p-4 flex-1 flex flex-col justify-between">
                                             <div>
-                                                <h4 class="font-bold text-lg text-slate-800 dark:text-white truncate">Cobertura Duplex no Leblon</h4>
-                                                <p class="text-xs text-slate-400 mb-2">Av. Delfim Moreira, Rio de Janeiro - RJ</p>
-                                                <div class="flex items-center gap-3 text-slate-500 dark:text-slate-400 text-xs mb-4">
-                                                    <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">bed</span> 4 Quartos</span>
-                                                    <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">bathtub</span> 5 Banhs</span>
-                                                    <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">square_foot</span> 380m²</span>
+                                                <h4 class="font-bold text-lg text-slate-800 dark:text-white truncate">
+                                                    Cobertura Duplex no Leblon</h4>
+                                                <p class="text-xs text-slate-400 mb-2">Av. Delfim Moreira, Rio de
+                                                    Janeiro - RJ</p>
+                                                <div
+                                                    class="flex items-center gap-3 text-slate-500 dark:text-slate-400 text-xs mb-4">
+                                                    <span class="flex items-center gap-1"><span
+                                                            class="material-symbols-outlined text-sm">bed</span> 4
+                                                        Quartos</span>
+                                                    <span class="flex items-center gap-1"><span
+                                                            class="material-symbols-outlined text-sm">bathtub</span> 5
+                                                        Banhs</span>
+                                                    <span class="flex items-center gap-1"><span
+                                                            class="material-symbols-outlined text-sm">square_foot</span>
+                                                        380m²</span>
                                                 </div>
                                             </div>
-                                            <div class="flex items-center justify-between border-t border-slate-100 dark:border-slate-800 pt-3">
+                                            <div
+                                                class="flex items-center justify-between border-t border-slate-100 dark:border-slate-800 pt-3">
                                                 <span class="text-lg font-extrabold text-primary">R$ 4.200.000</span>
                                                 <span class="text-xs text-slate-400">Ref: CR-00122</span>
                                             </div>
                                         </div>
                                     </div>
                                     <!-- Imóvel Card 2 -->
-                                    <div class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden flex flex-col">
-                                        <div class="h-40 bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white relative">
+                                    <div
+                                        class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden flex flex-col">
+                                        <div
+                                            class="h-40 bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white relative">
                                             <span class="material-symbols-outlined text-5xl">holiday_village</span>
-                                            <span class="absolute top-2 right-2 bg-amber-500 text-white font-bold text-xs px-2.5 py-1 rounded-full">Em Destaque</span>
+                                            <span
+                                                class="absolute top-2 right-2 bg-amber-500 text-white font-bold text-xs px-2.5 py-1 rounded-full">Em
+                                                Destaque</span>
                                         </div>
                                         <div class="p-4 flex-1 flex flex-col justify-between">
                                             <div>
-                                                <h4 class="font-bold text-lg text-slate-800 dark:text-white truncate">Casa Contemporânea Alphaville</h4>
+                                                <h4 class="font-bold text-lg text-slate-800 dark:text-white truncate">
+                                                    Casa Contemporânea Alphaville</h4>
                                                 <p class="text-xs text-slate-400 mb-2">Barueri, São Paulo - SP</p>
-                                                <div class="flex items-center gap-3 text-slate-500 dark:text-slate-400 text-xs mb-4">
-                                                    <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">bed</span> 3 Suítes</span>
-                                                    <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">bathtub</span> 4 Banhs</span>
-                                                    <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">square_foot</span> 290m²</span>
+                                                <div
+                                                    class="flex items-center gap-3 text-slate-500 dark:text-slate-400 text-xs mb-4">
+                                                    <span class="flex items-center gap-1"><span
+                                                            class="material-symbols-outlined text-sm">bed</span> 3
+                                                        Suítes</span>
+                                                    <span class="flex items-center gap-1"><span
+                                                            class="material-symbols-outlined text-sm">bathtub</span> 4
+                                                        Banhs</span>
+                                                    <span class="flex items-center gap-1"><span
+                                                            class="material-symbols-outlined text-sm">square_foot</span>
+                                                        290m²</span>
                                                 </div>
                                             </div>
-                                            <div class="flex items-center justify-between border-t border-slate-100 dark:border-slate-800 pt-3">
+                                            <div
+                                                class="flex items-center justify-between border-t border-slate-100 dark:border-slate-800 pt-3">
                                                 <span class="text-lg font-extrabold text-primary">R$ 2.890.000</span>
                                                 <span class="text-xs text-slate-400">Ref: CR-00455</span>
                                             </div>
                                         </div>
                                     </div>
                                     <!-- Imóvel Card 3 -->
-                                    <div class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden flex flex-col">
-                                        <div class="h-40 bg-gradient-to-br from-teal-500 to-emerald-600 flex items-center justify-center text-white relative">
+                                    <div
+                                        class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden flex flex-col">
+                                        <div
+                                            class="h-40 bg-gradient-to-br from-teal-500 to-emerald-600 flex items-center justify-center text-white relative">
                                             <span class="material-symbols-outlined text-5xl">apartment</span>
                                         </div>
                                         <div class="p-4 flex-1 flex flex-col justify-between">
                                             <div>
-                                                <h4 class="font-bold text-lg text-slate-800 dark:text-white truncate">Apartamento Vista Mar Barra</h4>
-                                                <p class="text-xs text-slate-400 mb-2">Av. Lúcio Costa, Rio de Janeiro - RJ</p>
-                                                <div class="flex items-center gap-3 text-slate-500 dark:text-slate-400 text-xs mb-4">
-                                                    <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">bed</span> 2 Qts</span>
-                                                    <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">bathtub</span> 2 Banhs</span>
-                                                    <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">square_foot</span> 85m²</span>
+                                                <h4 class="font-bold text-lg text-slate-800 dark:text-white truncate">
+                                                    Apartamento Vista Mar Barra</h4>
+                                                <p class="text-xs text-slate-400 mb-2">Av. Lúcio Costa, Rio de Janeiro -
+                                                    RJ</p>
+                                                <div
+                                                    class="flex items-center gap-3 text-slate-500 dark:text-slate-400 text-xs mb-4">
+                                                    <span class="flex items-center gap-1"><span
+                                                            class="material-symbols-outlined text-sm">bed</span> 2
+                                                        Qts</span>
+                                                    <span class="flex items-center gap-1"><span
+                                                            class="material-symbols-outlined text-sm">bathtub</span> 2
+                                                        Banhs</span>
+                                                    <span class="flex items-center gap-1"><span
+                                                            class="material-symbols-outlined text-sm">square_foot</span>
+                                                        85m²</span>
                                                 </div>
                                             </div>
-                                            <div class="flex items-center justify-between border-t border-slate-100 dark:border-slate-800 pt-3">
+                                            <div
+                                                class="flex items-center justify-between border-t border-slate-100 dark:border-slate-800 pt-3">
                                                 <span class="text-lg font-extrabold text-primary">R$ 1.750.000</span>
                                                 <span class="text-xs text-slate-400">Ref: CR-00912</span>
                                             </div>
@@ -451,16 +549,22 @@
 
                             <!-- 3. CLIENTES FALLBACK -->
                             <div id="fallback-clientes" class="fallback-screen hidden space-y-6">
-                                <div class="flex items-center justify-between border-b border-slate-100 dark:border-slate-800 pb-4">
+                                <div
+                                    class="flex items-center justify-between border-b border-slate-100 dark:border-slate-800 pb-4">
                                     <div>
-                                        <h3 class="text-2xl font-bold text-slate-800 dark:text-white">CRM - Gestão de Contatos</h3>
-                                        <p class="text-sm text-slate-500 dark:text-slate-400">Gerencie leads e clientes em um único banco de dados unificado.</p>
+                                        <h3 class="text-2xl font-bold text-slate-800 dark:text-white">CRM - Gestão de
+                                            Contatos</h3>
+                                        <p class="text-sm text-slate-500 dark:text-slate-400">Gerencie leads e clientes
+                                            em um único banco de dados unificado.</p>
                                     </div>
                                 </div>
 
-                                <div class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-x-auto">
-                                    <table class="w-full border-collapse text-left text-sm text-slate-600 dark:text-slate-300">
-                                        <thead class="bg-slate-50 dark:bg-slate-800/50 text-slate-700 dark:text-slate-200 font-bold border-b border-slate-200 dark:border-slate-800">
+                                <div
+                                    class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-x-auto">
+                                    <table
+                                        class="w-full border-collapse text-left text-sm text-slate-600 dark:text-slate-300">
+                                        <thead
+                                            class="bg-slate-50 dark:bg-slate-800/50 text-slate-700 dark:text-slate-200 font-bold border-b border-slate-200 dark:border-slate-800">
                                             <tr>
                                                 <th class="p-4">Nome / Contato</th>
                                                 <th class="p-4">Tipo</th>
@@ -472,31 +576,49 @@
                                         <tbody class="divide-y divide-slate-100 dark:divide-slate-800">
                                             <tr>
                                                 <td class="p-4">
-                                                    <div class="font-bold text-slate-800 dark:text-white">Moisez Silva</div>
-                                                    <div class="text-xs text-slate-400">moisez@email.com • (21) 99888-7766</div>
+                                                    <div class="font-bold text-slate-800 dark:text-white">Moisez Silva
+                                                    </div>
+                                                    <div class="text-xs text-slate-400">moisez@email.com • (21)
+                                                        99888-7766</div>
                                                 </td>
-                                                <td class="p-4"><span class="bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-xs px-2 py-1 rounded font-bold">Comprador</span></td>
-                                                <td class="p-4"><span class="bg-amber-100 dark:bg-amber-900/30 text-amber-600 dark:text-amber-400 text-xs px-2.5 py-1 rounded-full font-bold">Em Negociação</span></td>
+                                                <td class="p-4"><span
+                                                        class="bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-xs px-2 py-1 rounded font-bold">Comprador</span>
+                                                </td>
+                                                <td class="p-4"><span
+                                                        class="bg-amber-100 dark:bg-amber-900/30 text-amber-600 dark:text-amber-400 text-xs px-2.5 py-1 rounded-full font-bold">Em
+                                                        Negociação</span></td>
                                                 <td class="p-4">Visita realizada ontem às 15:00</td>
                                                 <td class="p-4 font-semibold text-primary">Cobertura Leblon</td>
                                             </tr>
                                             <tr>
                                                 <td class="p-4">
-                                                    <div class="font-bold text-slate-800 dark:text-white">Matheus Costa</div>
-                                                    <div class="text-xs text-slate-400">matheus@email.com • (11) 97766-5544</div>
+                                                    <div class="font-bold text-slate-800 dark:text-white">Matheus Costa
+                                                    </div>
+                                                    <div class="text-xs text-slate-400">matheus@email.com • (11)
+                                                        97766-5544</div>
                                                 </td>
-                                                <td class="p-4"><span class="bg-purple-50 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 text-xs px-2 py-1 rounded font-bold">Proprietário</span></td>
-                                                <td class="p-4"><span class="bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 text-xs px-2.5 py-1 rounded-full font-bold">Ativo</span></td>
+                                                <td class="p-4"><span
+                                                        class="bg-purple-50 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 text-xs px-2 py-1 rounded font-bold">Proprietário</span>
+                                                </td>
+                                                <td class="p-4"><span
+                                                        class="bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 text-xs px-2.5 py-1 rounded-full font-bold">Ativo</span>
+                                                </td>
                                                 <td class="p-4">Avaliação do imóvel enviada hoje</td>
                                                 <td class="p-4 font-semibold text-slate-500">Apto Copacabana</td>
                                             </tr>
                                             <tr>
                                                 <td class="p-4">
-                                                    <div class="font-bold text-slate-800 dark:text-white">Alessandra Reis</div>
-                                                    <div class="text-xs text-slate-400">alessandra@email.com • (11) 99912-3456</div>
+                                                    <div class="font-bold text-slate-800 dark:text-white">Alessandra
+                                                        Reis</div>
+                                                    <div class="text-xs text-slate-400">alessandra@email.com • (11)
+                                                        99912-3456</div>
                                                 </td>
-                                                <td class="p-4"><span class="bg-emerald-50 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 text-xs px-2 py-1 rounded font-bold">Investidor</span></td>
-                                                <td class="p-4"><span class="bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-xs px-2.5 py-1 rounded-full font-bold">Lead Novo</span></td>
+                                                <td class="p-4"><span
+                                                        class="bg-emerald-50 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 text-xs px-2 py-1 rounded font-bold">Investidor</span>
+                                                </td>
+                                                <td class="p-4"><span
+                                                        class="bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-xs px-2.5 py-1 rounded-full font-bold">Lead
+                                                        Novo</span></td>
                                                 <td class="p-4">Entrou via formulário do site oficial</td>
                                                 <td class="p-4 font-semibold text-primary">Lançamento Alphaville</td>
                                             </tr>
@@ -507,45 +629,62 @@
 
                             <!-- 4. CHAVES FALLBACK -->
                             <div id="fallback-chaves" class="fallback-screen hidden space-y-6">
-                                <div class="flex items-center justify-between border-b border-slate-100 dark:border-slate-800 pb-4">
+                                <div
+                                    class="flex items-center justify-between border-b border-slate-100 dark:border-slate-800 pb-4">
                                     <div>
-                                        <h3 class="text-2xl font-bold text-slate-800 dark:text-white">Controle de Chaves</h3>
-                                        <p class="text-sm text-slate-500 dark:text-slate-400">Gerenciamento eletrônico de chaves de imóveis com QR Code e histórico.</p>
+                                        <h3 class="text-2xl font-bold text-slate-800 dark:text-white">Controle de Chaves
+                                        </h3>
+                                        <p class="text-sm text-slate-500 dark:text-slate-400">Gerenciamento eletrônico
+                                            de chaves de imóveis com QR Code e histórico.</p>
                                     </div>
-                                    <button class="bg-emerald-600 text-white text-sm px-4 py-2 rounded-lg font-bold hover:bg-emerald-700 transition flex items-center gap-1">
+                                    <button
+                                        class="bg-emerald-600 text-white text-sm px-4 py-2 rounded-lg font-bold hover:bg-emerald-700 transition flex items-center gap-1">
                                         <span class="material-symbols-outlined text-sm">key</span> Emprestar Chave
                                     </button>
                                 </div>
 
                                 <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                                    <div class="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm flex items-start gap-4">
-                                        <div class="w-12 h-12 rounded-lg bg-emerald-50 dark:bg-emerald-900/20 text-emerald-500 flex items-center justify-center">
+                                    <div
+                                        class="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm flex items-start gap-4">
+                                        <div
+                                            class="w-12 h-12 rounded-lg bg-emerald-50 dark:bg-emerald-900/20 text-emerald-500 flex items-center justify-center">
                                             <span class="material-symbols-outlined text-2xl font-bold">key</span>
                                         </div>
                                         <div class="flex-1 min-w-0">
-                                            <h4 class="font-bold text-slate-800 dark:text-white truncate">Apto 101 - Edifício Paris</h4>
+                                            <h4 class="font-bold text-slate-800 dark:text-white truncate">Apto 101 -
+                                                Edifício Paris</h4>
                                             <p class="text-xs text-slate-400">Armário A • Gancho 12</p>
-                                            <span class="inline-block mt-2 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 text-xs px-2 py-0.5 rounded-full font-bold">Disponível</span>
+                                            <span
+                                                class="inline-block mt-2 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 text-xs px-2 py-0.5 rounded-full font-bold">Disponível</span>
                                         </div>
                                     </div>
-                                    <div class="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm flex items-start gap-4">
-                                        <div class="w-12 h-12 rounded-lg bg-amber-50 dark:bg-amber-900/20 text-amber-500 flex items-center justify-center">
+                                    <div
+                                        class="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm flex items-start gap-4">
+                                        <div
+                                            class="w-12 h-12 rounded-lg bg-amber-50 dark:bg-amber-900/20 text-amber-500 flex items-center justify-center">
                                             <span class="material-symbols-outlined text-2xl font-bold">vpn_key</span>
                                         </div>
                                         <div class="flex-1 min-w-0">
-                                            <h4 class="font-bold text-slate-800 dark:text-white truncate">Casa 04 - Condomínio Lagos</h4>
+                                            <h4 class="font-bold text-slate-800 dark:text-white truncate">Casa 04 -
+                                                Condomínio Lagos</h4>
                                             <p class="text-xs text-slate-400">Com Corretor Bruno Santos</p>
-                                            <span class="inline-block mt-2 bg-amber-100 dark:bg-amber-900/30 text-amber-600 dark:text-amber-400 text-xs px-2 py-0.5 rounded-full font-bold">Emprestada (Hoje às 10h)</span>
+                                            <span
+                                                class="inline-block mt-2 bg-amber-100 dark:bg-amber-900/30 text-amber-600 dark:text-amber-400 text-xs px-2 py-0.5 rounded-full font-bold">Emprestada
+                                                (Hoje às 10h)</span>
                                         </div>
                                     </div>
-                                    <div class="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm flex items-start gap-4">
-                                        <div class="w-12 h-12 rounded-lg bg-emerald-50 dark:bg-emerald-900/20 text-emerald-500 flex items-center justify-center">
+                                    <div
+                                        class="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm flex items-start gap-4">
+                                        <div
+                                            class="w-12 h-12 rounded-lg bg-emerald-50 dark:bg-emerald-900/20 text-emerald-500 flex items-center justify-center">
                                             <span class="material-symbols-outlined text-2xl font-bold">key</span>
                                         </div>
                                         <div class="flex-1 min-w-0">
-                                            <h4 class="font-bold text-slate-800 dark:text-white truncate">Sala 204 - Prime Center</h4>
+                                            <h4 class="font-bold text-slate-800 dark:text-white truncate">Sala 204 -
+                                                Prime Center</h4>
                                             <p class="text-xs text-slate-400">Armário B • Gancho 05</p>
-                                            <span class="inline-block mt-2 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 text-xs px-2 py-0.5 rounded-full font-bold">Disponível</span>
+                                            <span
+                                                class="inline-block mt-2 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 text-xs px-2 py-0.5 rounded-full font-bold">Disponível</span>
                                         </div>
                                     </div>
                                 </div>
@@ -553,80 +692,116 @@
 
                             <!-- 5. NEGÓCIOS FALLBACK -->
                             <div id="fallback-negocios" class="fallback-screen hidden space-y-6">
-                                <div class="flex items-center justify-between border-b border-slate-100 dark:border-slate-800 pb-4">
+                                <div
+                                    class="flex items-center justify-between border-b border-slate-100 dark:border-slate-800 pb-4">
                                     <div>
-                                        <h3 class="text-2xl font-bold text-slate-800 dark:text-white">Pipeline de Negócios (Funil)</h3>
-                                        <p class="text-sm text-slate-500 dark:text-slate-400">Visualize todas as oportunidades de venda em colunas arrastáveis de Kanban.</p>
+                                        <h3 class="text-2xl font-bold text-slate-800 dark:text-white">Pipeline de
+                                            Negócios (Funil)</h3>
+                                        <p class="text-sm text-slate-500 dark:text-slate-400">Visualize todas as
+                                            oportunidades de venda em colunas arrastáveis de Kanban.</p>
                                     </div>
                                 </div>
 
                                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                                     <!-- Coluna 1 -->
-                                    <div class="bg-slate-100/50 dark:bg-slate-900/50 p-4 rounded-xl border border-slate-200/50 dark:border-slate-800/50 flex flex-col gap-3 min-h-[300px]">
+                                    <div
+                                        class="bg-slate-100/50 dark:bg-slate-900/50 p-4 rounded-xl border border-slate-200/50 dark:border-slate-800/50 flex flex-col gap-3 min-h-[300px]">
                                         <div class="flex justify-between items-center px-1">
-                                            <span class="font-bold text-slate-700 dark:text-slate-300 text-xs uppercase tracking-wider">Prospecção (2)</span>
-                                            <span class="text-xs bg-slate-200 dark:bg-slate-800 px-2 py-0.5 rounded font-bold">R$ 2.450.000</span>
+                                            <span
+                                                class="font-bold text-slate-700 dark:text-slate-300 text-xs uppercase tracking-wider">Prospecção
+                                                (2)</span>
+                                            <span
+                                                class="text-xs bg-slate-200 dark:bg-slate-800 px-2 py-0.5 rounded font-bold">R$
+                                                2.450.000</span>
                                         </div>
                                         <!-- Card Negócio 1 -->
-                                        <div class="bg-white dark:bg-slate-950 p-4 rounded-lg border border-slate-200 dark:border-slate-850 shadow-sm space-y-2 cursor-grab">
+                                        <div
+                                            class="bg-white dark:bg-slate-950 p-4 rounded-lg border border-slate-200 dark:border-slate-850 shadow-sm space-y-2 cursor-grab">
                                             <div class="flex justify-between items-start">
-                                                <h5 class="font-bold text-sm text-slate-800 dark:text-white">Moisez Silva</h5>
+                                                <h5 class="font-bold text-sm text-slate-800 dark:text-white">Moisez
+                                                    Silva</h5>
                                                 <span class="w-2 h-2 rounded-full bg-blue-500"></span>
                                             </div>
-                                            <p class="text-xs text-slate-500 dark:text-slate-400">Apto 3 Quartos Leblon</p>
-                                            <div class="flex justify-between items-center text-xs font-semibold pt-2 border-t border-slate-50 dark:border-slate-900">
+                                            <p class="text-xs text-slate-500 dark:text-slate-400">Apto 3 Quartos Leblon
+                                            </p>
+                                            <div
+                                                class="flex justify-between items-center text-xs font-semibold pt-2 border-t border-slate-50 dark:border-slate-900">
                                                 <span class="text-primary">R$ 1.500.000</span>
                                                 <span class="text-slate-400 text-[10px]">1 dia parado</span>
                                             </div>
                                         </div>
                                         <!-- Card Negócio 2 -->
-                                        <div class="bg-white dark:bg-slate-950 p-4 rounded-lg border border-slate-200 dark:border-slate-850 shadow-sm space-y-2 cursor-grab">
+                                        <div
+                                            class="bg-white dark:bg-slate-950 p-4 rounded-lg border border-slate-200 dark:border-slate-850 shadow-sm space-y-2 cursor-grab">
                                             <div class="flex justify-between items-start">
-                                                <h5 class="font-bold text-sm text-slate-800 dark:text-white">Ana Santos</h5>
+                                                <h5 class="font-bold text-sm text-slate-800 dark:text-white">Ana Santos
+                                                </h5>
                                                 <span class="w-2 h-2 rounded-full bg-blue-500"></span>
                                             </div>
-                                            <p class="text-xs text-slate-500 dark:text-slate-400">Casa 3 Quartos Lagos</p>
-                                            <div class="flex justify-between items-center text-xs font-semibold pt-2 border-t border-slate-50 dark:border-slate-900">
+                                            <p class="text-xs text-slate-500 dark:text-slate-400">Casa 3 Quartos Lagos
+                                            </p>
+                                            <div
+                                                class="flex justify-between items-center text-xs font-semibold pt-2 border-t border-slate-50 dark:border-slate-900">
                                                 <span class="text-primary">R$ 950.000</span>
                                                 <span class="text-slate-400 text-[10px]">Hoje</span>
                                             </div>
                                         </div>
                                     </div>
                                     <!-- Coluna 2 -->
-                                    <div class="bg-slate-100/50 dark:bg-slate-900/50 p-4 rounded-xl border border-slate-200/50 dark:border-slate-800/50 flex flex-col gap-3 min-h-[300px]">
+                                    <div
+                                        class="bg-slate-100/50 dark:bg-slate-900/50 p-4 rounded-xl border border-slate-200/50 dark:border-slate-800/50 flex flex-col gap-3 min-h-[300px]">
                                         <div class="flex justify-between items-center px-1">
-                                            <span class="font-bold text-slate-700 dark:text-slate-300 text-xs uppercase tracking-wider">Visita Agendada (1)</span>
-                                            <span class="text-xs bg-slate-200 dark:bg-slate-800 px-2 py-0.5 rounded font-bold">R$ 450.000</span>
+                                            <span
+                                                class="font-bold text-slate-700 dark:text-slate-300 text-xs uppercase tracking-wider">Visita
+                                                Agendada (1)</span>
+                                            <span
+                                                class="text-xs bg-slate-200 dark:bg-slate-800 px-2 py-0.5 rounded font-bold">R$
+                                                450.000</span>
                                         </div>
                                         <!-- Card Negócio 3 -->
-                                        <div class="bg-white dark:bg-slate-950 p-4 rounded-lg border border-slate-200 dark:border-slate-850 shadow-sm space-y-2 cursor-grab">
+                                        <div
+                                            class="bg-white dark:bg-slate-950 p-4 rounded-lg border border-slate-200 dark:border-slate-850 shadow-sm space-y-2 cursor-grab">
                                             <div class="flex justify-between items-start">
-                                                <h5 class="font-bold text-sm text-slate-800 dark:text-white">Carlos Eduardo</h5>
+                                                <h5 class="font-bold text-sm text-slate-800 dark:text-white">Carlos
+                                                    Eduardo</h5>
                                                 <span class="w-2 h-2 rounded-full bg-amber-500"></span>
                                             </div>
-                                            <p class="text-xs text-slate-500 dark:text-slate-400">Sala Comercial Prime</p>
-                                            <div class="flex justify-between items-center text-xs font-semibold pt-2 border-t border-slate-50 dark:border-slate-900">
+                                            <p class="text-xs text-slate-500 dark:text-slate-400">Sala Comercial Prime
+                                            </p>
+                                            <div
+                                                class="flex justify-between items-center text-xs font-semibold pt-2 border-t border-slate-50 dark:border-slate-900">
                                                 <span class="text-primary">R$ 450.000</span>
-                                                <span class="text-amber-500 text-[10px] font-bold">Amanhã às 14:00</span>
+                                                <span class="text-amber-500 text-[10px] font-bold">Amanhã às
+                                                    14:00</span>
                                             </div>
                                         </div>
                                     </div>
                                     <!-- Coluna 3 -->
-                                    <div class="bg-slate-100/50 dark:bg-slate-900/50 p-4 rounded-xl border border-slate-200/50 dark:border-slate-800/50 flex flex-col gap-3 min-h-[300px]">
+                                    <div
+                                        class="bg-slate-100/50 dark:bg-slate-900/50 p-4 rounded-xl border border-slate-200/50 dark:border-slate-800/50 flex flex-col gap-3 min-h-[300px]">
                                         <div class="flex justify-between items-center px-1">
-                                            <span class="font-bold text-slate-700 dark:text-slate-300 text-xs uppercase tracking-wider">Proposta (1)</span>
-                                            <span class="text-xs bg-slate-200 dark:bg-slate-800 px-2 py-0.5 rounded font-bold">R$ 680.000</span>
+                                            <span
+                                                class="font-bold text-slate-700 dark:text-slate-300 text-xs uppercase tracking-wider">Proposta
+                                                (1)</span>
+                                            <span
+                                                class="text-xs bg-slate-200 dark:bg-slate-800 px-2 py-0.5 rounded font-bold">R$
+                                                680.000</span>
                                         </div>
                                         <!-- Card Negócio 4 -->
-                                        <div class="bg-white dark:bg-slate-950 p-4 rounded-lg border border-slate-200 dark:border-slate-850 shadow-sm space-y-2 cursor-grab">
+                                        <div
+                                            class="bg-white dark:bg-slate-950 p-4 rounded-lg border border-slate-200 dark:border-slate-850 shadow-sm space-y-2 cursor-grab">
                                             <div class="flex justify-between items-start">
-                                                <h5 class="font-bold text-sm text-slate-800 dark:text-white">Matheus Costa</h5>
+                                                <h5 class="font-bold text-sm text-slate-800 dark:text-white">Matheus
+                                                    Costa</h5>
                                                 <span class="w-2 h-2 rounded-full bg-purple-500"></span>
                                             </div>
-                                            <p class="text-xs text-slate-500 dark:text-slate-400">Terreno Alphaville Residencial</p>
-                                            <div class="flex justify-between items-center text-xs font-semibold pt-2 border-t border-slate-50 dark:border-slate-900">
+                                            <p class="text-xs text-slate-500 dark:text-slate-400">Terreno Alphaville
+                                                Residencial</p>
+                                            <div
+                                                class="flex justify-between items-center text-xs font-semibold pt-2 border-t border-slate-50 dark:border-slate-900">
                                                 <span class="text-primary">R$ 680.000</span>
-                                                <span class="text-emerald-500 text-[10px] font-bold">Aguardando resposta</span>
+                                                <span class="text-emerald-500 text-[10px] font-bold">Aguardando
+                                                    resposta</span>
                                             </div>
                                         </div>
                                     </div>
@@ -635,57 +810,74 @@
 
                             <!-- 6. EMPREENDIMENTOS FALLBACK -->
                             <div id="fallback-empreendimentos" class="fallback-screen hidden space-y-6">
-                                <div class="flex items-center justify-between border-b border-slate-100 dark:border-slate-800 pb-4">
+                                <div
+                                    class="flex items-center justify-between border-b border-slate-100 dark:border-slate-800 pb-4">
                                     <div>
-                                        <h3 class="text-2xl font-bold text-slate-800 dark:text-white">Lançamentos &amp; Empreendimentos</h3>
-                                        <p class="text-sm text-slate-500 dark:text-slate-400">Acompanhamento e espelho de vendas completo de incorporadoras e condomínios.</p>
+                                        <h3 class="text-2xl font-bold text-slate-800 dark:text-white">Lançamentos &amp;
+                                            Empreendimentos</h3>
+                                        <p class="text-sm text-slate-500 dark:text-slate-400">Acompanhamento e espelho
+                                            de vendas completo de incorporadoras e condomínios.</p>
                                     </div>
                                 </div>
 
                                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                                     <!-- Empreendimento 1 -->
-                                    <div class="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
+                                    <div
+                                        class="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
                                         <div class="flex justify-between items-start">
                                             <div>
-                                                <h4 class="font-bold text-lg text-slate-800 dark:text-white">Vanguard Residence</h4>
-                                                <p class="text-xs text-slate-400">Vanguard Construtora • Barra da Tijuca, RJ</p>
+                                                <h4 class="font-bold text-lg text-slate-800 dark:text-white">Vanguard
+                                                    Residence</h4>
+                                                <p class="text-xs text-slate-400">Vanguard Construtora • Barra da
+                                                    Tijuca, RJ</p>
                                             </div>
-                                            <span class="bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-xs px-2.5 py-1 rounded font-bold">Em Obras</span>
+                                            <span
+                                                class="bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-xs px-2.5 py-1 rounded font-bold">Em
+                                                Obras</span>
                                         </div>
                                         <div class="space-y-1">
                                             <div class="flex justify-between text-xs font-semibold text-slate-500">
                                                 <span>Progresso da Construção</span>
                                                 <span>85% Concluído</span>
                                             </div>
-                                            <div class="w-full bg-slate-100 dark:bg-slate-800 h-2.5 rounded-full overflow-hidden">
+                                            <div
+                                                class="w-full bg-slate-100 dark:bg-slate-800 h-2.5 rounded-full overflow-hidden">
                                                 <div class="bg-blue-600 h-full rounded-full" style="width: 85%"></div>
                                             </div>
                                         </div>
-                                        <div class="flex justify-between text-xs font-medium border-t border-slate-100 dark:border-slate-800 pt-3">
-                                            <span>Estoque Disponível: <strong class="text-slate-800 dark:text-white">12 unidades</strong></span>
+                                        <div
+                                            class="flex justify-between text-xs font-medium border-t border-slate-100 dark:border-slate-800 pt-3">
+                                            <span>Estoque Disponível: <strong class="text-slate-800 dark:text-white">12
+                                                    unidades</strong></span>
                                             <span class="text-primary font-bold">Ver espelho de vendas →</span>
                                         </div>
                                     </div>
                                     <!-- Empreendimento 2 -->
-                                    <div class="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
+                                    <div
+                                        class="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
                                         <div class="flex justify-between items-start">
                                             <div>
-                                                <h4 class="font-bold text-lg text-slate-800 dark:text-white">PrimeState Tower</h4>
+                                                <h4 class="font-bold text-lg text-slate-800 dark:text-white">PrimeState
+                                                    Tower</h4>
                                                 <p class="text-xs text-slate-400">PrimeState Inc • Itaim Bibi, SP</p>
                                             </div>
-                                            <span class="bg-amber-50 dark:bg-amber-900/30 text-amber-600 dark:text-amber-400 text-xs px-2.5 py-1 rounded font-bold">Lançamento</span>
+                                            <span
+                                                class="bg-amber-50 dark:bg-amber-900/30 text-amber-600 dark:text-amber-400 text-xs px-2.5 py-1 rounded font-bold">Lançamento</span>
                                         </div>
                                         <div class="space-y-1">
                                             <div class="flex justify-between text-xs font-semibold text-slate-500">
                                                 <span>Progresso da Construção</span>
                                                 <span>40% Concluído</span>
                                             </div>
-                                            <div class="w-full bg-slate-100 dark:bg-slate-800 h-2.5 rounded-full overflow-hidden">
+                                            <div
+                                                class="w-full bg-slate-100 dark:bg-slate-800 h-2.5 rounded-full overflow-hidden">
                                                 <div class="bg-amber-500 h-full rounded-full" style="width: 40%"></div>
                                             </div>
                                         </div>
-                                        <div class="flex justify-between text-xs font-medium border-t border-slate-100 dark:border-slate-800 pt-3">
-                                            <span>Estoque Disponível: <strong class="text-slate-800 dark:text-white">28 unidades</strong></span>
+                                        <div
+                                            class="flex justify-between text-xs font-medium border-t border-slate-100 dark:border-slate-800 pt-3">
+                                            <span>Estoque Disponível: <strong class="text-slate-800 dark:text-white">28
+                                                    unidades</strong></span>
                                             <span class="text-primary font-bold">Ver espelho de vendas →</span>
                                         </div>
                                     </div>
@@ -694,77 +886,105 @@
 
                             <!-- 7. LEADS FALLBACK -->
                             <div id="fallback-leads" class="fallback-screen hidden space-y-6">
-                                <div class="flex items-center justify-between border-b border-slate-100 dark:border-slate-800 pb-4">
+                                <div
+                                    class="flex items-center justify-between border-b border-slate-100 dark:border-slate-800 pb-4">
                                     <div>
-                                        <h3 class="text-2xl font-bold text-slate-800 dark:text-white">Entrada de Leads (Distribuição)</h3>
-                                        <p class="text-sm text-slate-500 dark:text-slate-400">Leads capturados em tempo real dos maiores portais imobiliários nacionais.</p>
+                                        <h3 class="text-2xl font-bold text-slate-800 dark:text-white">Entrada de Leads
+                                            (Distribuição)</h3>
+                                        <p class="text-sm text-slate-500 dark:text-slate-400">Leads capturados em tempo
+                                            real dos maiores portais imobiliários nacionais.</p>
                                     </div>
                                 </div>
 
                                 <div class="space-y-3">
                                     <!-- Lead 1 -->
-                                    <div class="bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4">
+                                    <div
+                                        class="bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4">
                                         <div class="flex items-start md:items-center gap-3">
                                             <!-- Ícone do Portal Simulado -->
-                                            <div class="w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 font-bold flex items-center justify-center text-xs whitespace-nowrap px-1">
+                                            <div
+                                                class="w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 font-bold flex items-center justify-center text-xs whitespace-nowrap px-1">
                                                 ZAP
                                             </div>
                                             <div>
                                                 <div class="flex items-center gap-2">
-                                                    <h4 class="font-bold text-slate-800 dark:text-white text-base">Bruno Ramos</h4>
-                                                    <span class="bg-slate-100 dark:bg-slate-800 text-slate-500 text-[10px] px-2 py-0.5 rounded font-semibold">Novo</span>
+                                                    <h4 class="font-bold text-slate-800 dark:text-white text-base">Bruno
+                                                        Ramos</h4>
+                                                    <span
+                                                        class="bg-slate-100 dark:bg-slate-800 text-slate-500 text-[10px] px-2 py-0.5 rounded font-semibold">Novo</span>
                                                 </div>
-                                                <p class="text-xs text-slate-500 dark:text-slate-400">"Deseja agendar uma visita para sábado no Apto de 3 Qts no Leblon."</p>
+                                                <p class="text-xs text-slate-500 dark:text-slate-400">"Deseja agendar
+                                                    uma visita para sábado no Apto de 3 Qts no Leblon."</p>
                                             </div>
                                         </div>
                                         <div class="flex items-center gap-2 self-end md:self-auto">
-                                            <span class="text-xs text-slate-400 font-semibold mr-2">Recebido há 5 min</span>
-                                            <button class="bg-emerald-600 hover:bg-emerald-700 text-white text-xs px-3.5 py-2 rounded-lg font-bold transition flex items-center gap-1.5">
-                                                <span class="material-symbols-outlined text-sm">chat</span> Conversar no WhatsApp
+                                            <span class="text-xs text-slate-400 font-semibold mr-2">Recebido há 5
+                                                min</span>
+                                            <button
+                                                class="bg-emerald-600 hover:bg-emerald-700 text-white text-xs px-3.5 py-2 rounded-lg font-bold transition flex items-center gap-1.5">
+                                                <span class="material-symbols-outlined text-sm">chat</span> Conversar no
+                                                WhatsApp
                                             </button>
                                         </div>
                                     </div>
                                     <!-- Lead 2 -->
-                                    <div class="bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4">
+                                    <div
+                                        class="bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4">
                                         <div class="flex items-start md:items-center gap-3">
                                             <!-- Ícone do Portal Simulado -->
-                                            <div class="w-10 h-10 rounded-full bg-orange-100 dark:bg-orange-900/30 text-orange-600 dark:text-orange-400 font-bold flex items-center justify-center text-xs whitespace-nowrap px-1">
+                                            <div
+                                                class="w-10 h-10 rounded-full bg-orange-100 dark:bg-orange-900/30 text-orange-600 dark:text-orange-400 font-bold flex items-center justify-center text-xs whitespace-nowrap px-1">
                                                 OLX
                                             </div>
                                             <div>
                                                 <div class="flex items-center gap-2">
-                                                    <h4 class="font-bold text-slate-800 dark:text-white text-base">Juliana Mendes</h4>
-                                                    <span class="bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-[10px] px-2 py-0.5 rounded font-semibold">Em Distribuição</span>
+                                                    <h4 class="font-bold text-slate-800 dark:text-white text-base">
+                                                        Juliana Mendes</h4>
+                                                    <span
+                                                        class="bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-[10px] px-2 py-0.5 rounded font-semibold">Em
+                                                        Distribuição</span>
                                                 </div>
-                                                <p class="text-xs text-slate-500 dark:text-slate-400">"Gostaria de saber opções de financiamento para a Casa em Alphaville."</p>
+                                                <p class="text-xs text-slate-500 dark:text-slate-400">"Gostaria de saber
+                                                    opções de financiamento para a Casa em Alphaville."</p>
                                             </div>
                                         </div>
                                         <div class="flex items-center gap-2 self-end md:self-auto">
-                                            <span class="text-xs text-slate-400 font-semibold mr-2">Recebido há 12 min</span>
-                                            <button class="bg-emerald-600 hover:bg-emerald-700 text-white text-xs px-3.5 py-2 rounded-lg font-bold transition flex items-center gap-1.5">
-                                                <span class="material-symbols-outlined text-sm">chat</span> Conversar no WhatsApp
+                                            <span class="text-xs text-slate-400 font-semibold mr-2">Recebido há 12
+                                                min</span>
+                                            <button
+                                                class="bg-emerald-600 hover:bg-emerald-700 text-white text-xs px-3.5 py-2 rounded-lg font-bold transition flex items-center gap-1.5">
+                                                <span class="material-symbols-outlined text-sm">chat</span> Conversar no
+                                                WhatsApp
                                             </button>
                                         </div>
                                     </div>
                                     <!-- Lead 3 -->
-                                    <div class="bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4">
+                                    <div
+                                        class="bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4">
                                         <div class="flex items-start md:items-center gap-3">
                                             <!-- Ícone do Portal Simulado -->
-                                            <div class="w-10 h-10 rounded-full bg-indigo-100 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 font-bold flex items-center justify-center text-xs whitespace-nowrap px-1">
+                                            <div
+                                                class="w-10 h-10 rounded-full bg-indigo-100 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 font-bold flex items-center justify-center text-xs whitespace-nowrap px-1">
                                                 SITE
                                             </div>
                                             <div>
                                                 <div class="flex items-center gap-2">
-                                                    <h4 class="font-bold text-slate-800 dark:text-white text-base">Ricardo Souza</h4>
-                                                    <span class="bg-slate-100 dark:bg-slate-800 text-slate-500 text-[10px] px-2 py-0.5 rounded font-semibold">Atendido</span>
+                                                    <h4 class="font-bold text-slate-800 dark:text-white text-base">
+                                                        Ricardo Souza</h4>
+                                                    <span
+                                                        class="bg-slate-100 dark:bg-slate-800 text-slate-500 text-[10px] px-2 py-0.5 rounded font-semibold">Atendido</span>
                                                 </div>
-                                                <p class="text-xs text-slate-500 dark:text-slate-400">"Solicitou o catálogo digital completo do Vanguard Residence."</p>
+                                                <p class="text-xs text-slate-500 dark:text-slate-400">"Solicitou o
+                                                    catálogo digital completo do Vanguard Residence."</p>
                                             </div>
                                         </div>
                                         <div class="flex items-center gap-2 self-end md:self-auto">
-                                            <span class="text-xs text-slate-400 font-semibold mr-2">Recebido há 2 horas</span>
-                                            <button class="bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 text-xs px-3.5 py-2 rounded-lg font-bold transition flex items-center gap-1.5">
-                                                <span class="material-symbols-outlined text-sm">check_circle</span> Visualizar Atendimento
+                                            <span class="text-xs text-slate-400 font-semibold mr-2">Recebido há 2
+                                                horas</span>
+                                            <button
+                                                class="bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 text-xs px-3.5 py-2 rounded-lg font-bold transition flex items-center gap-1.5">
+                                                <span class="material-symbols-outlined text-sm">check_circle</span>
+                                                Visualizar Atendimento
                                             </button>
                                         </div>
                                     </div>
@@ -806,7 +1026,7 @@
                     // Adicionamos um cache-buster dinâmico (?t=...) para evitar que o navegador cacheie erros 404 anteriores
                     img.src = imagePath + '?t=' + new Date().getTime();
                     img.alt = "Mockup do Chave Reserva - Tela de " + tabId.charAt(0).toUpperCase() + tabId.slice(1);
-                    
+
                     // Manter o aviso de arquivo ausente atualizado
                     const missingNoticeFile = document.getElementById('missing-filename-notice');
                     if (missingNoticeFile) {
@@ -820,7 +1040,7 @@
             // Imagem carregou com sucesso: exibe a imagem e oculta o fallback de HTML e o aviso
             imgEl.classList.remove('hidden');
             imgEl.style.opacity = '1';
-            
+
             const fallbackContainer = document.getElementById('showcase-html-fallback');
             if (fallbackContainer) {
                 fallbackContainer.classList.add('hidden');
@@ -835,7 +1055,7 @@
         function onShowcaseImageError(imgEl) {
             // Falha ao carregar a imagem real: oculta o elemento img e ativa o fallback elegante
             imgEl.classList.add('hidden');
-            
+
             const fallbackContainer = document.getElementById('showcase-html-fallback');
             if (fallbackContainer) {
                 fallbackContainer.classList.remove('hidden');
@@ -850,13 +1070,13 @@
             const activeTabButton = document.querySelector('.showcase-tab.bg-primary');
             if (activeTabButton) {
                 const tabId = activeTabButton.id.replace('tab-', '');
-                
+
                 // Ocultar todas as telas de fallback
                 const screens = document.querySelectorAll('.fallback-screen');
                 screens.forEach(screen => {
                     screen.classList.add('hidden');
                 });
-                
+
                 // Exibir a tela correspondente ao tabId
                 const targetScreen = document.getElementById('fallback-' + tabId);
                 if (targetScreen) {
@@ -1237,7 +1457,8 @@
                 Pronto para transformar sua gestão?
             </h2>
             <p class="text-slate-300 text-lg mb-12 max-w-2xl mx-auto leading-relaxed">
-                Junte-se a imobiliárias que já profissionalizaram suas operações com o Chave Reserva. Controle absoluto do seu negócio, de ponta a ponta.
+                Junte-se a imobiliárias que já profissionalizaram suas operações com o Chave Reserva. Controle absoluto
+                do seu negócio, de ponta a ponta.
             </p>
             <div class="flex flex-wrap justify-center gap-4">
                 <button
